@@ -16,12 +16,18 @@ nothing is called an alert.
 
 | Route            | Content                                                                                   | Files read                                              |
 | ---------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| `/`              | Coverage line, stat tiles, "Ugens bevægelser", top state indices                          | meta, runs, brands, size_depletion, launch_calendar, movements, sold_out_state |
-| `/udsolgt`       | "Kort fortalt" cross-attribute headline, sold-out state index per attribute (scope all / new), brand × size depletion table | meta, taxonomy, sold_out_state, size_depletion |
-| `/attributter`   | 8-week sold-out index per attribute (net events vs. launches), 12-week series as small multiples, alerts or calibration note | meta, taxonomy, attributes, series, alerts |
-| `/brands`        | Sortable brand table for the report week                                                  | meta, brands                                            |
-| `/positionering` | Price index vs. style distance scatter, profile table, attribute-mix comparison           | meta, taxonomy, positioning                             |
-| `/data`          | Runs table, tagged share per brand, sources, method and limits                            | meta, runs, positioning                                 |
+| `/`              | "Hvad betyder det for Baum": "Kort fortalt" summary (one line per insight kind) and "Til næste drop- og indkøbsmøde" steps built from `insights.json`, then the insight cards (rank order, kind badge, action, own-shop caveat, evidence chips incl. Baum's own depletion and tag coverage), coverage line, stat tiles, "Ugens bevægelser", top state indices | meta, insights, runs, brands, size_depletion, launch_calendar, movements, sold_out_state |
+| `/udsolgt`       | "Sådan bruger I det" steps, "Kort fortalt" headline, sold-out state index per attribute (scope all / new) with tag coverage, the attribute insights and Baum's own share/index under the chart (`#indeks`; `?attr=…&scope=…` from a card preselects the tab), sizes insight + brand × size depletion table (`#storrelser`) | meta, taxonomy, insights, sold_out_state, size_depletion, brands |
+| `/attributter`   | "Hvad kommer hvornår" timeline, 8-week sold-out index per attribute (net events vs. launches), 12-week series as small multiples, alerts or calibration note | meta, taxonomy, attributes, series, alerts |
+| `/brands`        | Markdown insight card, sortable brand table for the report week with header tooltips, column legend | meta, insights, brands                                  |
+| `/positionering` | Nearest-competitors insight card, plain-Danish reading guide, price index vs. style distance scatter, profile table, attribute-mix comparison | meta, taxonomy, insights, positioning                   |
+| `/data`          | Runs table, tagged share per brand (with the weakest named), tag coverage per attribute (peers and Baum), sources, method and limits | meta, runs, positioning, sold_out_state, brands         |
+| `/metode`        | "Metode og forbehold": anchored sections (data, snapshot, events, tags, tilstand, indeks, lavt-n, kalibrering, positionering, storrelser, lanceringer, nedsat, indsigter, forbehold) with formulas, a worked example computed from the real `sold_out_state.json`, thresholds the export carries read from `meta.json` / `insights.json`, the rest mirrored in `lib/method.ts` | meta, taxonomy, insights, sold_out_state, positioning   |
+
+Every chart and table has a collapsed `MethodNote` ("Sådan er det regnet") under it: two to four sentences, the
+JSON fields it rests on, and a link to the matching `/metode#anchor`. Insight wording (title, text, action) is
+rendered verbatim from `insights.json`; the dashboard only adds the kind badge, the evidence chips, a short caveat
+where the own-shop numbers or the assortment basis call for one, and the links.
 
 ## Run locally
 
@@ -80,10 +86,12 @@ matches the latest committed export. If a day's snapshot fails, the previous exp
 ```
 app/                 App Router pages (server components) and layout
 components/          UI pieces; files starting with "use client" are the only browser-side code
-lib/types.ts         TypeScript shapes of every exported JSON file
-lib/data.ts          server-only loaders (node:fs), brandName / isSelf helpers
+lib/types.ts         TypeScript shapes of every exported JSON file (incl. the InsightItem union by kind)
+lib/data.ts          server-only loaders (node:fs), brandName / isSelf / selfName / weakestTaggedBrand helpers
 lib/format.ts        Danish number and date formatting (Intl da-DK), pure
-lib/labels.ts        Danish labels for attributes, roles, scopes; size ordering, pure
+lib/labels.ts        Danish labels for attributes, roles, scopes, insight kinds (badge classes, detail links); size ordering, pure
+lib/method.ts        pipeline constants the export does not carry (restock window, live days, movement cut-offs, style weights, FX), mirrored from Python
+lib/coverage.ts      tag coverage per attribute from sold_out_state + brands (share of live variants the attribute shares rest on), pure
 lib/text.ts          Danish sentences for movements.json, same wording as the weekly report
 vercel.json          Ignored Build Step: build when web/ or ../data/export changed
 ```

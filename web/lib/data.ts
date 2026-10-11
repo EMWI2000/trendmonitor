@@ -5,11 +5,15 @@
 import { existsSync, readFileSync } from "node:fs";
 import { isAbsolute, join, resolve } from "node:path";
 
+import { isNum } from "./format";
+import { assertMethodMirror } from "./method";
 import type {
   AlertRow,
   AttributeRow,
+  BrandProfile,
   BrandRow,
   Dashboard,
+  Insights,
   LaunchCalendarRow,
   Meta,
   MetaBrand,
@@ -55,7 +59,9 @@ function readJson<T>(name: string): T {
 }
 
 export function loadMeta(): Meta {
-  return readJson<Meta>("meta.json");
+  const meta = readJson<Meta>("meta.json");
+  assertMethodMirror(meta.method); // build fails if lib/method.ts drifts from the Python constants
+  return meta;
 }
 
 export function loadBrands(): BrandRow[] {
@@ -106,6 +112,11 @@ export function loadTaxonomy(): Taxonomy {
   return readJson<Taxonomy>("taxonomy.json");
 }
 
+/** "Hvad betyder det for Baum": ranked rule-based insights plus the thresholds they used (insights.py). */
+export function loadInsights(): Insights {
+  return readJson<Insights>("insights.json");
+}
+
 export function loadAll(): Dashboard {
   return {
     meta: loadMeta(),
@@ -121,7 +132,16 @@ export function loadAll(): Dashboard {
     positioning: loadPositioning(),
     runs: loadRuns(),
     taxonomy: loadTaxonomy(),
+    insights: loadInsights(),
   };
+}
+
+/** Display name of the reference brand: insights.self_name first, then meta.brands, then the key. */
+export function selfName(): string {
+  const fromInsights = loadInsights().self_name;
+  if (fromInsights && fromInsights.length > 0) return fromInsights;
+  const key = loadMeta().self_brand;
+  return key ? brandName(key) : "Referencebrandet";
 }
 
 // ---------------------------------------------------------------------------- brand helpers
@@ -145,6 +165,16 @@ export function brandNames(): Record<string, string> {
   const out: Record<string, string> = {};
   for (const b of loadMeta().brands) out[b.key] = b.name;
   return out;
+}
+
+/** The brand with the lowest tagged_share in positioning.json, or null when no brand has one. */
+export function weakestTaggedBrand(): BrandProfile | null {
+  let weakest: BrandProfile | null = null;
+  for (const p of loadPositioning().brands) {
+    if (!isNum(p.tagged_share)) continue;
+    if (weakest === null || !isNum(weakest.tagged_share) || p.tagged_share < weakest.tagged_share) weakest = p;
+  }
+  return weakest;
 }
 
 /** Attribute keys present in the taxonomy, in the canonical order, followed by any unknown extras. */

@@ -33,6 +33,34 @@ export interface MetaNotes {
   self_excluded: string;
 }
 
+/** Pipeline constants the method texts name (export.py `_meta`, key "method"). */
+export interface MetaMethod {
+  restock_window_days: number;
+  min_share_for_index: number;
+  live_days: number;
+  min_alert_count: number;
+  mad_scale: number;
+  markdown_drop: number;
+  min_rule_attributes: number;
+  min_rule_confidence: number;
+  cohort_4w_days: [number, number];
+  median_days_max_age: number;
+  movement_over_index: number;
+  movement_under_index: number;
+  movement_min_n_calibration: number;
+  movement_min_launched: number;
+  movement_min_cohort: number;
+  movement_markdown_share: number;
+  newness_days: number;
+  style_weights: Record<string, number>;
+  neutrals: string[];
+  fx_to_dkk: Record<string, number>;
+  price_band_labels: string[];
+  alpha_sizes: string[];
+  numeric_sizes: string[];
+  request_delay_seconds: number;
+}
+
 export interface Meta {
   report_date: string;
   week_start: string;
@@ -44,6 +72,7 @@ export interface Meta {
   self_brand: string | null;
   thresholds: Thresholds;
   brands: MetaBrand[];
+  method: MetaMethod;
   notes: MetaNotes;
   generated_at: string;
 }
@@ -153,15 +182,25 @@ export type Movement = AttributeMovement | BrandSellOutMovement | BrandMarkdownM
 
 // ---------------------------------------------------------------------------- sold_out_state.json
 
+/**
+ * One row per attribute value and scope. The peer columns (live_n, unavailable_n, share_*, state_index) carry
+ * the index; the self_* columns describe the reference brand's own assortment and never enter the index
+ * (metrics.py _sold_out_state). self_state_index is computed over the self brand's variants alone.
+ */
 export interface SoldOutStateRow {
   attribute: string;
   scope: Scope;
   value: string;
   live_n: number;
   unavailable_n: number;
+  self_live_n: number;
+  self_unavailable_n: number;
   share_live: number | null;
   share_unavailable: number | null;
   state_index: number | null;
+  self_share_live: number | null;
+  self_share_unavailable: number | null;
+  self_state_index: number | null;
   low_n: boolean;
 }
 
@@ -247,6 +286,105 @@ export interface Taxonomy {
   attributes: Record<string, TaxonomyAttribute>;
 }
 
+// ---------------------------------------------------------------------------- insights.json
+
+/** The six rule kinds in src/trendmonitor/insights.py. */
+export type InsightKind = "white_space" | "strength" | "risk" | "sizes" | "markdown" | "nearest";
+
+export type AttributeInsightKind = "white_space" | "strength" | "risk";
+
+/** Fields every insight carries (compute_insights adds rank and attribute_label to all kinds). */
+export interface InsightBase {
+  title: string;
+  text: string;
+  action: string;
+  strength: number;
+  low_n: boolean;
+  evidence: string;
+  rank: number;
+  attribute_label: string | null;
+}
+
+/** white_space / strength / risk: one attribute value in sold_out_state held against the self brand's share. */
+export interface AttributeInsight extends InsightBase {
+  kind: AttributeInsightKind;
+  attribute: string;
+  value: string;
+  scope: Scope;
+  peer_index: number;
+  peer_n: number;
+  peer_live_n: number;
+  peer_share: number;
+  peer_unavailable_share: number;
+  avg_unavailable_share: number | null;
+  self_share: number;
+  self_unavailable_share: number | null;
+  self_n: number;
+}
+
+export interface InsightSizeRow {
+  size: string;
+  peer_share: number;
+  peer_n: number;
+  self_share: number | null;
+}
+
+export interface SizesInsight extends InsightBase {
+  kind: "sizes";
+  sizes: InsightSizeRow[];
+  avg_unavailable_share: number;
+}
+
+export interface MarkdownInsight extends InsightBase {
+  kind: "markdown";
+  peer_count: number;
+  peer_total: number;
+  self_share: number | null;
+}
+
+export interface InsightBrandRow {
+  brand: string;
+  style_distance: number;
+  price_index: number | null;
+  overlap_with_self: number | null;
+}
+
+export interface NearestInsight extends InsightBase {
+  kind: "nearest";
+  brands: InsightBrandRow[];
+}
+
+export type InsightItem = AttributeInsight | SizesInsight | MarkdownInsight | NearestInsight;
+
+/** RULES in insights.py: every threshold the six rules use. */
+export interface InsightRules {
+  over_index: number;
+  under_index: number;
+  white_space_ratio: number;
+  heavy_ratio: number;
+  min_self_share: number;
+  size_gap: number;
+  min_size_n: number;
+  markdown_heavy: number;
+  per_kind_cap: number;
+  max_attribute_insights: number;
+  nearest_n: number;
+  low_n: number;
+  launch_window_days: number;
+}
+
+export interface Insights {
+  report_date: string;
+  latest_snapshot_date: string;
+  self_brand: string | null;
+  self_name: string | null;
+  calibration: boolean;
+  weeks_of_history: number;
+  note: string;
+  rules: InsightRules;
+  items: InsightItem[];
+}
+
 // ---------------------------------------------------------------------------- everything at once
 
 export interface Dashboard {
@@ -263,4 +401,5 @@ export interface Dashboard {
   positioning: Positioning;
   runs: RunRow[];
   taxonomy: Taxonomy;
+  insights: Insights;
 }

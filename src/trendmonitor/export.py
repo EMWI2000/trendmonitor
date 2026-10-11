@@ -17,19 +17,43 @@ from typing import Any
 import pandas as pd
 
 from .config import ATTRIBUTES, DATA_DIR, load_sources, load_taxonomy
+from .diff import MARKDOWN_DROP
 from .insights import RULES, compute_insights
 from .metrics import (
     BASELINE_WEEKS,
+    COHORT_4W_DAYS,
     LAUNCH_WINDOW_DAYS,
     LOW_N,
+    MAD_SCALE,
+    MEDIAN_DAYS_MAX_AGE,
+    MIN_ALERT_COUNT,
     MIN_LAUNCHED,
+    MIN_SHARE_FOR_INDEX,
+    MOVEMENT_MARKDOWN_SHARE,
+    MOVEMENT_MIN_COHORT,
+    MOVEMENT_MIN_LAUNCHED,
+    MOVEMENT_MIN_N_CALIBRATION,
+    MOVEMENT_OVER_INDEX,
+    MOVEMENT_UNDER_INDEX,
+    RESTOCK_WINDOW_DAYS,
     SERIES_WEEKS,
     WeeklyMetrics,
     compute,
     compute_state,
 )
-from .profile import BrandProfile, Positioning, positioning
+from .profile import (
+    ALPHA_SIZES,
+    NEUTRALS,
+    NEWNESS_DAYS,
+    NUMERIC_SIZES,
+    PRICE_BANDS,
+    STYLE_WEIGHTS,
+    BrandProfile,
+    Positioning,
+    positioning,
+)
 from .storage import latest_runs, read_runs, read_snapshot, read_tags
+from .tagger import MIN_RULE_ATTRIBUTES, MIN_RULE_CONFIDENCE
 
 EXPORT_FILES = (
     "meta.json", "brands.json", "attributes.json", "series.json", "alerts.json", "sizes.json",
@@ -139,6 +163,33 @@ def _meta(m: WeeklyMetrics, latest_date: str, self_brand: str | None, generated_
             {"key": b.key, "name": b.name, "role": b.role, "enabled": b.enabled, "currency": b.currency, "url": b.url}
             for b in sources.brands
         ],
+        # Every other constant the method texts name, so the dashboard never has to mirror the Python.
+        "method": {
+            "restock_window_days": RESTOCK_WINDOW_DAYS,
+            "min_share_for_index": MIN_SHARE_FOR_INDEX,
+            "live_days": sources.live_days,
+            "min_alert_count": MIN_ALERT_COUNT,
+            "mad_scale": MAD_SCALE,
+            "markdown_drop": MARKDOWN_DROP,
+            "min_rule_attributes": MIN_RULE_ATTRIBUTES,
+            "min_rule_confidence": MIN_RULE_CONFIDENCE,
+            "cohort_4w_days": list(COHORT_4W_DAYS),
+            "median_days_max_age": MEDIAN_DAYS_MAX_AGE,
+            "movement_over_index": MOVEMENT_OVER_INDEX,
+            "movement_under_index": MOVEMENT_UNDER_INDEX,
+            "movement_min_n_calibration": MOVEMENT_MIN_N_CALIBRATION,
+            "movement_min_launched": MOVEMENT_MIN_LAUNCHED,
+            "movement_min_cohort": MOVEMENT_MIN_COHORT,
+            "movement_markdown_share": MOVEMENT_MARKDOWN_SHARE,
+            "newness_days": NEWNESS_DAYS,
+            "style_weights": STYLE_WEIGHTS,
+            "neutrals": sorted(NEUTRALS),
+            "fx_to_dkk": sources.fx_to_dkk,
+            "price_band_labels": [b[2] for b in PRICE_BANDS],
+            "alpha_sizes": ALPHA_SIZES,
+            "numeric_sizes": NUMERIC_SIZES,
+            "request_delay_seconds": sources.request_delay_seconds,
+        },
         "notes": NOTES,
         "generated_at": generated_at,
     }

@@ -18,6 +18,18 @@ BASELINE_WEEKS = 8
 MIN_ALERT_COUNT = 5
 LOW_N = 10
 MIN_LAUNCHED = 8  # no index on fewer launches: the denominator is too small to mean anything
+RESTOCK_WINDOW_DAYS = 7  # a sold_out followed by a restock of the same variant within this window is not net
+MIN_SHARE_FOR_INDEX = 0.02  # no index for values below this share of launches / live variants
+MAD_SCALE = 1.4826  # scales a median absolute deviation to a standard deviation
+COHORT_4W_DAYS = (22, 35)  # age in days since launch that defines the 4-week sell-out cohort
+MEDIAN_DAYS_MAX_AGE = 84  # median days to first sold-out counts products launched at most this long ago
+# Thresholds behind "Ugens bevægelser" (_movements)
+MOVEMENT_OVER_INDEX = 1.4
+MOVEMENT_UNDER_INDEX = 0.5
+MOVEMENT_MIN_N_CALIBRATION = 5
+MOVEMENT_MIN_LAUNCHED = 15
+MOVEMENT_MIN_COHORT = 5
+MOVEMENT_MARKDOWN_SHARE = 0.25
 
 
 @dataclass
@@ -63,7 +75,7 @@ def _prepare(report_date: str | None, data_dir: Path) -> tuple[duckdb.DuckDBPyCo
     con = _connect(data_dir)
     con.execute(f"CREATE VIEW latest AS SELECT * FROM snapshots WHERE snapshot_date = '{latest}'")
     con.execute(
-        """
+        f"""
         CREATE VIEW net_sold_out AS
         SELECT s.* FROM events s
         WHERE s.event_type = 'sold_out'
@@ -71,7 +83,7 @@ def _prepare(report_date: str | None, data_dir: Path) -> tuple[duckdb.DuckDBPyCo
             SELECT 1 FROM events r
             WHERE r.event_type = 'restock' AND r.variant_id = s.variant_id
               AND CAST(r.event_date AS DATE) > CAST(s.event_date AS DATE)
-              AND CAST(r.event_date AS DATE) <= CAST(s.event_date AS DATE) + INTERVAL 7 DAY)
+              AND CAST(r.event_date AS DATE) <= CAST(s.event_date AS DATE) + INTERVAL {RESTOCK_WINDOW_DAYS} DAY)
         """
     )
     # Launch date per product: published_at (date part), fallback first-seen snapshot
@@ -140,10 +152,10 @@ def _brand_table(con, report_date: str, week_start: str) -> pd.DataFrame:
         rates AS (
           SELECT brand,
                  AVG(CASE WHEN age_days BETWEEN 8 AND 21 THEN CAST(has_sold_out AS INT) END) AS sell_out_rate_2w,
-                 AVG(CASE WHEN age_days BETWEEN 22 AND 35 THEN CAST(has_sold_out AS INT) END) AS sell_out_rate_4w,
+                 AVG(CASE WHEN age_days BETWEEN {COHORT_4W_DAYS[0]} AND {COHORT_4W_DAYS[1]} THEN CAST(has_sold_out AS INT) END) AS sell_out_rate_4w,
                  AVG(CASE WHEN age_days BETWEEN 50 AND 63 THEN CAST(has_sold_out AS INT) END) AS sell_out_rate_8w,
-                 SUM(CASE WHEN age_days BETWEEN 22 AND 35 THEN 1 ELSE 0 END) AS cohort_4w_n,
-                 MEDIAN(CASE WHEN age_days <= 84 AND has_sold_out THEN days_to_first END) AS median_days_to_first_sold_out
+                 SUM(CASE WHEN age_days BETWEEN {COHORT_4W_DAYS[0]} AND {COHORT_4W_DAYS[1]} THEN 1 ELSE 0 END) AS cohort_4w_n,
+                 MEDIAN(CASE WHEN age_days <= {MEDIAN_DAYS_MAX_AGE} AND has_sold_out THEN days_to_first END) AS median_days_to_first_sold_out
           FROM cohort GROUP BY brand)
         SELECT live.brand, live.role, live.live_products, live.live_variants,
                COALESCE(wk_events.new_products, 0) AS new_products,
@@ -192,7 +204,7 @@ def _attribute_table(con, report_date: str) -> pd.DataFrame:
     df = pd.concat(frames, ignore_index=True)
     df["demand_index"] = df.apply(
         lambda r: (r["share_sold_out"] / r["share_new"])
-        if pd.notna(r["share_new"]) and r["share_new"] >= 0.02 and r["launched_n"] >= MIN_LAUNCHED else None,
+        if pd.notna(r["share_new"]) and r["share_new"] >= MIN_SHARE_FOR_INDEX and r["launched_n"] >= MIN_LAUNCHED else None,
         axis=1,
     )
     df["low_n"] = df["sold_out_n"] < LOW_N
@@ -238,7 +250,7 @@ def _series_and_alerts(con, report_date: str) -> tuple[pd.DataFrame, pd.DataFram
             continue
         med = float(base.median())
         mad = float((base - med).abs().median())
-        threshold = med + 2 * 1.4826 * mad
+        threshold = med + 2 * MAD_SCALE * mad
         if this_week >= MIN_ALERT_COUNT and this_week > threshold:
             alerts.append({"attribute": attr, "value": value, "this_week": this_week,
                            "baseline_median": med, "baseline_mad": mad})
@@ -249,24 +261,25 @@ def _movements(m: WeeklyMetrics) -> list[dict]:
     """Three to five sentences' worth of structured movements, strongest first."""
     out: list[dict] = []
     attrs = m.attributes.dropna(subset=["demand_index"])
-    strong = attrs[(attrs["sold_out_n"] >= (LOW_N if not m.calibration else 5)) & (attrs["demand_index"] >= 1.4)]
+    strong = attrs[(attrs["sold_out_n"] >= (LOW_N if not m.calibration else MOVEMENT_MIN_N_CALIBRATION))
+                   & (attrs["demand_index"] >= MOVEMENT_OVER_INDEX)]
     for r in strong.sort_values("demand_index", ascending=False).head(3).itertuples():
         out.append({"kind": "attribute_over_index", "attribute": r.attribute, "value": r.value,
                     "index": round(r.demand_index, 2), "share_new": r.share_new, "share_sold_out": r.share_sold_out,
                     "n": int(r.sold_out_n), "low_n": bool(r.low_n), "source": "tags × net_sold_out, 8 uger"})
-    weak = attrs[(attrs["launched_n"] >= 15) & (attrs["demand_index"] <= 0.5)]
+    weak = attrs[(attrs["launched_n"] >= MOVEMENT_MIN_LAUNCHED) & (attrs["demand_index"] <= MOVEMENT_UNDER_INDEX)]
     for r in weak.sort_values("demand_index").head(2).itertuples():
         out.append({"kind": "attribute_under_index", "attribute": r.attribute, "value": r.value,
                     "index": round(r.demand_index, 2), "share_new": r.share_new, "share_sold_out": r.share_sold_out,
                     "n": int(r.sold_out_n), "low_n": bool(r.low_n), "source": "tags × net_sold_out, 8 uger"})
     b = m.brands.dropna(subset=["sell_out_rate_4w"])
-    b = b[b["cohort_4w_n"] >= 5]
+    b = b[b["cohort_4w_n"] >= MOVEMENT_MIN_COHORT]
     if len(b):
         top = b.sort_values("sell_out_rate_4w", ascending=False).iloc[0]
         out.append({"kind": "brand_sell_out_4w", "brand": top["brand"], "rate": float(top["sell_out_rate_4w"]),
                     "n": int(top["cohort_4w_n"]), "source": "launches × net_sold_out"})
     md = m.brands.dropna(subset=["markdown_share"]).sort_values("markdown_share", ascending=False)
-    if len(md) and md.iloc[0]["markdown_share"] >= 0.25:
+    if len(md) and md.iloc[0]["markdown_share"] >= MOVEMENT_MARKDOWN_SHARE:
         out.append({"kind": "brand_markdown", "brand": md.iloc[0]["brand"], "share": float(md.iloc[0]["markdown_share"]),
                     "discount": md.iloc[0]["median_discount"], "source": "seneste snapshot"})
     for r in m.alerts.sort_values("this_week", ascending=False).head(2).itertuples():
@@ -349,7 +362,8 @@ def _sold_out_state(con, report_date: str) -> pd.DataFrame:
         unavailable_total = group[f"{prefix}unavailable_n"].transform("sum")
         df[f"{prefix}share_live"] = (df[f"{prefix}live_n"] / live_total).where(live_total > 0)
         df[f"{prefix}share_unavailable"] = (df[f"{prefix}unavailable_n"] / unavailable_total).where(unavailable_total > 0)
-        ok = (df[f"{prefix}share_live"] >= 0.02) & (df[f"{prefix}live_n"] >= MIN_LAUNCHED) & df[f"{prefix}share_unavailable"].notna()
+        ok = ((df[f"{prefix}share_live"] >= MIN_SHARE_FOR_INDEX) & (df[f"{prefix}live_n"] >= MIN_LAUNCHED)
+              & df[f"{prefix}share_unavailable"].notna())
         df[f"{prefix}state_index"] = (df[f"{prefix}share_unavailable"] / df[f"{prefix}share_live"]).where(ok)
     df["low_n"] = df["unavailable_n"] < LOW_N
     return df.sort_values(["scope", "attribute", "state_index"], ascending=[True, True, False]).reset_index(drop=True)

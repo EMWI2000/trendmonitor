@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import Card from "@/components/Card";
 import IndexBars, { type IndexBarRow } from "@/components/IndexBars";
 import LowNBadge from "@/components/LowNBadge";
+import MethodNote from "@/components/MethodNote";
 import NotSalesNote from "@/components/NotSalesNote";
 import PageHeader from "@/components/PageHeader";
 import SeriesChart, { type SeriesPanel, type SeriesPoint } from "@/components/SeriesChart";
@@ -11,6 +12,7 @@ import Tabs, { type TabSpec } from "@/components/Tabs";
 import { loadAlerts, loadAttributes, loadMeta, loadSeries, taxonomyAttributes } from "@/lib/data";
 import { fmtDate, fmtIndex, fmtInt, fmtNum, fmtPct, isNum } from "@/lib/format";
 import { ATTRIBUTE_ORDER, attributeLabel } from "@/lib/labels";
+import { MAD_SCALE_LABEL, MIN_ALERT_COUNT, MIN_SHARE_FOR_INDEX, RESTOCK_WINDOW_DAYS } from "@/lib/method";
 import type { AttributeRow, SeriesRow } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Attributindeks" };
@@ -35,19 +37,19 @@ function AttributeTable({ rows, lowN, weeks }: { rows: AttributeRow[]; lowN: num
             <th scope="col" className="px-2 py-2 font-medium">
               Værdi
             </th>
-            <th scope="col" className="px-2 py-2 text-right font-medium">
+            <th scope="col" className="px-2 py-2 text-right font-medium" title={`Produkter hos peers med lanceringsdato inden for ${weeks} uger og værdien (launched_n)`}>
               Lanceret, {weeks} uger
             </th>
-            <th scope="col" className="px-2 py-2 text-right font-medium">
+            <th scope="col" className="px-2 py-2 text-right font-medium" title={`Netto udsolgt-events inden for ${weeks} uger på produkter med værdien (sold_out_n)`}>
               Netto udsolgt, {weeks} uger
             </th>
-            <th scope="col" className="px-2 py-2 text-right font-medium">
+            <th scope="col" className="px-2 py-2 text-right font-medium" title="launched_n delt med alle lanceringer med en værdi i attributten (share_new)">
               Andel af nyt
             </th>
-            <th scope="col" className="px-2 py-2 text-right font-medium">
+            <th scope="col" className="px-2 py-2 text-right font-medium" title="sold_out_n delt med alle netto udsolgt-events med en værdi i attributten (share_sold_out)">
               Andel af udsolgt
             </th>
-            <th scope="col" className="px-2 py-2 text-right font-medium">
+            <th scope="col" className="px-2 py-2 text-right font-medium" title="share_sold_out / share_new (demand_index)">
               Indeks
             </th>
           </tr>
@@ -158,13 +160,15 @@ export default function AttributesPage() {
       );
   }
 
+  const firstSnapshot = meta.snapshot_dates.length > 0 ? meta.snapshot_dates[0] : meta.latest_snapshot_date;
+
   return (
     <>
       <PageHeader
         title="Attributindeks over tid"
         lead={
           <>
-            Bevægelsen: netto udsolgt-events (udsolgt minus genopfyldning inden 7 dage) pr. attributværdi,
+            Bevægelsen: netto udsolgt-events (udsolgt minus genopfyldning inden {RESTOCK_WINDOW_DAYS} dage) pr. attributværdi,
             indekseret mod værdiens andel af det, peers har lanceret de seneste {weeks} uger. Supplement til øjebliksbilledet under Hvad er
             udsolgt nu.
           </>
@@ -178,6 +182,43 @@ export default function AttributesPage() {
 
       <div className="space-y-6">
         <Card
+          title="Hvad kommer hvornår"
+          description={`Første snapshot ${fmtDate(firstSnapshot)}; lige nu ${fmtInt(meta.weeks_of_history)} af ${fmtInt(t.baseline_weeks)} ugers eventhistorik.`}
+        >
+          <ol className="grid grid-cols-1 gap-3 text-sm md:grid-cols-3">
+            <li className="rounded border border-hair bg-plane p-3">
+              <div className="text-xs uppercase tracking-wide text-muted">Dag 2</div>
+              <div className="mt-1 font-medium text-ink">Events</div>
+              <p className="mt-1 text-ink2">
+                Når der er to snapshots, sammenlignes de variant for variant: udsolgt, genopfyldt, nyt, delistet, nedsat.
+                Ugeserien får sine første punkter, brandtabellen sine første event-tal.
+              </p>
+            </li>
+            <li className="rounded border border-hair bg-plane p-3">
+              <div className="text-xs uppercase tracking-wide text-muted">Omkring uge 4</div>
+              <div className="mt-1 font-medium text-ink">Indeks bliver meningsfuldt</div>
+              <p className="mt-1 text-ink2">
+                Indekset kræver mindst {fmtInt(t.min_launched)} lanceringer og {fmtPct(MIN_SHARE_FOR_INDEX)} af det nye
+                sortiment pr. værdi, og n under {fmtInt(t.low_n)} netto udsolgte er lavt n. Det tager nogle uger, før de
+                fleste værdier passerer det.
+              </p>
+            </li>
+            <li className="rounded border border-hair bg-plane p-3">
+              <div className="text-xs uppercase tracking-wide text-muted">
+                Uge {fmtInt(t.baseline_weeks)}–{fmtInt(t.baseline_weeks + 1)}
+              </div>
+              <div className="mt-1 font-medium text-ink">Afvigelser</div>
+              <p className="mt-1 text-ink2">
+                Efter {fmtInt(t.baseline_weeks)} ugers eventhistorik slutter kalibreringen; fra uge{" "}
+                {fmtInt(t.baseline_weeks + 1)} ({fmtInt(t.baseline_weeks)} hele baseline-uger plus den aktuelle) kan en uge
+                kaldes en afvigelse: mindst {fmtInt(MIN_ALERT_COUNT)} netto udsolgte og flere end medianen plus 2 ×{" "}
+                {MAD_SCALE_LABEL} × MAD. Indtil da står der Kalibrering, og intet kaldes en afvigelse.
+              </p>
+            </li>
+          </ol>
+        </Card>
+
+        <Card
           title={`Udsolgt-indeks pr. attribut, ${weeks} uger`}
           description={
             anyIndex
@@ -186,6 +227,22 @@ export default function AttributesPage() {
           }
         >
           <Tabs tabs={tabs} panels={indexPanels} ariaLabel="Attribut" />
+          <MethodNote
+            anchor="indeks"
+            fields={["attributes.json: launched_n, sold_out_n, share_new, share_sold_out, demand_index, low_n", "meta.json: thresholds.launch_window_days, min_launched, low_n"]}
+          >
+            <p>
+              Pr. attributværdi hos peers: share_new = andel af produkter med lanceringsdato inden for{" "}
+              {fmtInt(t.launch_window_days)} dage, der har værdien; share_sold_out = andel af netto udsolgt-events i samme
+              vindue på produkter med værdien. Indeks = share_sold_out / share_new.
+            </p>
+            <p>
+              Netto udsolgt er et udsolgt-event uden genopfyldning af samme variant inden {fmtInt(RESTOCK_WINDOW_DAYS)}{" "}
+              dage. Intet indeks når share_new er under {fmtPct(MIN_SHARE_FOR_INDEX)} eller launched_n under{" "}
+              {fmtInt(t.min_launched)}; n er sold_out_n, lavt n under {fmtInt(t.low_n)}. Delistede produkter tæller
+              aldrig som udsolgte.
+            </p>
+          </MethodNote>
         </Card>
 
         <Card
@@ -197,7 +254,7 @@ export default function AttributesPage() {
               <p className="font-medium text-ink">Events starter fra dag 2.</p>
               <p className="mt-1">
                 Ugeserien bygges af forskelle mellem to daglige snapshots. Første snapshot er fra{" "}
-                {fmtDate(meta.latest_snapshot_date)}; de første punkter kommer efter næste kørsel,
+                {fmtDate(firstSnapshot)}; de første punkter kommer efter næste kørsel,
                 og serien bliver læsbar efter omkring 4 uger. Indtil da er Hvad er udsolgt
                 nu det rigtige sted at kigge.
               </p>
@@ -205,6 +262,13 @@ export default function AttributesPage() {
           ) : (
             <Tabs tabs={tabs} panels={seriesPanels} ariaLabel="Attribut, ugeserie" />
           )}
+          <MethodNote anchor="kalibrering" fields={["series.json: attribute, value, weeks_ago, n", "meta.json: thresholds.series_weeks"]}>
+            <p>
+              Hvert punkt er antal netto udsolgt-events hos peers i én uge (7 dage bagud fra rapportdatoen, weeks_ago 0 er
+              rapportugen) på produkter med værdien, over de seneste {fmtInt(t.series_weeks)} uger. De{" "}
+              {SERIES_PANELS_PER_ATTRIBUTE} værdier med flest events i attributten vises.
+            </p>
+          </MethodNote>
         </Card>
 
         <Card title={meta.calibration ? "Kalibrering" : "Afvigelser denne uge"}>
@@ -219,6 +283,11 @@ export default function AttributesPage() {
                 robuste spredning (MAD). Indtil da viser siden kun tilstand og indeks.
               </p>
             </div>
+          ) : meta.weeks_of_history < t.baseline_weeks + 1 ? (
+            <p className="text-sm text-ink2">
+              Baseline etableret; de første afvigelser kan beregnes fra næste uge ({fmtInt(t.baseline_weeks)} hele
+              baseline-uger plus den aktuelle).
+            </p>
           ) : alerts.length === 0 ? (
             <p className="text-sm text-ink2">Ingen afvigelser denne uge.</p>
           ) : (
@@ -257,6 +326,15 @@ export default function AttributesPage() {
               </table>
             </div>
           )}
+          <MethodNote anchor="kalibrering" fields={["alerts.json: this_week, baseline_median, baseline_mad", "meta.json: weeks_of_history, calibration, thresholds.baseline_weeks"]}>
+            <p>
+              For hver værdi sammenlignes ugens antal netto udsolgte med medianen af de foregående{" "}
+              {fmtInt(t.baseline_weeks)} uger. Tærskel = median + 2 × {MAD_SCALE_LABEL} × MAD, hvor MAD er medianen af
+              de absolutte afvigelser fra medianen. En afvigelse kræver mindst {fmtInt(MIN_ALERT_COUNT)} events i ugen og
+              mindst {fmtInt(t.baseline_weeks + 1)} ugers historik.
+            </p>
+            <p>Historik tælles i uger siden første event; under {fmtInt(t.baseline_weeks)} uger er alt kalibrering.</p>
+          </MethodNote>
         </Card>
       </div>
     </>

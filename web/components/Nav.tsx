@@ -10,6 +10,7 @@ const LINKS: ReadonlyArray<{ href: string; label: string }> = [
   { href: "/brands", label: "Brands" },
   { href: "/positionering", label: "Positionering" },
   { href: "/data", label: "Datakvalitet" },
+  { href: "/metode", label: "Metode" },
 ];
 
 export default function Nav() {

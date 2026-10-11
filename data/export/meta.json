@@ -178,6 +178,81 @@
    "url": "https://www.bymalenebirger.com"
   }
  ],
+ "method": {
+  "restock_window_days": 7,
+  "min_share_for_index": 0.02,
+  "live_days": 120,
+  "min_alert_count": 5,
+  "mad_scale": 1.4826,
+  "markdown_drop": 0.05,
+  "min_rule_attributes": 4,
+  "min_rule_confidence": 0.5,
+  "cohort_4w_days": [
+   22,
+   35
+  ],
+  "median_days_max_age": 84,
+  "movement_over_index": 1.4,
+  "movement_under_index": 0.5,
+  "movement_min_n_calibration": 5,
+  "movement_min_launched": 15,
+  "movement_min_cohort": 5,
+  "movement_markdown_share": 0.25,
+  "newness_days": 56,
+  "style_weights": {
+   "category": 2.0,
+   "print": 2.0,
+   "colour_family": 1.5,
+   "silhouette": 1.0,
+   "material": 1.0,
+   "sleeve": 0.5,
+   "length": 0.5,
+   "occasion": 0.5
+  },
+  "neutrals": [
+   "black",
+   "brown",
+   "grey",
+   "navy",
+   "white"
+  ],
+  "fx_to_dkk": {
+   "DKK": 1.0,
+   "EUR": 7.46,
+   "SEK": 0.68,
+   "GBP": 8.6,
+   "USD": 6.6
+  },
+  "price_band_labels": [
+   "<1.000",
+   "1.000–1.999",
+   "2.000–2.999",
+   "3.000+"
+  ],
+  "alpha_sizes": [
+   "XXXS",
+   "XXS",
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL",
+   "XXXL"
+  ],
+  "numeric_sizes": [
+   "32",
+   "34",
+   "36",
+   "38",
+   "40",
+   "42",
+   "44",
+   "46",
+   "48"
+  ],
+  "request_delay_seconds": 2.0
+ },
  "notes": {
   "not_sales": "Udsolgt er indkøbsdybde gange efterspørgsel, ikke salg.",
   "index": "Alle attributtal er indekseret mod attributtens andel af nyt sortiment i de seneste 8 uger.",
@@ -186,5 +261,5 @@
   "state": "Udsolgt-tilstand er et øjebliksbillede af varianter uden lager i dag, ikke en bevægelse.",
   "self_excluded": "Referencebrandet indgår aldrig i udsolgt-indekset."
  },
- "generated_at": "2026-10-11T17:23:13+00:00"
+ "generated_at": "2026-10-11T20:29:40+00:00"
 }

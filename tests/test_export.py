@@ -62,6 +62,10 @@ def test_export_writes_valid_json_without_product_rows(tmp_path):
     assert meta["calibration"] is True and meta["weeks_of_history"] >= 1
     assert meta["self_brand"] == "baum" and meta["taxonomy_version"] == load_taxonomy().version
     assert meta["thresholds"]["low_n"] == LOW_N and "ikke salg" in meta["notes"]["not_sales"]
+    method = meta["method"]
+    assert method["restock_window_days"] == 7 and method["min_share_for_index"] == 0.02 and method["live_days"] == 120
+    assert method["mad_scale"] == 1.4826 and method["markdown_drop"] == 0.05 and method["cohort_4w_days"] == [22, 35]
+    assert method["style_weights"]["category"] == 2.0 and "navy" in method["neutrals"] and method["fx_to_dkk"]["EUR"] > 1
     assert meta["generated_at"] == "2026-10-11T06:00:00+00:00"
     assert {b["key"] for b in meta["brands"]} >= {"baum", "stinegoya"}
 

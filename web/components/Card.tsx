@@ -4,12 +4,14 @@ interface Props {
   title?: string;
   description?: ReactNode;
   children: ReactNode;
+  /** Anchor id, so insight cards and the method page can link straight to a section. */
+  id?: string;
 }
 
 /** A bordered section on the chart surface. */
-export default function Card({ title, description, children }: Props) {
+export default function Card({ title, description, children, id }: Props) {
   return (
-    <section className="rounded border border-hair bg-surface p-4">
+    <section id={id} className="scroll-mt-4 rounded border border-hair bg-surface p-4">
       {title ? <h2 className="text-base font-semibold text-ink">{title}</h2> : null}
       {description ? <div className="mt-1 text-sm text-ink2">{description}</div> : null}
       <div className={title || description ? "mt-4" : ""}>{children}</div>

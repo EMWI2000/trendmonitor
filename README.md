@@ -95,10 +95,14 @@ the same low-n flag as the report. `web/` is the Next.js dashboard that reads th
 
 ## Dashboard (web/)
 
-`web/` is a Next.js 15 site that renders the exported JSON into six Danish pages (overview, what is sold
-out now, attribute index over time, brands, positioning, data quality), server-side at build time and with
-the same guard rails as the report: no sales claims, n always shown, "lavt n" below 10, a "Kalibrering"
-banner until 8 weeks of history. It deploys on Vercel with Root Directory = `web` and redeploys when a push
+`web/` is a Next.js 15 site that renders the exported JSON into seven Danish pages (overview with a "Kort
+fortalt" summary, next-meeting steps and the "Hvad betyder det for Baum" insight cards from `insights.json`,
+what is sold out now incl. Baum's own position per attribute value, attribute index over time, brands,
+positioning, data quality incl. tag coverage per attribute, and a method page `/metode` with formulas, a
+worked example and every caveat), server-side at build time and with the same guard rails as the report: no
+sales claims, n always shown, "lavt n" below 10, a "Kalibrering" banner until 8 weeks of history. Every chart
+and table carries a collapsed "Sådan er det regnet" note linking to the method page; thresholds the export
+carries are read from it, the rest is mirrored from the Python constants in `web/lib/method.ts`. It deploys on Vercel with Root Directory = `web` and redeploys when a push
 to `main` changes `web/` or `data/export/`, so the daily GitHub Actions commit is what refreshes it. Setup and
 details: [web/README.md](web/README.md).
 

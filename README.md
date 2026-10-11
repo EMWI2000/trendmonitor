@@ -41,6 +41,7 @@ uv run trendmonitor snapshot [--date D] [--brand key]
 uv run trendmonitor diff [--date D]
 uv run trendmonitor tag [--date D] [--no-claude] [--limit N]
 uv run trendmonitor report [--date D]
+uv run trendmonitor profile [--date D] [--no-claude]   # style + positioning profile vs. the self brand
 uv run trendmonitor run-daily [--no-claude]
 uv run trendmonitor demo [--days 70] [--seed 7]
 ```
@@ -58,11 +59,25 @@ src/trendmonitor/
   diff.py               events: new_product, delisted, sold_out, restock, markdown, price_change, product_sold_out
   tagger.py             RuleTagger (free) and ClaudeTagger (forced tool use, enum = taxonomy)
   metrics.py            DuckDB: brand table, attribute demand index, 12-week series, robust alerts
-  report.py             Danish markdown report
+  report.py             Danish markdown weekly report
+  profile.py            assortment profile per brand, JS distance and overlap vs. self brand, implied-customer read
   demo.py               synthetic catalogues for offline runs
 tests/                  fixtures with two consecutive days + unit and end-to-end tests
 .github/workflows/      ci.yml, daily.yml, weekly.yml
 ```
+
+## Style and positioning profile
+
+`trendmonitor profile` writes `reports/profile-YYYY-MM-DD.md` (also run by the weekly workflow): per brand
+the attribute mix, price architecture (quartiles, bands, dress median, price index vs. the self brand),
+size system and range, newness, markdown share, print share and non-neutral colour share; then a
+weighted Jensen–Shannon style distance and a (category × print × colour) overlap score against the self
+brand, so the sell-out index can be read against the brands the customer actually chooses between.
+Section 2 is an implied-customer read: occasion and tone-of-voice word shares from product texts,
+price tier, size span, and (with `ANTHROPIC_API_KEY`) a Claude read of sampled descriptions giving age
+band, life stage, style identity and how the offer differs from Baum's. That section describes the
+offer, not the buyer: demographics need Baum's own customer data (Shopify customer reports, Meta
+Audience Insights, newsletter data), which is the natural next input.
 
 ## What the numbers mean
 

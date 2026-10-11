@@ -12,7 +12,7 @@ pandas only for row-level transforms. CLI is argparse in `src/trendmonitor/cli.p
 environment variables (`ANTHROPIC_API_KEY`, `TM_MODEL`, `TM_CONTACT`); never in the repo.
 
 Commands: `uv sync` · `uv run pytest` · `uv run ruff check src tests` ·
-`uv run trendmonitor probe|snapshot|diff|tag|report|run-daily|demo`.
+`uv run trendmonitor probe|snapshot|diff|tag|report|profile|run-daily|demo`.
 
 Run `uv run pytest` before every commit. Keep functions small and pure where possible; I/O at the
 edges (`storage.py`, `shopify.py`), logic in the middle (`diff.py`, `tagger.py`, `metrics.py`).
@@ -32,6 +32,6 @@ edges (`storage.py`, `shopify.py`), logic in the middle (`diff.py`, `tagger.py`,
 
 ## Status
 
-MVP built on fixtures (no live run yet). Next: first live probe + snapshot from a machine with
+MVP built on fixtures (no live run yet), incl. style/positioning profile (`profile.py`). Next: first live probe + snapshot from a machine with
 internet access, then validate the rule tagger against 50 designer-tagged products
 (`data/gold/`), then enable the Claude tagger.

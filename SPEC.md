@@ -159,6 +159,19 @@ three to five movements each with direction, size and source table, then the bra
 attribute index table (top 10 by demand_index with n ≥ 10), the alert list or calibration note,
 and a "what changed in coverage" footer (brands that failed, taxonomy version).
 
+## Profile (style and positioning)
+
+`profile.py` reads the latest snapshot and tags. Per brand: attribute mix (share per value, tagged
+products only), price p25/p50/p75 and bands (<1.000, 1.000–1.999, 2.000–2.999, 3.000+), dress median,
+size system (alfa/numerisk) and range, newness (published_at within 56 days), markdown share, print
+share (1 − solid), non-neutral colour share, occasion and voice word shares from title + body_text.
+Positioning vs. the `self` brand: Jensen–Shannon distance per attribute, weighted mean
+(category 2, print 2, colour 1.5, silhouette 1, material 1, others 0.5), overlap = share of the brand's
+(category, print, colour_family) cells present in the self brand, price index = p50 / self p50.
+Optional Claude read (`record_profile` tool, closed enums) on ≤ 40 sampled product texts per brand with
+the self brand's sample as reference. Output `reports/profile-YYYY-MM-DD.md`. The implied-customer
+section is labelled as an inference from the offer; it is not demographic data.
+
 ## Non-goals for the MVP
 
 No image embeddings, no Instagram/TikTok/Pinterest, no Google Trends, no Power BI model, no

@@ -29,6 +29,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--limit", type=int)
     p = sub.add_parser("report", help="write the weekly report")
     p.add_argument("--date")
+    p = sub.add_parser("profile", help="style and positioning profile of every brand vs. the self brand")
+    p.add_argument("--date")
+    p.add_argument("--no-claude", action="store_true", help="skip the Claude implied-customer read")
     p = sub.add_parser("run-daily", help="snapshot + diff + tag")
     p.add_argument("--date")
     p.add_argument("--no-claude", action="store_true")
@@ -75,6 +78,13 @@ def main(argv: list[str] | None = None) -> int:
         print(path)
         return 0
 
+    if args.cmd == "profile":
+        from .profile import write_profile
+
+        path = write_profile(args.date, args.data_dir, args.reports_dir, use_claude=False if args.no_claude else None)
+        print(path)
+        return 0
+
     if args.cmd == "run-daily":
         date = args.date or today_utc()
         _, runs = run_snapshot(load_sources(), date=date, data_dir=args.data_dir)
@@ -90,10 +100,12 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "demo":
         from .demo import run_demo
+        from .profile import write_profile
 
         dates = run_demo(args.data_dir, days=args.days, seed=args.seed)
         path = write_report(dates[-1], args.data_dir, args.reports_dir)
-        print(f"{len(dates)} synthetic days written to {args.data_dir}; report: {path}")
+        prof = write_profile(dates[-1], args.data_dir, args.reports_dir, use_claude=False)
+        print(f"{len(dates)} synthetic days written to {args.data_dir}; report: {path}; profile: {prof}")
         return 0
 
     return 2

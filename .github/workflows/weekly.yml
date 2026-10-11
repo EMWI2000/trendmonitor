@@ -1,0 +1,33 @@
+name: Weekly report
+
+on:
+  schedule:
+    - cron: "41 5 * * 1"   # Mondays 05:41 UTC, after the daily snapshot has committed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendmonitor-data
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - run: uv run trendmonitor report
+      - name: Commit report
+        run: |
+          git config user.name "trendmonitor-bot"
+          git config user.email "trendmonitor-bot@users.noreply.github.com"
+          git add reports/
+          git diff --cached --quiet || git commit -m "report: $(date -u +%G-W%V)"
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git push

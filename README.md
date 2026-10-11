@@ -1,0 +1,84 @@
+# trendmonitor
+
+MVP: daily snapshots of peer brands' public Shopify catalogues → sell-out events → attribute tags
+(closed taxonomy, rules + Claude) → weekly Danish report. Built for Baum und Pferdgarten's trend
+foresight work. Design rationale is in SPEC.md; working rules for Claude Code in CLAUDE.md.
+
+## Try it offline (2 minutes)
+
+```bash
+uv sync
+uv run pytest -q                 # 17 tests
+uv run trendmonitor demo         # 70 synthetic days → data/ and reports/2026-Www.md
+```
+
+The demo uses invented catalogues with built-in hazards (floral and lace sell faster), so the
+report should show those attributes over-indexed. Delete `data/` and `reports/` before going live.
+
+## Go live (30 minutes)
+
+1. Push this folder to a private GitHub repo. Actions is the runtime: `daily.yml` snapshots at
+   04:17 UTC and commits parquet files under `data/`; `weekly.yml` writes `reports/YYYY-Www.md`
+   on Mondays. Both are also runnable from the Actions tab (`workflow_dispatch`).
+2. Repository → Settings → Secrets and variables → Actions:
+   secret `ANTHROPIC_API_KEY` (optional; without it tagging is rules-only),
+   variables `TM_MODEL` (default `claude-haiku-5-5`) and `TM_CONTACT` (an email or URL put in
+   the User-Agent, so store owners can reach you).
+3. Verify the peer set from any machine with internet: `uv run trendmonitor probe`. Set
+   `enabled: false` in `config/sources.yaml` for brands that return `not_shopify_or_disabled`.
+4. Run the daily workflow once by hand, check `data/runs.parquet`, then let the schedule run.
+   Events start on day 2; the attribute index becomes meaningful after ~4 weeks; alerts switch
+   on after 8 weeks of history (the report says "Kalibrering" until then).
+
+Rough running cost: GitHub Actions free tier covers ~10 min/day; Claude tagging only touches new
+products (tens per day across the peer set), well under USD 10/month on Haiku.
+
+## Commands
+
+```
+uv run trendmonitor probe                  # first page of every brand, writes data/probe.json
+uv run trendmonitor snapshot [--date D] [--brand key]
+uv run trendmonitor diff [--date D]
+uv run trendmonitor tag [--date D] [--no-claude] [--limit N]
+uv run trendmonitor report [--date D]
+uv run trendmonitor run-daily [--no-claude]
+uv run trendmonitor demo [--days 70] [--seed 7]
+```
+
+`--data-dir` and `--reports-dir` override the default `data/` and `reports/`.
+
+## Layout
+
+```
+config/sources.yaml     peer set (the only allowed domains) and politeness settings
+config/taxonomy.yaml    closed attribute taxonomy with Danish/English keywords
+src/trendmonitor/
+  shopify.py            polite client (robots.txt, delay, UA, retries) + normalisation
+  snapshot.py           daily run, writes data/snapshots/YYYY-MM-DD.parquet + data/runs.parquet
+  diff.py               events: new_product, delisted, sold_out, restock, markdown, price_change, product_sold_out
+  tagger.py             RuleTagger (free) and ClaudeTagger (forced tool use, enum = taxonomy)
+  metrics.py            DuckDB: brand table, attribute demand index, 12-week series, robust alerts
+  report.py             Danish markdown report
+  demo.py               synthetic catalogues for offline runs
+tests/                  fixtures with two consecutive days + unit and end-to-end tests
+.github/workflows/      ci.yml, daily.yml, weekly.yml
+```
+
+## What the numbers mean
+
+Sold-out is buy depth × demand, never sales. Every attribute number is a share of net sold-out
+events (sold_out minus a restock of the same variant within 7 days) divided by the attribute's
+share of products launched in the last 8 weeks, across peer and benchmark brands (never the
+`self` brand). An index of 1.5 means the attribute is over-represented among sell-outs by 50 %
+relative to how much of it the peers put out. n < 10 is flagged. Delisted products are reported
+but never counted as sold out.
+
+## Next steps (in order)
+
+1. Live probe + first snapshot; fix `size_option` quirks per brand if sizes land in option2.
+2. 50 products hand-tagged by the design team into `data/gold/` and an eval command
+   (rules vs. Claude vs. gold), before enabling Claude tagging in the schedule.
+3. Taxonomy v0.2 with the design team's own print families.
+4. Power BI over `data/*.parquet` (DuckDB ODBC or a daily CSV export).
+5. Additional sources with the same `events`/`tags` shape: own sell-through, Instagram Hashtag
+   API (after App Review), Google Trends proxy, runway counts.

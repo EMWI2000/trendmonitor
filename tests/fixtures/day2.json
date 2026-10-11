@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "title": "Nora puff sleeve midi dress, butter yellow floral",
+      "handle": "nora-dress",
+      "product_type": "Dress",
+      "vendor": "Testbrand",
+      "tags": ["Dress", "Floral", "Yellow", "Viscose", "New in"],
+      "body_html": "<p>Midikjole i <strong>viskose</strong> med pufærmer og blomsterprint. Perfekt til fest.</p>",
+      "published_at": "2026-09-20T08:00:00+02:00",
+      "created_at": "2026-09-18T08:00:00+02:00",
+      "updated_at": "2026-09-21T08:00:00+02:00",
+      "images": [{"src": "https://cdn.example.invalid/nora.jpg"}],
+      "variants": [
+        {"id": 1011, "sku": "NORA-XS", "option1": "XS", "option2": null, "option3": null, "price": "1799.00", "compare_at_price": null, "available": true},
+        {"id": 1012, "sku": "NORA-S", "option1": "S", "option2": null, "option3": null, "price": "1799.00", "compare_at_price": null, "available": false},
+        {"id": 1013, "sku": "NORA-M", "option1": "M", "option2": null, "option3": null, "price": "1799.00", "compare_at_price": null, "available": false}
+      ]
+    },
+    {
+      "id": 102,
+      "title": "Elin oversized blazer, navy pinstripe",
+      "handle": "elin-blazer",
+      "product_type": "Blazer",
+      "vendor": "Testbrand",
+      "tags": ["Blazer", "Tailoring", "Navy"],
+      "body_html": "<p>Oversized blazer i uldblanding med nålestriber.</p>",
+      "published_at": "2026-08-01T08:00:00+02:00",
+      "created_at": "2026-08-01T08:00:00+02:00",
+      "updated_at": "2026-09-21T08:00:00+02:00",
+      "images": [],
+      "variants": [
+        {"id": 1021, "sku": "ELIN-36", "option1": "Navy", "option2": "36", "option3": null, "price": "1749.00", "compare_at_price": "2499.00", "available": true},
+        {"id": 1022, "sku": "ELIN-38", "option1": "Navy", "option2": "38", "option3": null, "price": "1749.00", "compare_at_price": "2499.00", "available": true}
+      ]
+    },
+    {
+      "id": 104,
+      "title": "Saga pleated mini skirt, cherry red polka dot",
+      "handle": "saga-skirt",
+      "product_type": "Skirt",
+      "vendor": "Testbrand",
+      "tags": ["Skirt", "Polka dot", "Red"],
+      "body_html": "<p>Plisseret mininederdel i satin med prikker.</p>",
+      "published_at": "2026-09-21T06:00:00+02:00",
+      "created_at": "2026-09-21T06:00:00+02:00",
+      "updated_at": "2026-09-21T06:00:00+02:00",
+      "images": [{"src": "https://cdn.example.invalid/saga.jpg"}],
+      "variants": [
+        {"id": 1041, "sku": "SAGA-S", "option1": "S", "option2": null, "option3": null, "price": "1199.00", "compare_at_price": null, "available": true}
+      ]
+    }
+  ]
+}

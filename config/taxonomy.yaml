@@ -1,0 +1,117 @@
+# Closed attribute taxonomy. Every tag written to data/tags.parquet must use one of the
+# values listed here (or null when unknown). This file is the source of truth: the Claude
+# tagger builds its output schema from it, the rule tagger reads the keywords from it, and
+# tests fail if a tag uses a value outside it.
+#
+# Changing a value or adding one is a pull request against this file, because it breaks
+# comparability of the time series. Keywords are matched case-insensitively against title,
+# tags, product_type and the first 600 characters of the description (Danish and English).
+#
+# DRAFT for validation with the design team. Expected edits: print families that matter to
+# Baum's own language (e.g. split "floral" into painterly / ditsy / botanical), and silhouette
+# values per category.
+
+version: 0.1
+
+attributes:
+  category:
+    description: Product category
+    values:
+      dress:      [dress, kjole, gown]
+      top:        [top, bluse, blouse, tee, t-shirt, tank, camisole, body, bodysuit]
+      shirt:      [shirt, skjorte]
+      knit:       [knit, strik, sweater, pullover, jumper, cardigan, strikket, vest]
+      jacket:     [jacket, jakke, bomber, anorak]
+      coat:       [coat, frakke, trench, parka, puffer, dunjakke]
+      blazer:     [blazer]
+      trousers:   [trousers, pants, bukser, buks, chinos, leggings, culottes]
+      jeans:      [jeans, denim pants, denim trousers]
+      skirt:      [skirt, nederdel]
+      shorts:     [shorts]
+      jumpsuit:   [jumpsuit, overall, buksedragt, playsuit]
+      swimwear:   [swimsuit, bikini, badedragt, swim]
+      accessory:  [bag, taske, scarf, tørklæde, belt, bælte, hat, hue, cap, sock, strømpe, tights, jewellery, jewelry, earring, necklace, ring, sunglasses, gloves, handske]
+      shoes:      [shoe, sko, boot, støvle, sandal, sneaker, loafer, heel, pump, ballerina, flat]
+  silhouette:
+    description: Overall silhouette or fit
+    values:
+      fitted:     [fitted, slim, tight, tailored fit, bodycon, figursyet, tætsiddende, stretch]
+      straight:   [straight, lige, regular fit, classic fit]
+      relaxed:    [relaxed, loose, afslappet, løs, easy]
+      oversized:  [oversized, oversize, boxy, voluminous, volumen]
+      a-line:     [a-line, a-shape, a-linje, flared, flare, svaj]
+      wide-leg:   [wide leg, wide-leg, wide, vidde, palazzo, baggy]
+      balloon:    [balloon, puff skirt, bubble, ballon]
+      wrap:       [wrap, slå-om, slaa-om, omslag]
+      shift:      [shift, column, sheath, straight dress]
+      pleated:    [pleated, plissé, plisse, plisseret, læg]
+  print:
+    description: Print or pattern family
+    values:
+      solid:      [solid, plain, ensfarvet, unicolour]
+      floral:     [floral, flower, blomst, blomster, rose, botanical, bloom, garden, daisy, tulip, poppy]
+      animal:     [leopard, leo, zebra, snake, python, animal, tiger, cheetah, cow, giraffe]
+      stripe:     [stripe, striped, stribet, striber, pinstripe]
+      check:      [check, checked, plaid, tartan, gingham, tern, ternet, houndstooth, hanefjed, vichy]
+      dot:        [polka, dot, dots, prik, prikker, prikket, spot]
+      abstract:   [abstract, graphic, geometric, geometrisk, swirl, marble, brush, painted, paint]
+      logo:       [logo, monogram, branded, lettering, slogan, text print]
+      paisley:    [paisley]
+      other-print: [print, printed, mønster, mønstret, pattern, patterned, jacquard, embroidered, broderet]
+  colour_family:
+    description: Dominant colour family
+    values:
+      black:      [black, sort]
+      white:      [white, hvid, cream, creme, off-white, ivory, ecru, chalk, optic]
+      grey:       [grey, gray, grå, charcoal, melange, heather]
+      navy:       [navy, marine, marineblå, midnight]
+      blue:       [blue, blå, cobalt, sky, denim blue, azure, turquoise, turkis, teal, petrol, aqua]
+      green:      [green, grøn, olive, oliven, khaki, sage, mint, forest, pistachio, lime, emerald]
+      yellow:     [yellow, gul, butter, lemon, mustard, sennep, gold, guld, honey]
+      orange:     [orange, apricot, peach, coral, rust, terracotta, tangerine]
+      red:        [red, rød, cherry, burgundy, bordeaux, wine, scarlet, crimson, tomato, brick]
+      pink:       [pink, lyserød, rosa, rose, fuchsia, magenta, blush, bubblegum, raspberry]
+      purple:     [purple, lilla, lilac, lavender, violet, plum, aubergine, mauve]
+      brown:      [brown, brun, beige, camel, tan, sand, taupe, chocolate, mocha, caramel, nude, oat, stone, nougat]
+      metallic:   [silver, sølv, metallic, gold lamé, sequin, pailletter, glitter, shimmer]
+      multi:      [multi, multicolour, multicolor, multifarvet, colourful, colorful]
+  material:
+    description: Main material family
+    values:
+      cotton:     [cotton, bomuld, poplin, jersey, chambray, twill, corduroy, fløjl]
+      linen:      [linen, hør, hørblanding]
+      silk:       [silk, silke, charmeuse, crepe de chine]
+      wool:       [wool, uld, merino, cashmere, kashmir, alpaca, mohair, tweed, flannel, flonel]
+      viscose:    [viscose, viskose, lyocell, tencel, ecovero, rayon, modal, cupro]
+      polyester:  [polyester, recycled polyester, nylon, polyamide, acrylic, akryl, elastane, elastan]
+      denim:      [denim]
+      leather:    [leather, læder, skind, suede, ruskind, faux leather, vegan leather]
+      lace:       [lace, blonde, blonder, broderie anglaise, crochet, hæklet, mesh, tulle, tyl]
+      satin:      [satin, sateen, duchesse]
+      knitwear:   [knit, strik, rib, ribbed, ribstrik, cable knit, kabelstrik]
+      sequin:     [sequin, sequins, pailletter, paillet]
+  sleeve:
+    description: Sleeve type (tops, dresses, outerwear)
+    values:
+      sleeveless: [sleeveless, ærmeløs, strap, strappy, halter, strapless, tube, spaghetti, cami]
+      short:      [short sleeve, short-sleeve, kort ærme, korte ærmer, cap sleeve]
+      long:       [long sleeve, long-sleeve, lange ærmer, langt ærme, langærmet]
+      puff:       [puff sleeve, puff-sleeve, pufærme, pufærmer, balloon sleeve, bishop sleeve]
+      three-quarter: [3/4 sleeve, three-quarter, trekvart]
+  length:
+    description: Length (dresses, skirts, trousers, coats)
+    values:
+      mini:       [mini, kort, short dress, short skirt]
+      knee:       [knee, knælang, knee-length]
+      midi:       [midi, midi-length, mid-length]
+      maxi:       [maxi, maxi-length, long dress, lang kjole, floor, ankle length, ankellang]
+      cropped:    [cropped, crop, kort model, ankle, 7/8]
+      full:       [full length, full-length, fuld længde]
+  occasion:
+    description: Primary wearing occasion
+    values:
+      everyday:   [everyday, hverdag, casual, daily, weekend]
+      work:       [work, office, kontor, tailoring, tailored, suit, suiting, jakkesæt]
+      occasion:   [party, fest, evening, aften, occasion, wedding, bryllup, cocktail, gala, festive, christmas, jul, new year]
+      outerwear:  [outerwear, overtøj, outdoor, rain, regn, winter, vinter]
+      lounge:     [lounge, loungewear, home, hjemme, sleep, night, pyjamas]

@@ -1,0 +1,48 @@
+name: Daily snapshot
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # 04:17 UTC daily (06:17 Copenhagen in summer); minute chosen to avoid the :00 rush
+  workflow_dispatch:
+    inputs:
+      no_claude:
+        description: "Rules-only tagging (skip Claude API)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendmonitor-data
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - name: Snapshot, diff, tag
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TM_MODEL: ${{ vars.TM_MODEL }}
+          TM_CONTACT: ${{ vars.TM_CONTACT }}
+        run: |
+          if [ "${{ inputs.no_claude }}" = "true" ]; then
+            uv run trendmonitor run-daily --no-claude
+          else
+            uv run trendmonitor run-daily
+          fi
+      - name: Commit data
+        run: |
+          git config user.name "trendmonitor-bot"
+          git config user.email "trendmonitor-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: snapshot $(date -u +%F)"
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git push

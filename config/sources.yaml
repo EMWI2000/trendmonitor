@@ -1,0 +1,84 @@
+# Peer set. Only Shopify storefronts with a public /products.json are supported.
+# Run `uv run trendmonitor probe` to verify each URL; it writes the result to data/probe.json
+# and the daily job skips brands that do not respond. Keep `enabled: false` for brands
+# you have not verified yet, or that have disabled the endpoint.
+#
+# Fields: key (slug used in data), name, url (storefront root, no trailing slash),
+# role (self | peer | benchmark), enabled, size_option (which optionN holds size; null = auto).
+
+user_agent: "trendmonitor/0.1 (+contact: set TM_CONTACT env var)"
+request_delay_seconds: 1.0
+page_size: 250
+max_pages: 40
+
+brands:
+  - key: baum
+    name: Baum und Pferdgarten
+    url: https://baumundpferdgarten.com
+    role: self
+    enabled: true
+  - key: stinegoya
+    name: Stine Goya
+    url: https://stinegoya.com
+    role: peer
+    enabled: true
+  - key: rotate
+    name: Rotate Birger Christensen
+    url: https://www.rotatebirgerchristensen.com
+    role: peer
+    enabled: true
+  - key: remain
+    name: Remain Birger Christensen
+    url: https://www.remainbirgerchristensen.com
+    role: peer
+    enabled: true
+  - key: gestuz
+    name: Gestuz
+    url: https://gestuz.com
+    role: peer
+    enabled: true
+  - key: munthe
+    name: Munthe
+    url: https://munthe.com
+    role: peer
+    enabled: true
+  - key: rabens
+    name: Rabens Saloner
+    url: https://rabenssaloner.com
+    role: peer
+    enabled: true
+  - key: samsoe
+    name: Samsøe Samsøe
+    url: https://www.samsoe.com
+    role: peer
+    enabled: true
+  - key: herskind
+    name: Birgitte Herskind
+    url: https://www.birgitteherskind.com
+    role: peer
+    enabled: true
+  - key: ganni
+    name: Ganni
+    url: https://www.ganni.com
+    role: benchmark
+    enabled: true
+  - key: ceciliebahnsen
+    name: Cecilie Bahnsen
+    url: https://ceciliebahnsen.com
+    role: benchmark
+    enabled: true
+  - key: malenebirger
+    name: By Malene Birger
+    url: https://www.bymalenebirger.com
+    role: peer
+    enabled: false
+  - key: envii
+    name: Envii
+    url: https://www.envii.com
+    role: peer
+    enabled: false
+  - key: madsnorgaard
+    name: Mads Nørgaard
+    url: https://www.madsnorgaard.com
+    role: peer
+    enabled: false

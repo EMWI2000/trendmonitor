@@ -9,7 +9,7 @@ import pandas as pd
 
 from .config import REPORTS_DIR, load_sources, load_taxonomy
 from .metrics import LOW_N, WeeklyMetrics, compute
-from .storage import read_runs
+from .storage import latest_runs, read_runs
 
 ATTR_DA = {
     "category": "kategori", "silhouette": "silhuet", "print": "print", "colour_family": "farvefamilie",
@@ -30,6 +30,7 @@ def num(x) -> str:
 
 
 def render(m: WeeklyMetrics, brand_names: dict[str, str], taxonomy_version: str, runs: pd.DataFrame) -> str:
+    runs = latest_runs(runs)  # append-only table: a re-run on the same date must not count twice
     rd = dt.date.fromisoformat(m.report_date)
     iso_year, iso_week, _ = rd.isocalendar()
     lines: list[str] = []

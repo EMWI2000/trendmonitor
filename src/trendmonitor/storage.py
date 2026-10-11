@@ -12,6 +12,7 @@ SNAPSHOT_COLUMNS = [
     "snapshot_date", "brand", "role", "product_id", "handle", "title", "product_type", "vendor", "tags",
     "body_text", "published_at", "created_at", "updated_at", "image_url", "variant_id", "sku",
     "option1", "option2", "option3", "size", "price", "compare_at_price", "available", "currency",
+    "price_dkk", "compare_at_dkk", "season_tag",
 ]
 EVENT_COLUMNS = ["event_date", "brand", "product_id", "variant_id", "event_type", "prev_value", "new_value"]
 TAG_COLUMNS = [
@@ -63,9 +64,11 @@ def _coerce_snapshot(df: pd.DataFrame) -> pd.DataFrame:
     df["variant_id"] = df["variant_id"].astype("int64")
     df["price"] = pd.to_numeric(df["price"], errors="coerce").astype("float64")
     df["compare_at_price"] = pd.to_numeric(df["compare_at_price"], errors="coerce").astype("float64")
+    df["price_dkk"] = pd.to_numeric(df["price_dkk"], errors="coerce").astype("float64")
+    df["compare_at_dkk"] = pd.to_numeric(df["compare_at_dkk"], errors="coerce").astype("float64")
     df["available"] = df["available"].fillna(False).astype(bool)
     for col in SNAPSHOT_COLUMNS:
-        if col not in ("product_id", "variant_id", "price", "compare_at_price", "available"):
+        if col not in ("product_id", "variant_id", "price", "compare_at_price", "available", "price_dkk", "compare_at_dkk"):
             df[col] = df[col].astype("string")
     return df
 

@@ -92,3 +92,48 @@ def test_client_marks_non_shopify(sources, brand):
     session = _Session({"robots.txt": _Resp(404, ctype="text/html")})
     client = ShopifyClient(sources, session=session, sleep=lambda s: None)
     assert client.fetch_brand(brand).status == "not_shopify_or_disabled"
+
+
+def test_detect_size_prefixed_and_second_option():
+    assert detect_size(("Black", "UK10", None)) == "UK10"
+    assert detect_size(("EU 38", None, None)) == "EU38"
+    assert detect_size(("Dark brown combo", "XS/S", None)) == "XS/S"
+    assert detect_size(("One size", None, None)) == "ONESIZE"
+
+
+def test_detect_season_codes():
+    from trendmonitor.shopify import detect_season
+
+    assert detect_season(["60%", "party", "PS25", "SALE"]) == "PS25"
+    assert detect_season(["FW26", "FW26 drop 2"]) == "FW26"
+    assert detect_season(["27 Pre Spring", "colour:Multi"]) == "27PRESPRING"
+    assert detect_season(["SEASON - 264", "LIVE"]) == "SEASON-264"
+    assert detect_season(["Dress", "Floral"]) is None
+
+
+def test_exclusions_live_filter_and_dkk(day1):
+    from trendmonitor.config import Brand
+    from trendmonitor.shopify import excluded, is_live
+
+    b = Brand(key="x", name="X", url="https://x.example.invalid", currency="EUR",
+              exclude_types="beauty|bed linen", exclude_tags="preloved")
+    assert excluded({"product_type": "BED LINEN & TOWELS", "tags": []}, b)
+    assert excluded({"product_type": "Dress", "tags": ["Rabens", "preloved"]}, b)
+    assert not excluded({"product_type": "Dress", "tags": ["new"]}, b)
+
+    dead = {"published_at": "2025-01-01T08:00:00+02:00", "variants": [{"available": False}]}
+    fresh = {"published_at": "2026-09-20T08:00:00+02:00", "variants": [{"available": False}]}
+    live = {"published_at": "2024-01-01T08:00:00+02:00", "variants": [{"available": True}]}
+    assert not is_live(dead, "2026-10-11", 120)
+    assert is_live(fresh, "2026-10-11", 120)
+    assert is_live(live, "2026-10-11", 120)
+
+    rows = normalise(day1, b, "2026-09-20", "DKK", fx_to_dkk=7.46, live_days=120)
+    nora = next(r for r in rows if r["product_id"] == 101)
+    assert nora["currency"] == "EUR"  # explicit brand currency beats meta.json
+    assert nora["price_dkk"] == round(1799.0 * 7.46, 2) and nora["compare_at_dkk"] is None
+    # product 103 (published 2026-07-01, available) stays; make it dead and old to see it dropped
+    day1[2]["variants"][0]["available"] = False
+    day1[2]["published_at"] = "2025-01-01T08:00:00+02:00"
+    rows2 = normalise(day1, b, "2026-09-20", "DKK", fx_to_dkk=7.46, live_days=120)
+    assert {r["product_id"] for r in rows2} == {101, 102}

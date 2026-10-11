@@ -59,7 +59,13 @@ All tables are parquet. Dates are ISO strings (`YYYY-MM-DD`) in UTC; timestamps 
 | price | float | parsed from string |
 | compare_at_price | float | null when not on sale |
 | available | bool | the only public stock signal |
-| currency | str | from meta.json; null if unavailable |
+| currency | str | explicit from sources.yaml, else meta.json |
+| price_dkk / compare_at_dkk | float | converted with `fx_to_dkk` from sources.yaml |
+| season_tag | str | season code found in tags (SS27, FW26, PS25, "SEASON-264"), else null |
+
+Products are dropped before normalisation when they match the brand's `exclude_types` /
+`exclude_tags`, or when they have no available variant and were published more than `live_days`
+(120) ago; otherwise outlet archives of thousands of dead products dominate every metric.
 
 ### events — one row per change, appended daily
 

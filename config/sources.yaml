@@ -1,15 +1,29 @@
-# Peer set. Only Shopify storefronts with a public /products.json are supported.
-# Run `uv run trendmonitor probe` to verify each URL; it writes the result to data/probe.json
-# and the daily job skips brands that do not respond. Keep `enabled: false` for brands
-# you have not verified yet, or that have disabled the endpoint.
+# Peer set, verified by a browser probe on 2026-10-11 (see docs/probe-2026-10-11.md).
+# Only Shopify storefronts with a public /products.json are supported.
+# Run `uv run trendmonitor probe` to re-verify; the daily job skips brands that do not respond.
 #
 # Fields: key (slug used in data), name, url (storefront root, no trailing slash),
-# role (self | peer | benchmark), enabled, size_option (which optionN holds size; null = auto).
+# role (self | peer | benchmark | international), enabled, currency (explicit; overrides meta.json
+# because at least one store reports the wrong one), exclude_types (regex on product_type, case-
+# insensitive) and exclude_tags (regex on tags) to drop non-apparel or non-women's products.
 
 user_agent: "trendmonitor/0.1 (+contact: set TM_CONTACT env var)"
 request_delay_seconds: 1.0
 page_size: 250
 max_pages: 40
+
+# A product is kept in the snapshot when it has at least one available variant OR was published
+# within live_days. Old, fully sold-out outlet products (thousands at some brands) are dropped.
+live_days: 120
+
+# Fixed conversion to DKK for cross-brand price comparison. Update occasionally; precision
+# beyond a few percent does not matter for positioning.
+fx_to_dkk:
+  DKK: 1.0
+  EUR: 7.46
+  SEK: 0.68
+  GBP: 8.60
+  USD: 6.60
 
 brands:
   - key: baum
@@ -17,59 +31,116 @@ brands:
     url: https://baumundpferdgarten.com
     role: self
     enabled: true
+    currency: EUR            # INT storefront; no DKK path found
   - key: stinegoya
     name: Stine Goya
     url: https://stinegoya.com
     role: peer
     enabled: true
-  - key: rotate
-    name: Rotate Birger Christensen
-    url: https://www.rotatebirgerchristensen.com
-    role: peer
-    enabled: true
-  - key: remain
-    name: Remain Birger Christensen
-    url: https://www.remainbirgerchristensen.com
-    role: peer
-    enabled: true
-  - key: gestuz
-    name: Gestuz
-    url: https://gestuz.com
-    role: peer
-    enabled: true
+    currency: DKK
   - key: munthe
     name: Munthe
     url: https://munthe.com
     role: peer
     enabled: true
-  - key: rabens
-    name: Rabens Saloner
-    url: https://rabenssaloner.com
-    role: peer
-    enabled: true
-  - key: samsoe
-    name: Samsøe Samsøe
-    url: https://www.samsoe.com
-    role: peer
-    enabled: true
+    currency: DKK
+    exclude_types: "accessor|beauty|home|gift"
   - key: herskind
     name: Birgitte Herskind
     url: https://www.birgitteherskind.com
     role: peer
     enabled: true
-  - key: ganni
-    name: Ganni
-    url: https://www.ganni.com
-    role: benchmark
+    currency: DKK
+  - key: rabens
+    name: Rabens Saloner
+    url: https://rabenssaloner.com
+    role: peer
     enabled: true
+    currency: EUR
+    exclude_types: "beauty|bed linen|towel|jewel|home|candle|preloved"
+    exclude_tags: "preloved"
+  - key: day
+    name: DAY Birger et Mikkelsen
+    url: https://www.day.dk
+    role: peer
+    enabled: true
+    currency: DKK
+  - key: designersremix
+    name: Designers Remix
+    url: https://www.designersremix.com
+    role: peer
+    enabled: true
+    currency: DKK
+  - key: skall
+    name: Skall Studio
+    url: https://skallstudio.com
+    role: peer
+    enabled: true
+    currency: EUR
+    exclude_types: "pattern|yarn|knitting"
+    exclude_tags: "opskrift|PDF Paper|Pattern"
+  - key: madsnorgaard
+    name: Mads Nørgaard
+    url: https://www.madsnorgaard.com
+    role: peer
+    enabled: true
+    currency: EUR
+    exclude_types: "headwear|accessor|socks|bag"
+    exclude_tags: "^Men$|^Kids$|^Boys$|^Girls$"
   - key: ceciliebahnsen
     name: Cecilie Bahnsen
     url: https://ceciliebahnsen.com
     role: benchmark
     enabled: true
-  - key: malenebirger
-    name: By Malene Birger
-    url: https://www.bymalenebirger.com
+    currency: DKK            # meta.json says EUR but prices are DKK (gown 10,598; sneaker 4,194)
+    exclude_types: "shoes|bag|accessor"
+  - key: rodebjer
+    name: Rodebjer
+    url: https://www.rodebjer.com
+    role: international
+    enabled: true
+    currency: SEK
+    exclude_types: "accessor|shoes|bag"
+  - key: rixo
+    name: Rixo
+    url: https://www.rixo.co.uk
+    role: international
+    enabled: true
+    currency: GBP
+    exclude_types: "necklace|earring|jewel|bag|shoes|accessor"
+  - key: kitri
+    name: Kitri
+    url: https://kitristudio.com
+    role: international
+    enabled: true
+    currency: GBP
+    exclude_types: "accessor|bag|shoes"
+  - key: rouje
+    name: Rouje
+    url: https://www.rouje.com
+    role: international
+    enabled: true
+    currency: EUR
+    exclude_types: "accessor|shoes|bag|beauty|cosm"
+  # Not Shopify, or endpoint disabled (probe 2026-10-11): kept for the record, never fetched.
+  - key: ganni
+    name: Ganni
+    url: https://www.ganni.com
+    role: benchmark
+    enabled: false
+  - key: rotate
+    name: Rotate Birger Christensen
+    url: https://www.rotatebirgerchristensen.com
+    role: peer
+    enabled: false
+  - key: gestuz
+    name: Gestuz
+    url: https://www.gestuz.com
+    role: peer
+    enabled: false
+  - key: samsoe
+    name: Samsøe Samsøe
+    url: https://www.samsoe.com
     role: peer
     enabled: false
   - key: envii
@@ -77,8 +148,8 @@ brands:
     url: https://www.envii.com
     role: peer
     enabled: false
-  - key: madsnorgaard
-    name: Mads Nørgaard
-    url: https://www.madsnorgaard.com
+  - key: malenebirger
+    name: By Malene Birger
+    url: https://www.bymalenebirger.com
     role: peer
     enabled: false

@@ -114,11 +114,13 @@ def run_demo(data_dir: Path, days: int = 70, seed: int = 7) -> list[str]:
     from .diff import run_diff
     from .tagger import run_tagging
 
-    sources = load_sources()
+    names = {b.key: b.name for b in load_sources().brands}
     data = generate(days=days, seed=seed)
     brand_keys = list(next(iter(data.values())).keys())
-    brands = [b for b in sources.brands if b.key in brand_keys] or [
-        Brand(key=k, name=k.title(), url=f"https://{k}.example.invalid", role="self" if k == "baum" else "peer")
+    # Fresh Brand objects: synthetic prices are DKK regardless of the real store's currency
+    brands = [
+        Brand(key=k, name=names.get(k, k.title()), url=f"https://{k}.example.invalid",
+              role="self" if k == "baum" else "peer", currency="DKK")
         for k in brand_keys
     ]
     dates = []
@@ -126,7 +128,8 @@ def run_demo(data_dir: Path, days: int = 70, seed: int = 7) -> list[str]:
         def fetcher(brand: Brand, _d=per_brand) -> FetchResult:
             return FetchResult(brand.key, "ok", _d.get(brand.key, []), "DKK", 1, 0.0)
 
-        run_snapshot(Sources(brands=brands, user_agent="demo"), date=date, data_dir=data_dir, fetcher=fetcher, brands=brands)
+        run_snapshot(Sources(brands=brands, user_agent="demo", fx_to_dkk={"DKK": 1.0}), date=date, data_dir=data_dir,
+                     fetcher=fetcher, brands=brands)
         run_diff(date, data_dir)
         run_tagging(date, data_dir, use_claude=False)
         dates.append(date)

@@ -24,6 +24,10 @@ SIZE_VOCAB = {
 }
 _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
+_SIZE_PREFIX_RE = re.compile(r"^(?:UK|EU|US|FR|IT|DE)\s?\d{1,2}(?:[.,]5)?$", re.IGNORECASE)
+_SEASON_RE = re.compile(
+    r"^(?:(?:SS|AW|FW|PS|PF|HS|RS)\s?\d{2}(?:\s?drop\s?\d)?|\d{2}\s?(?:Pre\s?Spring|Pre\s?Fall|Spring/Summer|Autumn/Winter|Resort)"
+    r"|SEASON\s?-\s?\d{3})$", re.IGNORECASE)
 
 
 @dataclass
@@ -45,16 +49,65 @@ def strip_html(text: str | None, limit: int = 600) -> str:
 
 
 def detect_size(options: Iterable[str | None]) -> str | None:
+    """Size from any option: alpha, numeric, or UK/EU/US-prefixed. Colour-in-option1 stores work."""
     for value in options:
-        if value and str(value).strip().lower() in SIZE_VOCAB:
-            return str(value).strip().upper()
+        if not value:
+            continue
+        v = str(value).strip()
+        if v.lower() in SIZE_VOCAB or _SIZE_PREFIX_RE.match(v):
+            return v.upper().replace(" ", "")
     return None
 
 
-def normalise(products: list[dict[str, Any]], brand: Brand, snapshot_date: str, currency: str | None) -> list[dict]:
-    """Flatten Shopify products into one row per variant (see SPEC.md)."""
+def detect_season(tags: Iterable[str]) -> str | None:
+    for t in tags:
+        if t and _SEASON_RE.match(str(t).strip()):
+            return str(t).strip().upper().replace(" ", "")
+    return None
+
+
+def excluded(product: dict[str, Any], brand: Brand) -> bool:
+    """Per-brand product_type / tag exclusions from sources.yaml."""
+    if brand.exclude_types and re.search(brand.exclude_types, product.get("product_type") or "", re.IGNORECASE):
+        return True
+    if brand.exclude_tags:
+        tags = product.get("tags") or []
+        tags = tags if isinstance(tags, list) else [t.strip() for t in str(tags).split(",")]
+        if any(re.search(brand.exclude_tags, t, re.IGNORECASE) for t in tags):
+            return True
+    return False
+
+
+def is_live(product: dict[str, Any], snapshot_date: str, live_days: int) -> bool:
+    """Keep products with any available variant, or published within live_days."""
+    if any(v.get("available") for v in product.get("variants") or []):
+        return True
+    pub = product.get("published_at")
+    if not pub:
+        return False
+    try:
+        import datetime as _dt
+
+        published = _dt.datetime.fromisoformat(str(pub).replace("Z", "+00:00")).date()  # noqa: FURB162 - py<3.11 "Z"
+        return (_dt.date.fromisoformat(snapshot_date) - published).days <= live_days
+    except ValueError:
+        return False
+
+
+def normalise(products: list[dict[str, Any]], brand: Brand, snapshot_date: str, currency: str | None,
+              fx_to_dkk: float | None = None, live_days: int | None = None) -> list[dict]:
+    """Flatten Shopify products into one row per variant (see SPEC.md).
+
+    `currency` is the brand's explicit currency when configured, else meta.json's. `fx_to_dkk`
+    converts prices; `live_days` (with the availability rule) drops dead outlet products.
+    """
+    currency = brand.currency or currency
     rows: list[dict] = []
     for p in products:
+        if excluded(p, brand):
+            continue
+        if live_days is not None and not is_live(p, snapshot_date, live_days):
+            continue
         images = p.get("images") or []
         image_url = images[0].get("src") if images else None
         base = {
@@ -73,10 +126,13 @@ def normalise(products: list[dict[str, Any]], brand: Brand, snapshot_date: str, 
             "updated_at": p.get("updated_at"),
             "image_url": image_url,
             "currency": currency,
+            "season_tag": detect_season(p.get("tags") or []) if isinstance(p.get("tags"), list) else None,
         }
         for v in p.get("variants") or []:
             opts = (v.get("option1"), v.get("option2"), v.get("option3"))
             compare = v.get("compare_at_price")
+            price = _to_float(v.get("price"))
+            compare_f = _to_float(compare) if compare not in (None, "", "0", "0.0", "0.00") else None
             rows.append(
                 {
                     **base,
@@ -86,9 +142,11 @@ def normalise(products: list[dict[str, Any]], brand: Brand, snapshot_date: str, 
                     "option2": opts[1],
                     "option3": opts[2],
                     "size": detect_size(opts),
-                    "price": _to_float(v.get("price")),
-                    "compare_at_price": _to_float(compare) if compare not in (None, "", "0", "0.0", "0.00") else None,
+                    "price": price,
+                    "compare_at_price": compare_f,
                     "available": bool(v.get("available", False)),
+                    "price_dkk": round(price * fx_to_dkk, 2) if price is not None and fx_to_dkk else None,
+                    "compare_at_dkk": round(compare_f * fx_to_dkk, 2) if compare_f is not None and fx_to_dkk else None,
                 }
             )
     return rows

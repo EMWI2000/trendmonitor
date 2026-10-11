@@ -71,6 +71,7 @@ class BrandProfile:
     colour_share: float | None = None  # non-neutral
     occasion_words: dict[str, float] = field(default_factory=dict)
     voice_words: dict[str, float] = field(default_factory=dict)
+    season_tags: dict[str, int] = field(default_factory=dict)
     implied: dict[str, Any] | None = None  # Claude read, optional
 
 
@@ -134,21 +135,22 @@ def build_profiles(snapshot: pd.DataFrame, tags: pd.DataFrame, report_date: str)
         for attr in ATTRIBUTES:
             col = tagged[attr].dropna()
             prof.mix[attr] = (col.value_counts(normalize=True) if len(col) else pd.Series(dtype=float))
-        prices = pd.to_numeric(products["price"], errors="coerce").dropna()
+        prices = pd.to_numeric(products["price_dkk"], errors="coerce").dropna()
         if len(prices):
             prof.price_p25, prof.price_p50, prof.price_p75 = (float(prices.quantile(q)) for q in (0.25, 0.5, 0.75))
             bands = pd.cut(prices, bins=[b[0] for b in PRICE_BANDS] + [float("inf")], labels=[b[2] for b in PRICE_BANDS],
                            right=False)
             prof.price_bands = bands.value_counts(normalize=True).reindex([b[2] for b in PRICE_BANDS]).fillna(0.0)
-        dresses = pd.to_numeric(tagged.loc[tagged["category"] == "dress", "price"], errors="coerce").dropna()
+        dresses = pd.to_numeric(tagged.loc[tagged["category"] == "dress", "price_dkk"], errors="coerce").dropna()
         prof.dress_p50 = float(dresses.median()) if len(dresses) else None
         cur = v["currency"].dropna()
-        prof.currency = str(cur.iloc[0]) if len(cur) else None
+        prof.currency = f"DKK (fra {cur.iloc[0]})" if len(cur) and str(cur.iloc[0]).upper() != "DKK" else "DKK"
         prof.size_system, prof.size_range = _size_profile(v)
         pub = pd.to_datetime(products["published_at"], errors="coerce", utc=True)
         prof.newness_share = float((pub >= rd - pd.Timedelta(days=NEWNESS_DAYS)).mean()) if pub.notna().any() else None
         cmp_ = pd.to_numeric(v["compare_at_price"], errors="coerce")
         prof.markdown_share = float((cmp_ > pd.to_numeric(v["price"], errors="coerce")).mean())
+        prof.season_tags = v.drop_duplicates("product_id")["season_tag"].dropna().value_counts().head(4).to_dict()
         pr = prof.mix["print"]
         prof.print_share = float(1 - pr.get("solid", 0.0)) if len(pr) else None
         cf = prof.mix["colour_family"]
@@ -245,7 +247,7 @@ def implied_customer_claude(profiles: dict[str, BrandProfile], snapshot: pd.Data
         p = products[products["brand"] == brand]
         p = p.sample(min(sample, len(p)), random_state=0) if len(p) > sample else p
         lines = [
-            f"- {r.title} | {'' if r.price is None else f'{float(r.price):.0f}'} {r.currency or ''} | {(r.body_text or '')[:240]}"
+            f"- {r.title} | {'' if r.price_dkk is None else f'{float(r.price_dkk):.0f}'} DKK | {(r.body_text or '')[:240]}"
             for r in p.itertuples()
         ]
         return "\n".join(lines)
@@ -301,17 +303,17 @@ def render_profile(pos: Positioning, names: dict[str, str], taxonomy_version: st
 
     L.append("## 1. Udbud og positionering")
     L.append("")
-    L.append("| Brand | Live styles | Tagget | Median pris | Kjole median | Prisindeks | Prisbånd <1.000 / 1–2k / 2–3k / 3k+ | Størrelser | Nyt ≤ 8 uger | Nedsat | Print-andel | Farve-andel |")
+    L.append("| Brand | Live styles | Tagget | Median pris (DKK) | Kjole median | Prisindeks | Prisbånd <1.000 / 1–2k / 2–3k / 3k+ | Størrelser | Nyt ≤ 8 uger | Nedsat | Print-andel | Farve-andel |")
     L.append("|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|")
     for key, p in sorted(P.items(), key=lambda kv: (kv[1].role != "self", kv[0])):
         d = pos.distances.set_index("brand").loc[key]
         bands = " / ".join(_pct(v) for v in (p.price_bands.tolist() if p.price_bands is not None else [None] * 4))
         L.append(f"| {names.get(key, key)}{' (self)' if p.role == 'self' else ''} | {p.products} | {_pct(p.tagged_share)} | "
-                 f"{_num(p.price_p50)} {p.currency or ''} | {_num(p.dress_p50)} | {_num(d['price_index'], 2)} | {bands} | "
+                 f"{_num(p.price_p50)} | {_num(p.dress_p50)} | {_num(d['price_index'], 2)} | {bands} | "
                  f"{p.size_system} {p.size_range} | {_pct(p.newness_share)} | {_pct(p.markdown_share)} | "
                  f"{_pct(p.print_share)} | {_pct(p.colour_share)} |")
     L.append("")
-    L.append("Prisindeks = brandets medianpris / referencebrandets medianpris (samme valuta forudsat; tjek valutakolonnen). "
+    L.append("Alle priser er omregnet til DKK med faste kurser fra sources.yaml. Prisindeks = brandets medianpris / referencebrandets medianpris. "
              "Print-andel = andel af taggede produkter, der ikke er ensfarvede. Farve-andel = andel uden for "
              "neutralerne sort, hvid, grå, brun, navy.")
     L.append("")
@@ -347,16 +349,17 @@ def render_profile(pos: Positioning, names: dict[str, str], taxonomy_version: st
 
     L.append("## 2. Udledt kunde (produktets perspektiv)")
     L.append("")
-    L.append("| Brand | Anledning i tekster: fest / arbejde / hverdag / ferie | Stemme i tekster: legende / feminin / minimal / bæredygtig / craft | Prisbånd | Størrelsesspænd |")
-    L.append("|---|---|---|---|---|")
+    L.append("| Brand | Anledning i tekster: fest / arbejde / hverdag / ferie | Stemme i tekster: legende / feminin / minimal / bæredygtig / craft | Prisbånd | Størrelsesspænd | Sæsonkoder i tags |")
+    L.append("|---|---|---|---|---|---|")
     for key, p in sorted(P.items(), key=lambda kv: (kv[1].role != "self", kv[0])):
         occ = " / ".join(_pct(p.occasion_words.get(k)) for k in ("fest", "arbejde", "hverdag", "ferie"))
         voice = " / ".join(_pct(p.voice_words.get(k)) for k in ("legende", "feminin", "minimal", "bæredygtig", "craft"))
         tier = "–"
+        seasons = ", ".join(f"{k} ({n})" for k, n in p.season_tags.items()) or "–"
         if p.price_p50:
             tier = "high street" if p.price_p50 < 800 else "contemporary" if p.price_p50 < 2500 else \
                 "premium" if p.price_p50 < 6000 else "luxury"
-        L.append(f"| {names.get(key, key)} | {occ} | {voice} | {tier} | {p.size_system} {p.size_range} |")
+        L.append(f"| {names.get(key, key)} | {occ} | {voice} | {tier} | {p.size_system} {p.size_range} | {seasons} |")
     L.append("")
     L.append("Ordandele = andel af produkttekster, der nævner mindst ét ord fra lexikonet (se profile.py). "
              "Prisbånd efter medianpris i DKK: high street < 800, contemporary < 2.500, premium < 6.000, ellers luxury; "

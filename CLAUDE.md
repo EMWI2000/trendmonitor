@@ -32,6 +32,7 @@ edges (`storage.py`, `shopify.py`), logic in the middle (`diff.py`, `tagger.py`,
 
 ## Status
 
-MVP built on fixtures (no live run yet), incl. style/positioning profile (`profile.py`). Next: first live probe + snapshot from a machine with
-internet access, then validate the rule tagger against 50 designer-tagged products
-(`data/gold/`), then enable the Claude tagger.
+MVP built on fixtures, incl. style/positioning profile (`profile.py`). Peer set verified by browser
+probe 2026-10-11 (docs/probe-2026-10-11.md): currencies, live-filter, size prefixes and season tags
+added. Next: first live `run-daily` on GitHub Actions, then validate the rule tagger against 50
+designer-tagged products (`data/gold/`), then enable the Claude tagger.

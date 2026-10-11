@@ -37,7 +37,21 @@ def run_snapshot(
     for brand in brands:
         log.info("fetching %s (%s)", brand.key, brand.url)
         result = fetcher(brand)
-        rows = normalise(result.products, brand, date, result.currency) if result.status == "ok" else []
+        if brand.currency and result.currency and brand.currency.upper() != str(result.currency).upper():
+            log.warning("%s: configured currency %s differs from meta.json %s (configured wins)",
+                        brand.key, brand.currency, result.currency)
+        currency = brand.currency or result.currency
+        rows = (
+            normalise(result.products, brand, date, currency, fx_to_dkk=sources.to_dkk(currency),
+                      live_days=sources.live_days)
+            if result.status == "ok" else []
+        )
+        dkk = sorted(r["price_dkk"] for r in rows if r["price_dkk"])
+        if rows and not dkk:
+            log.warning("%s: no DKK conversion for currency %s; add it to fx_to_dkk", brand.key, currency)
+        elif dkk and not 150 <= dkk[len(dkk) // 2] <= 20000:
+            log.warning("%s: median price %.0f DKK looks wrong; check currency in sources.yaml",
+                        brand.key, dkk[len(dkk) // 2])
         all_rows.extend(rows)
         runs.append(
             {

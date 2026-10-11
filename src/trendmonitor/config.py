@@ -23,6 +23,9 @@ class Brand:
     url: str
     role: str = "peer"
     enabled: bool = True
+    currency: str | None = None  # explicit; overrides meta.json
+    exclude_types: str | None = None  # regex on product_type
+    exclude_tags: str | None = None  # regex on any single tag
 
 
 @dataclass(frozen=True)
@@ -32,6 +35,11 @@ class Sources:
     request_delay_seconds: float = 1.0
     page_size: int = 250
     max_pages: int = 40
+    live_days: int = 120
+    fx_to_dkk: dict[str, float] = field(default_factory=lambda: {"DKK": 1.0})
+
+    def to_dkk(self, currency: str | None) -> float | None:
+        return self.fx_to_dkk.get((currency or "").upper())
 
     def enabled(self) -> list[Brand]:
         return [b for b in self.brands if b.enabled]
@@ -77,6 +85,9 @@ def load_sources(path: Path | None = None) -> Sources:
             url=b["url"].rstrip("/"),
             role=b.get("role", "peer"),
             enabled=bool(b.get("enabled", True)),
+            currency=b.get("currency"),
+            exclude_types=b.get("exclude_types"),
+            exclude_tags=b.get("exclude_tags"),
         )
         for b in raw["brands"]
     ]
@@ -86,6 +97,8 @@ def load_sources(path: Path | None = None) -> Sources:
         request_delay_seconds=float(raw.get("request_delay_seconds", 1.0)),
         page_size=int(raw.get("page_size", 250)),
         max_pages=int(raw.get("max_pages", 40)),
+        live_days=int(raw.get("live_days", 120)),
+        fx_to_dkk={str(k).upper(): float(v) for k, v in (raw.get("fx_to_dkk") or {"DKK": 1.0}).items()},
     )
 
 

@@ -24,8 +24,8 @@ report should show those attributes over-indexed. Delete `data/` and `reports/` 
    secret `ANTHROPIC_API_KEY` (optional; without it tagging is rules-only),
    variables `TM_MODEL` (default `claude-haiku-5-5`) and `TM_CONTACT` (an email or URL put in
    the User-Agent, so store owners can reach you).
-3. Verify the peer set from any machine with internet: `uv run trendmonitor probe`. Set
-   `enabled: false` in `config/sources.yaml` for brands that return `not_shopify_or_disabled`.
+3. The peer set was verified by a browser probe on 2026-10-11 (docs/probe-2026-10-11.md): 14 Shopify
+   stores enabled, 6 non-Shopify brands kept disabled. Re-verify any time with `uv run trendmonitor probe`.
 4. Run the daily workflow once by hand, check `data/runs.parquet`, then let the schedule run.
    Events start on day 2; the attribute index becomes meaningful after ~4 weeks; alerts switch
    on after 8 weeks of history (the report says "Kalibrering" until then).

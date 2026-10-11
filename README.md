@@ -93,6 +93,15 @@ the day-one view of "what is sold out at the peers right now": for every attribu
 unavailable variants against the share of live variants, overall and for launches in the last 8 weeks, with
 the same low-n flag as the report. `web/` is the Next.js dashboard that reads these files at build time.
 
+## Dashboard (web/)
+
+`web/` is a Next.js 15 site that renders the exported JSON into six Danish pages (overview, what is sold
+out now, attribute index over time, brands, positioning, data quality), server-side at build time and with
+the same guard rails as the report: no sales claims, n always shown, "lavt n" below 10, a "Kalibrering"
+banner until 8 weeks of history. It deploys on Vercel with Root Directory = `web` and redeploys when a push
+to `main` changes `web/` or `data/export/`, so the daily GitHub Actions commit is what refreshes it. Setup and
+details: [web/README.md](web/README.md).
+
 ## What the numbers mean
 
 Sold-out is buy depth × demand, never sales. Every attribute number is a share of net sold-out

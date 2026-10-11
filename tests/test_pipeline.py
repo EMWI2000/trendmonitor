@@ -7,9 +7,9 @@ from trendmonitor.config import ATTRIBUTES
 from trendmonitor.diff import diff_snapshots, run_diff
 from trendmonitor.metrics import compute
 from trendmonitor.report import render
-from trendmonitor.shopify import normalise
+from trendmonitor.shopify import FetchResult, normalise
 from trendmonitor.snapshot import run_snapshot
-from trendmonitor.storage import read_events, read_runs, read_snapshot, read_tags
+from trendmonitor.storage import RUN_COLUMNS, latest_runs, read_events, read_runs, read_snapshot, read_tags
 from trendmonitor.tagger import run_tagging
 
 
@@ -83,3 +83,50 @@ def test_tagging_is_idempotent(tmp_path, sources, day1):
     assert len(run_tagging("2026-09-20", data_dir, use_claude=False)) == 3
     assert len(run_tagging("2026-09-20", data_dir, use_claude=False)) == 0
     assert len(read_tags(data_dir)) == 3
+
+
+def test_report_uses_latest_run_per_brand_and_date(tmp_path, sources, brand, day1, day2, taxonomy):
+    """runs.parquet is append-only: re-running a date appends a second row per brand. The report must
+    read the last row, so a brand that failed and then succeeded is neither "failed" nor counted twice."""
+    data_dir = tmp_path / "data"
+
+    def failing(b):
+        return FetchResult(b.key, "http_error", [], None, 0, 0.0, "HTTP 430")
+
+    run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day1))
+    run_diff("2026-09-20", data_dir)
+    run_tagging("2026-09-20", data_dir, use_claude=False)
+    # Day 2: a failed attempt (e.g. CI blocked by the shop), then a successful re-run of the same date.
+    run_snapshot(sources, date="2026-09-21", data_dir=data_dir, fetcher=failing)
+    run_snapshot(sources, date="2026-09-21", data_dir=data_dir, fetcher=make_fetcher(day2))
+    run_diff("2026-09-21", data_dir)
+    run_tagging("2026-09-21", data_dir, use_claude=False)
+    runs = read_runs(data_dir)
+    assert runs["status"].tolist() == ["ok", "http_error", "ok"]
+
+    latest = latest_runs(runs)
+    assert len(latest) == 2 and latest["status"].tolist() == ["ok", "ok"]
+
+    m = compute("2026-09-21", data_dir)
+    text = render(m, {"testbrand": "Testbrand"}, taxonomy.version, runs)
+    assert "Fejlede i dag" not in text
+    assert "Seneste kørsel 2026-09-21: 1 af 1 brands ok, 3 produkter, 6 varianter." in text
+
+
+def test_latest_runs_keeps_last_row_per_brand_and_date():
+    runs = pd.DataFrame(
+        [
+            ("2026-10-11", "a", "http_error", 0, 0, 0, 0.0, "HTTP 430"),
+            ("2026-10-11", "b", "ok", 5, 10, 1, 1.0, None),
+            ("2026-10-11", "a", "ok", 7, 14, 1, 1.0, None),
+            ("2026-10-11", "b", "http_error", 0, 0, 0, 0.0, "HTTP 500"),
+            ("2026-10-10", "a", "ok", 6, 12, 1, 1.0, None),
+        ],
+        columns=RUN_COLUMNS,
+    )
+    latest = latest_runs(runs)
+    assert len(latest) == 3
+    today = latest[latest.run_date == "2026-10-11"].set_index("brand")
+    assert today.loc["a"].status == "ok" and today.loc["a"].products == 7
+    assert today.loc["b"].status == "http_error"  # ok, then a later failure: the later row wins
+    assert latest_runs(pd.DataFrame(columns=RUN_COLUMNS)).empty

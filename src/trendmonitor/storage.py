@@ -125,3 +125,15 @@ def append_runs(runs: pd.DataFrame, data_dir: Path = DATA_DIR) -> Path:
 
 def read_runs(data_dir: Path = DATA_DIR) -> pd.DataFrame:
     return read_table("runs", RUN_COLUMNS, data_dir)
+
+
+def latest_runs(runs: pd.DataFrame) -> pd.DataFrame:
+    """Reduce the append-only runs table to the last row per (run_date, brand).
+
+    Re-running `snapshot` or `run-daily` on a date appends a second row per brand, so the table can
+    hold a failed attempt followed by a successful one for the same brand and date. There is no
+    timestamp column; row order is append order, so the last row is that brand's current state.
+    """
+    if runs.empty:
+        return runs
+    return runs.drop_duplicates(subset=["run_date", "brand"], keep="last").reset_index(drop=True)

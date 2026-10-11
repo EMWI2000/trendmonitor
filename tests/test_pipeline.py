@@ -77,6 +77,32 @@ def test_end_to_end_on_fixtures(tmp_path, sources, brand, day1, day2, taxonomy):
     assert "Kalibrering" in text and "| Testbrand |" in text
 
 
+def test_metrics_on_day_one_before_diff_and_tags(tmp_path, sources, day1, taxonomy):
+    """A fresh data dir has a snapshot but no events.parquet or tags.parquet; the report must still run."""
+    data_dir = tmp_path / "data"
+    run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day1))
+    assert read_events(data_dir).empty and read_tags(data_dir).empty
+    assert read_events(data_dir)["brand"].dtype == "string" and read_tags(data_dir)["product_id"].dtype == "int64"
+
+    m = compute("2026-09-20", data_dir)
+    row = m.brands.iloc[0]
+    assert row.brand == "testbrand" and row.live_products == 3 and row.sold_out_variants == 0
+    assert m.attributes.empty and m.alerts.empty and m.sizes.empty and m.movements == []
+    assert m.calibration and m.weeks_of_history == 0
+    assert "Kalibrering" in render(m, {"testbrand": "Testbrand"}, taxonomy.version, read_runs(data_dir))
+
+    # The first diff writes a zero-row events.parquet; the first tag run fills tags.parquet.
+    run_diff("2026-09-20", data_dir)
+    run_tagging("2026-09-20", data_dir, use_claude=False)
+    assert read_events(data_dir).empty and len(read_tags(data_dir)) == 3
+    m = compute("2026-09-20", data_dir)
+    assert m.brands.iloc[0].live_products == 3 and m.brands.iloc[0].sold_out_variants == 0
+    # Launches are counted from the tags, but nothing has sold out yet, so no index and no movements
+    assert not m.attributes.empty and (m.attributes["launched_n"] > 0).all()
+    assert (m.attributes["sold_out_n"] == 0).all() and m.attributes["demand_index"].isna().all()
+    assert m.movements == []
+
+
 def test_tagging_is_idempotent(tmp_path, sources, day1):
     data_dir = tmp_path / "data"
     run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day1))

@@ -20,6 +20,11 @@ TAG_COLUMNS = [
     "material", "sleeve", "length", "occasion", "confidence", "notes",
 ]
 RUN_COLUMNS = ["run_date", "brand", "status", "products", "variants", "pages", "seconds", "error"]
+# Columns metrics.py joins and filters on. Coerced on every read so that an empty table (no file yet, or
+# the zero-row events.parquet the first diff writes) registers in DuckDB as VARCHAR/BIGINT instead of the
+# INTEGER DuckDB infers for empty object columns, which made the join against snapshots fail.
+EVENT_KEY_DTYPES = {"event_date": "string", "brand": "string", "product_id": "int64", "event_type": "string"}
+TAG_KEY_DTYPES = {"brand": "string", "product_id": "int64"}
 
 
 def snapshots_dir(data_dir: Path = DATA_DIR) -> Path:
@@ -84,6 +89,12 @@ def _append_table(df: pd.DataFrame, name: str, columns: list[str], data_dir: Pat
     return path
 
 
+def _coerce_keys(df: pd.DataFrame, dtypes: dict[str, str]) -> pd.DataFrame:
+    for col, dtype in dtypes.items():
+        df[col] = df[col].astype(dtype)
+    return df
+
+
 def read_table(name: str, columns: list[str], data_dir: Path = DATA_DIR) -> pd.DataFrame:
     path = data_dir / f"{name}.parquet"
     if not path.exists():
@@ -103,7 +114,7 @@ def replace_events_for_date(events: pd.DataFrame, date: str, data_dir: Path = DA
 
 
 def read_events(data_dir: Path = DATA_DIR) -> pd.DataFrame:
-    return read_table("events", EVENT_COLUMNS, data_dir)
+    return _coerce_keys(read_table("events", EVENT_COLUMNS, data_dir), EVENT_KEY_DTYPES)
 
 
 def append_tags(tags: pd.DataFrame, data_dir: Path = DATA_DIR) -> Path:
@@ -113,10 +124,7 @@ def append_tags(tags: pd.DataFrame, data_dir: Path = DATA_DIR) -> Path:
 
 
 def read_tags(data_dir: Path = DATA_DIR) -> pd.DataFrame:
-    df = read_table("tags", TAG_COLUMNS, data_dir)
-    if len(df):
-        df["product_id"] = df["product_id"].astype("int64")
-    return df
+    return _coerce_keys(read_table("tags", TAG_COLUMNS, data_dir), TAG_KEY_DTYPES)
 
 
 def append_runs(runs: pd.DataFrame, data_dir: Path = DATA_DIR) -> Path:

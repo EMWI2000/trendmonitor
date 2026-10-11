@@ -5,7 +5,9 @@
 # Fields: key (slug used in data), name, url (storefront root, no trailing slash),
 # role (self | peer | benchmark | international), enabled, currency (explicit; overrides meta.json
 # because at least one store reports the wrong one), exclude_types (regex on product_type, case-
-# insensitive) and exclude_tags (regex on tags) to drop non-apparel or non-women's products.
+# insensitive) and exclude_tags (regex tested against each single tag, case-insensitive; anchor with
+# ^...$ for whole-tag matches) to drop non-apparel or non-women's products. Check a brand's tag
+# vocabulary before adding a word: Rabens puts "preloved" on 80 % of its apparel.
 
 user_agent: "trendmonitor/0.1 (+contact: set TM_CONTACT env var)"
 request_delay_seconds: 2.0
@@ -57,8 +59,14 @@ brands:
     role: peer
     enabled: true
     currency: EUR
-    exclude_types: "beauty|bed linen|towel|jewel|home|candle|preloved"
-    exclude_tags: "preloved"
+    # Live check 2026-10-11 (first page, 250 products): the tag "preloved" sits on 200 of them incl.
+    # new-in dresses and knits (resale-programme marker), so it is not an exclusion. Non-apparel is
+    # the Rabens Apartment line (tags vendor_interior / rabensfriendsapartment / type_textiles,
+    # type_brass, type_decoration; product_type blank or "Objects"), BEAUTY, BED LINEN & TOWELS,
+    # FOOTWEAR and ACCESSORIES (also tagged type_accessories with blank product_type). About a third
+    # of the apparel has a blank product_type; the tagger must read title and tags for those.
+    exclude_types: "accessor|footwear|shoes|beauty|bed linen|towel|jewel|home|object|candle|preloved"
+    exclude_tags: "^vendor_interior$|^rabensfriendsapartment$|^type_(accessories|textiles|fragrance|bedlinen_towels|brass|decoration)$"
   - key: day
     name: DAY Birger et Mikkelsen
     url: https://www.day.dk
@@ -112,7 +120,12 @@ brands:
     name: Kitri
     url: https://kitristudio.com
     role: international
-    enabled: true
+    # Disabled 2026-10-11: the public products.json is an archive-sale remnant, not the live shop.
+    # 221 products, 1 of 1,182 variants available, every variant on compare_at_price, newest
+    # published_at 2026-07-03; the 45 products kept by live_days were all fully unavailable and made
+    # Kitri the top markdown alert (100 % nedsat, median 78 %). Re-probe before re-enabling; if the
+    # availability flag ever flips on, 1,181 restock/sold_out pairs would follow.
+    enabled: false
     currency: GBP
     exclude_types: "accessor|bag|shoes"
   - key: rouje

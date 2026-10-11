@@ -137,3 +137,45 @@ def test_exclusions_live_filter_and_dkk(day1):
     day1[2]["published_at"] = "2025-01-01T08:00:00+02:00"
     rows2 = normalise(day1, b, "2026-09-20", "DKK", fx_to_dkk=7.46, live_days=120)
     assert {r["product_id"] for r in rows2} == {101, 102}
+
+
+def test_excluded_matches_each_tag_separately():
+    """Exclusion regexes run against one tag at a time, so ^...$ anchors bind to a whole tag."""
+    from trendmonitor.config import Brand
+    from trendmonitor.shopify import excluded
+
+    b = Brand(key="x", name="X", url="https://x.example.invalid", exclude_tags="^men$|^type_accessories$")
+    assert excluded({"product_type": "Hat", "tags": ["Women", "type_Accessories"]}, b)  # case-insensitive
+    assert not excluded({"product_type": "Dress", "tags": ["Women", "menswear-inspired", "accessories"]}, b)
+    assert excluded({"product_type": "Dress", "tags": "Women, Men"}, b)  # comma string form is split
+
+
+def test_rabens_config_keeps_preloved_tagged_apparel():
+    """Live check 2026-10-11: Rabens tags ~80 % of its apparel "preloved" (resale marker), incl. new-in,
+    and leaves product_type blank on a third of it; the real config must keep those and drop the
+    Rabens Apartment interior line, beauty, bed linen, footwear and accessories."""
+    from trendmonitor.config import load_sources
+    from trendmonitor.shopify import excluded
+
+    rabens = load_sources().by_key("rabens")
+    keep = [
+        {"product_type": "", "tags": ["badge_new in", "Rabens Saloner", "Rabens Saloner - WOVEN DRESSES",
+                                      "Rabensfriends", "preloved", "type_Dresses", "vendor_clothing"]},
+        {"product_type": "SWEATERS", "tags": ["Rabens Saloner - SWEATERS", "preloved", "type_sweaters_knitwear",
+                                              "vendor_clothing"]},
+        {"product_type": "JACKETS", "tags": ["Rabens Saloner - JACKETS", "type_outerware", "vendor_clothing"]},
+        {"product_type": "", "tags": ["Rabens Saloner - WOVEN TOPS", "type_shirts", "type_vacay", "vendor_clothing"]},
+    ]
+    drop = [
+        {"product_type": "", "tags": ["RA", "RA - TEXTILES", "rabensfriendsapartment", "type_textiles",
+                                      "vendor_interior"]},  # pillow
+        {"product_type": "Objects", "tags": ["RA", "RA - BRASS", "rabensfriendsapartment", "type_brass",
+                                             "type_decoration", "vendor_interior"]},  # candlestick
+        {"product_type": "ACCESSORIES", "tags": ["RA", "RA - ACCESSORIES", "type_Accessories", "vendor_clothing"]},
+        {"product_type": "", "tags": ["Rabens Saloner - ACCESSORIES", "type_accessories", "vendor_clothing"]},
+        {"product_type": "BEAUTY", "tags": ["RA - BEAUTY", "type_fragrance"]},
+        {"product_type": "BED LINEN & TOWELS", "tags": ["type_bedlinen_towels", "vendor_interior"]},
+        {"product_type": "FOOTWEAR", "tags": ["vendor_clothing"]},
+    ]
+    assert [excluded(p, rabens) for p in keep] == [False] * len(keep)
+    assert [excluded(p, rabens) for p in drop] == [True] * len(drop)

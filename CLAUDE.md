@@ -34,5 +34,5 @@ edges (`storage.py`, `shopify.py`), logic in the middle (`diff.py`, `tagger.py`,
 
 MVP built on fixtures, incl. style/positioning profile (`profile.py`). Peer set verified by browser
 probe 2026-10-11 (docs/probe-2026-10-11.md): currencies, live-filter, size prefixes and season tags
-added. Next: first live `run-daily` on GitHub Actions, then validate the rule tagger against 50
+added. Rabens filter fixed and Kitri disabled 2026-10-11 (archive-only feed, see probe doc). Next: first live `run-daily` on GitHub Actions, then validate the rule tagger against 50
 designer-tagged products (`data/gold/`), then enable the Claude tagger.

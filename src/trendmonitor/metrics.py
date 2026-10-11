@@ -301,38 +301,56 @@ def compute_state(report_date: str | None = None, data_dir: Path = DATA_DIR) -> 
                         _launch_calendar(con, report_date))
 
 
+def _state_counts(con, attr: str, extra: str, role_filter: str) -> pd.DataFrame:
+    return con.execute(
+        f"""
+        WITH v AS (
+          SELECT l.available, t.{attr} AS value
+          FROM latest l JOIN tags t USING (brand, product_id) JOIN launches la USING (brand, product_id)
+          WHERE {role_filter} AND t.{attr} IS NOT NULL {extra})
+        SELECT value, COUNT(*) AS live_n, SUM(CASE WHEN available THEN 0 ELSE 1 END) AS unavailable_n
+        FROM v GROUP BY value
+        """
+    ).df()
+
+
+STATE_COUNT_COLUMNS = ["live_n", "unavailable_n", "self_live_n", "self_unavailable_n"]
+
+
 def _sold_out_state(con, report_date: str) -> pd.DataFrame:
+    """Per attribute value: peers' live and unavailable variants (the index) and the self brand's own counts.
+
+    The self brand never enters `state_index`; its columns (`self_*`) are there so the dashboard can say how
+    much of its own assortment sits in a value peers are selling out of, and how that value fares in its own shop.
+    """
     frames = []
     for attr in ATTRIBUTES:
         for scope, extra in (("all", ""),
                              ("new", f"AND la.launch_date >= DATE '{report_date}' - INTERVAL {LAUNCH_WINDOW_DAYS} DAY")):
-            frames.append(
-                con.execute(
-                    f"""
-                    WITH v AS (
-                      SELECT l.available, t.{attr} AS value
-                      FROM latest l JOIN tags t USING (brand, product_id) JOIN launches la USING (brand, product_id)
-                      WHERE l.role <> 'self' AND t.{attr} IS NOT NULL {extra}),
-                    agg AS (
-                      SELECT value, COUNT(*) AS live_n,
-                             SUM(CASE WHEN available THEN 0 ELSE 1 END) AS unavailable_n
-                      FROM v GROUP BY value)
-                    SELECT '{attr}' AS attribute, '{scope}' AS scope, value, live_n, unavailable_n,
-                           live_n * 1.0 / NULLIF(SUM(live_n) OVER (), 0) AS share_live,
-                           unavailable_n * 1.0 / NULLIF(SUM(unavailable_n) OVER (), 0) AS share_unavailable
-                    FROM agg
-                    """
-                ).df()
-            )
+            peers = _state_counts(con, attr, extra, "l.role <> 'self'")
+            own = _state_counts(con, attr, extra, "l.role = 'self'").rename(
+                columns={"live_n": "self_live_n", "unavailable_n": "self_unavailable_n"})
+            df = peers.merge(own, on="value", how="outer")
+            df.insert(0, "scope", scope)
+            df.insert(0, "attribute", attr)
+            frames.append(df)
     df = pd.concat(frames, ignore_index=True)
+    for col in STATE_COUNT_COLUMNS:
+        df[col] = df[col].fillna(0).astype(int) if col in df.columns else 0
     if df.empty:
-        df["state_index"] = pd.Series(dtype=float)
+        for col in ("share_live", "share_unavailable", "state_index", "self_share_live", "self_share_unavailable",
+                    "self_state_index"):
+            df[col] = pd.Series(dtype=float)
         df["low_n"] = pd.Series(dtype=bool)
         return df
-    df["live_n"] = df["live_n"].astype(int)
-    df["unavailable_n"] = df["unavailable_n"].astype(int)
-    ok = (df["share_live"] >= 0.02) & (df["live_n"] >= MIN_LAUNCHED) & df["share_unavailable"].notna()
-    df["state_index"] = (df["share_unavailable"] / df["share_live"]).where(ok)
+    group = df.groupby(["attribute", "scope"])
+    for prefix in ("", "self_"):
+        live_total = group[f"{prefix}live_n"].transform("sum")
+        unavailable_total = group[f"{prefix}unavailable_n"].transform("sum")
+        df[f"{prefix}share_live"] = (df[f"{prefix}live_n"] / live_total).where(live_total > 0)
+        df[f"{prefix}share_unavailable"] = (df[f"{prefix}unavailable_n"] / unavailable_total).where(unavailable_total > 0)
+        ok = (df[f"{prefix}share_live"] >= 0.02) & (df[f"{prefix}live_n"] >= MIN_LAUNCHED) & df[f"{prefix}share_unavailable"].notna()
+        df[f"{prefix}state_index"] = (df[f"{prefix}share_unavailable"] / df[f"{prefix}share_live"]).where(ok)
     df["low_n"] = df["unavailable_n"] < LOW_N
     return df.sort_values(["scope", "attribute", "state_index"], ascending=[True, True, False]).reset_index(drop=True)
 

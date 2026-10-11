@@ -8,13 +8,10 @@ from pathlib import Path
 import pandas as pd
 
 from .config import REPORTS_DIR, load_sources, load_taxonomy
-from .metrics import LOW_N, WeeklyMetrics, compute
-from .storage import latest_runs, read_runs
-
-ATTR_DA = {
-    "category": "kategori", "silhouette": "silhuet", "print": "print", "colour_family": "farvefamilie",
-    "material": "materiale", "sleeve": "ærme", "length": "længde", "occasion": "anledning",
-}
+from .insights import ATTR_DA, compute_insights
+from .metrics import BASELINE_WEEKS, LOW_N, WeeklyMetrics, compute, compute_state
+from .profile import positioning
+from .storage import latest_runs, read_runs, read_snapshot, read_tags
 
 
 def pct(x, digits=0) -> str:
@@ -29,7 +26,8 @@ def num(x) -> str:
     return f"{float(x):.0f}" if float(x).is_integer() else f"{float(x):.1f}"
 
 
-def render(m: WeeklyMetrics, brand_names: dict[str, str], taxonomy_version: str, runs: pd.DataFrame) -> str:
+def render(m: WeeklyMetrics, brand_names: dict[str, str], taxonomy_version: str, runs: pd.DataFrame,
+           insights: list[dict] | None = None, self_brand: str | None = None) -> str:
     runs = latest_runs(runs)  # append-only table: a re-run on the same date must not count twice
     rd = dt.date.fromisoformat(m.report_date)
     iso_year, iso_week, _ = rd.isocalendar()
@@ -56,6 +54,21 @@ def render(m: WeeklyMetrics, brand_names: dict[str, str], taxonomy_version: str,
                      "udsolgt-events at indeksere på.")
     for mv in m.movements:
         lines.append(_movement_sentence(mv, brand_names))
+    lines.append("")
+
+    self_name = brand_names.get(self_brand, self_brand) if self_brand else "referencebrandet"
+    lines.append(f"## Hvad betyder det for {self_name}")
+    lines.append("")
+    lines.append("Hypoteser til test, ikke konklusioner: faste regler over tilstanden i seneste snapshot "
+                 "(varianter uden lager hos peers mod deres andel af sortimentet) holdt op mod "
+                 f"{self_name}s eget sortiment. Ingen salgstal."
+                 + (f" Kalibrering: {m.weeks_of_history} af {BASELINE_WEEKS} ugers historik, så læs med forbehold."
+                    if m.calibration else ""))
+    lines.append("")
+    if not insights:
+        lines.append("Ingen udslag over tærsklerne i dag.")
+    for ins in insights or []:
+        lines.append(f"- **{ins['title']}.** {ins['text']} Handling: {ins['action']}")
     lines.append("")
 
     lines.append("## Brands")
@@ -159,7 +172,11 @@ def write_report(report_date: str | None = None, data_dir: Path | None = None,
     m = compute(report_date, data_dir)
     sources = load_sources()
     names = {b.key: b.name for b in sources.brands}
-    text = render(m, names, load_taxonomy().version, read_runs(data_dir))
+    state = compute_state(m.report_date, data_dir)
+    pos = positioning(read_snapshot(state.latest_date, data_dir), read_tags(data_dir), m.report_date)
+    insights = compute_insights(state.sold_out_state, state.size_depletion, m.brands, pos.distances,
+                                pos.self_brand, names)
+    text = render(m, names, load_taxonomy().version, read_runs(data_dir), insights, pos.self_brand)
     rd = dt.date.fromisoformat(m.report_date)
     y, w, _ = rd.isocalendar()
     reports_dir.mkdir(parents=True, exist_ok=True)

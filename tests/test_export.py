@@ -10,7 +10,7 @@ from trendmonitor.export import EXPORT_FILES, export_all
 from trendmonitor.metrics import LOW_N, compute_state
 from trendmonitor.storage import read_snapshot
 
-PRODUCT_LEVEL_FIELDS = ("image_url", "body_text", "handle", "variant_id", "sku", "title")
+PRODUCT_LEVEL_FIELDS = ("image_url", "body_text", "handle", "variant_id", "sku", "product_id")
 
 
 def test_compute_state_on_demo(tmp_path):

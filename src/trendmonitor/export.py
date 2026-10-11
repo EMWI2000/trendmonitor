@@ -17,6 +17,7 @@ from typing import Any
 import pandas as pd
 
 from .config import ATTRIBUTES, DATA_DIR, load_sources, load_taxonomy
+from .insights import RULES, compute_insights
 from .metrics import (
     BASELINE_WEEKS,
     LAUNCH_WINDOW_DAYS,
@@ -33,7 +34,7 @@ from .storage import latest_runs, read_runs, read_snapshot, read_tags
 EXPORT_FILES = (
     "meta.json", "brands.json", "attributes.json", "series.json", "alerts.json", "sizes.json",
     "movements.json", "sold_out_state.json", "size_depletion.json", "launch_calendar.json",
-    "positioning.json", "runs.json", "taxonomy.json",
+    "positioning.json", "runs.json", "taxonomy.json", "insights.json",
 )
 RUNS_DAYS = 14
 
@@ -172,6 +173,9 @@ def export_all(report_date: str | None = None, data_dir: Path = DATA_DIR, out_di
     snapshot = read_snapshot(state.latest_date, data_dir)
     tags = read_tags(data_dir)
     pos = positioning(snapshot, tags, m.report_date)
+    names = {b.key: b.name for b in load_sources().brands}
+    insights = compute_insights(state.sold_out_state, state.size_depletion, m.brands, pos.distances,
+                                pos.self_brand, names)
     generated_at = (now or dt.datetime.now(dt.UTC)).replace(microsecond=0).isoformat()
 
     files: dict[str, Any] = {
@@ -188,6 +192,18 @@ def export_all(report_date: str | None = None, data_dir: Path = DATA_DIR, out_di
         "positioning.json": _positioning_json(pos),
         "runs.json": _records(_recent_runs(data_dir, m.report_date)),
         "taxonomy.json": _taxonomy_json(),
+        "insights.json": {
+            "report_date": m.report_date,
+            "latest_snapshot_date": state.latest_date,
+            "self_brand": pos.self_brand,
+            "self_name": names.get(pos.self_brand, pos.self_brand) if pos.self_brand else None,
+            "calibration": m.calibration,
+            "weeks_of_history": m.weeks_of_history,
+            "note": ("Hypoteser til test, ikke konklusioner: faste regler over tilstanden i seneste snapshot holdt "
+                     "op mod referencebrandets eget sortiment. Ingen salgstal."),
+            "rules": RULES,
+            "items": insights,
+        },
     }
     assert set(files) == set(EXPORT_FILES)
     out_dir.mkdir(parents=True, exist_ok=True)

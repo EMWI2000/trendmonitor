@@ -1,50 +1,30 @@
 [
  {
   "attribute": "category",
-  "value": "dress",
-  "launched_n": 275,
+  "value": "shoes",
+  "launched_n": 11,
   "sold_out_n": 0,
-  "share_new": 0.14978213507625274,
+  "share_new": 0.005991285403050109,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true
  },
  {
   "attribute": "category",
-  "value": "coat",
-  "launched_n": 76,
+  "value": "shorts",
+  "launched_n": 26,
   "sold_out_n": 0,
-  "share_new": 0.04139433551198257,
+  "share_new": 0.014161220043572984,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true
  },
  {
   "attribute": "category",
-  "value": "accessory",
-  "launched_n": 86,
+  "value": "swimwear",
+  "launched_n": 2,
   "sold_out_n": 0,
-  "share_new": 0.046840958605664486,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
-  "value": "jeans",
-  "launched_n": 66,
-  "sold_out_n": 0,
-  "share_new": 0.03594771241830065,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "launched_n": 61,
-  "sold_out_n": 0,
-  "share_new": 0.0332244008714597,
+  "share_new": 0.0010893246187363835,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true
@@ -65,6 +45,16 @@
   "launched_n": 96,
   "sold_out_n": 0,
   "share_new": 0.05228758169934641,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "category",
+  "value": "dress",
+  "launched_n": 275,
+  "sold_out_n": 0,
+  "share_new": 0.14978213507625274,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true
@@ -101,40 +91,50 @@
  },
  {
   "attribute": "category",
+  "value": "blazer",
+  "launched_n": 61,
+  "sold_out_n": 0,
+  "share_new": 0.0332244008714597,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "launched_n": 76,
+  "sold_out_n": 0,
+  "share_new": 0.04139433551198257,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "category",
+  "value": "accessory",
+  "launched_n": 86,
+  "sold_out_n": 0,
+  "share_new": 0.046840958605664486,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "category",
+  "value": "jeans",
+  "launched_n": 66,
+  "sold_out_n": 0,
+  "share_new": 0.03594771241830065,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "category",
   "value": "top",
   "launched_n": 407,
   "sold_out_n": 0,
   "share_new": 0.22167755991285404,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "launched_n": 11,
-  "sold_out_n": 0,
-  "share_new": 0.005991285403050109,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
-  "value": "shorts",
-  "launched_n": 26,
-  "sold_out_n": 0,
-  "share_new": 0.014161220043572984,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
-  "value": "swimwear",
-  "launched_n": 2,
-  "sold_out_n": 0,
-  "share_new": 0.0010893246187363835,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true
@@ -511,6 +511,36 @@
  },
  {
   "attribute": "print",
+  "value": "animal",
+  "launched_n": 25,
+  "sold_out_n": 0,
+  "share_new": 0.03720238095238095,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "launched_n": 49,
+  "sold_out_n": 0,
+  "share_new": 0.07291666666666667,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "print",
+  "value": "dot",
+  "launched_n": 11,
+  "sold_out_n": 0,
+  "share_new": 0.01636904761904762,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "print",
   "value": "floral",
   "launched_n": 179,
   "sold_out_n": 0,
@@ -551,36 +581,6 @@
  },
  {
   "attribute": "print",
-  "value": "animal",
-  "launched_n": 25,
-  "sold_out_n": 0,
-  "share_new": 0.03720238095238095,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "launched_n": 49,
-  "sold_out_n": 0,
-  "share_new": 0.07291666666666667,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "print",
-  "value": "dot",
-  "launched_n": 11,
-  "sold_out_n": 0,
-  "share_new": 0.01636904761904762,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "print",
   "value": "abstract",
   "launched_n": 16,
   "sold_out_n": 0,
@@ -611,46 +611,6 @@
  },
  {
   "attribute": "silhouette",
-  "value": "shift",
-  "launched_n": 13,
-  "sold_out_n": 0,
-  "share_new": 0.010878661087866108,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "silhouette",
-  "value": "relaxed",
-  "launched_n": 304,
-  "sold_out_n": 0,
-  "share_new": 0.25439330543933053,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "launched_n": 69,
-  "sold_out_n": 0,
-  "share_new": 0.05774058577405858,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "launched_n": 218,
-  "sold_out_n": 0,
-  "share_new": 0.18242677824267783,
-  "share_sold_out": null,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "silhouette",
   "value": "fitted",
   "launched_n": 279,
   "sold_out_n": 0,
@@ -665,6 +625,16 @@
   "launched_n": 41,
   "sold_out_n": 0,
   "share_new": 0.03430962343096234,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "launched_n": 13,
+  "sold_out_n": 0,
+  "share_new": 0.010878661087866108,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true
@@ -705,6 +675,36 @@
   "launched_n": 19,
   "sold_out_n": 0,
   "share_new": 0.015899581589958158,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "silhouette",
+  "value": "relaxed",
+  "launched_n": 304,
+  "sold_out_n": 0,
+  "share_new": 0.25439330543933053,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "launched_n": 69,
+  "sold_out_n": 0,
+  "share_new": 0.05774058577405858,
+  "share_sold_out": null,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "launched_n": 218,
+  "sold_out_n": 0,
+  "share_new": 0.18242677824267783,
   "share_sold_out": null,
   "demand_index": null,
   "low_n": true

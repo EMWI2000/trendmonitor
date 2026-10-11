@@ -9,6 +9,9 @@ on:
         description: "Rules-only tagging (skip Claude API)"
         type: boolean
         default: false
+  push:
+    branches: [main]
+    paths: [".trigger/snapshot"]   # bump this file to start a run without the Actions UI
 
 permissions:
   contents: write

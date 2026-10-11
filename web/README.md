@@ -96,3 +96,10 @@ Number formatting follows Intl da-DK as the weekly report does: decimal comma, p
 separator ("3.478"), and a no-break space before "%" so "33 %" never wraps with the sign alone
 (`fmtPct` in `lib/format.ts`; literal percentages in JSX use `&nbsp;%`). Exporter source tokens in
 movement sentences are translated by `sourceLabel` in `lib/text.ts`.
+
+## Current deployment
+
+The Vercel project `eb-10/trendmonitor` (Hobby) builds from the mirror repository `EB10/trendmonitor`, pushed
+from the canonical `EMWI2000/trendmonitor` main. Hobby teams block deployments from commits whose GitHub author
+is not the team owner, so deployments must come from commits authored by EB10 (or from a Deploy Hook) until the
+project moves to a Pro team connected to the canonical repository.

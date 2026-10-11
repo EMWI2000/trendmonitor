@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import html
+import logging
 import re
 import time
 import urllib.robotparser
@@ -14,6 +15,8 @@ from urllib.parse import urlparse
 import requests
 
 from .config import Brand, Sources
+
+log = logging.getLogger(__name__)
 
 SIZE_VOCAB = {
     "xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl", "xs/s", "s/m", "m/l", "l/xl",
@@ -180,13 +183,22 @@ class ShopifyClient:
             return True
         return rp.can_fetch(self.sources.user_agent, f"{brand.url}/products.json")
 
+    RETRY_STATUSES = (429, 430, 500, 502, 503, 504)  # 430 = Shopify "security rejection"
+    MAX_ATTEMPTS = 5
+    MAX_BACKOFF = 90.0
+
     def _get_json(self, url: str, params: dict | None = None) -> tuple[int, Any]:
-        last_exc: Exception | None = None
-        for attempt in range(3):
+        last: str = "no response"
+        for attempt in range(self.MAX_ATTEMPTS):
             try:
                 r = self.session.get(url, params=params, timeout=30)
-                if r.status_code in (429, 500, 502, 503, 504):
-                    self.sleep(2 ** attempt * self.sources.request_delay_seconds)
+                if r.status_code in self.RETRY_STATUSES:
+                    retry_after = r.headers.get("Retry-After")
+                    wait = min(self.MAX_BACKOFF, float(retry_after)) if retry_after and retry_after.isdigit() \
+                        else min(self.MAX_BACKOFF, 5.0 * 2 ** attempt)
+                    last = f"http {r.status_code} (retry-after {retry_after}) on attempt {attempt + 1}"
+                    log.info("%s %s: %s, waiting %.0fs", url, params or "", last, wait)
+                    self.sleep(wait)
                     continue
                 if r.status_code != 200:
                     return r.status_code, None
@@ -195,9 +207,9 @@ class ShopifyClient:
                     return r.status_code, None
                 return r.status_code, r.json()
             except (requests.RequestException, ValueError) as exc:
-                last_exc = exc
-                self.sleep(2 ** attempt * self.sources.request_delay_seconds)
-        raise RuntimeError(f"giving up on {url}: {last_exc}")
+                last = f"{type(exc).__name__}: {str(exc)[:80]}"
+                self.sleep(min(self.MAX_BACKOFF, 5.0 * 2 ** attempt))
+        raise RuntimeError(f"giving up on {url}: {last}")
 
     def fetch_brand(self, brand: Brand) -> FetchResult:
         t0 = time.monotonic()

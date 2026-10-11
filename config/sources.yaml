@@ -8,7 +8,7 @@
 # insensitive) and exclude_tags (regex on tags) to drop non-apparel or non-women's products.
 
 user_agent: "trendmonitor/0.1 (+contact: set TM_CONTACT env var)"
-request_delay_seconds: 1.0
+request_delay_seconds: 2.0
 page_size: 250
 max_pages: 40
 

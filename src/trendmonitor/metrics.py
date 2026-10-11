@@ -17,6 +17,7 @@ SERIES_WEEKS = 12
 BASELINE_WEEKS = 8
 MIN_ALERT_COUNT = 5
 LOW_N = 10
+MIN_LAUNCHED = 8  # no index on fewer launches: the denominator is too small to mean anything
 
 
 @dataclass
@@ -181,7 +182,8 @@ def _attribute_table(con, report_date: str) -> pd.DataFrame:
         )
     df = pd.concat(frames, ignore_index=True)
     df["demand_index"] = df.apply(
-        lambda r: (r["share_sold_out"] / r["share_new"]) if pd.notna(r["share_new"]) and r["share_new"] >= 0.02 else None,
+        lambda r: (r["share_sold_out"] / r["share_new"])
+        if pd.notna(r["share_new"]) and r["share_new"] >= 0.02 and r["launched_n"] >= MIN_LAUNCHED else None,
         axis=1,
     )
     df["low_n"] = df["sold_out_n"] < LOW_N

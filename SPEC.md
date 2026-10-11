@@ -143,7 +143,7 @@ Per attribute value (across all peer/benchmark brands, excluding `self`):
 - `share_new`: share of products launched in the last 8 weeks carrying the value.
 - `share_sold_out`: share of net sold_out events in the last 8 weeks whose product carries the
   value.
-- `demand_index = share_sold_out / share_new` (null when share_new < 2 %). Reported with counts;
+- `demand_index = share_sold_out / share_new` (null when share_new < 2 % or fewer than 8 launches). Reported with counts;
   an index on fewer than 10 sold-out events is marked "low n".
 - `weekly_sold_out_count` time series per attribute value, 12 weeks, with a robust baseline:
   rolling 8-week median and MAD. `alert` when this week > median + 2 × 1.4826 × MAD and ≥ 8

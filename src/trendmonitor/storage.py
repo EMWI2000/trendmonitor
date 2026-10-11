@@ -55,6 +55,19 @@ def read_snapshot(date: str, data_dir: Path = DATA_DIR) -> pd.DataFrame:
     return _coerce_snapshot(pd.read_parquet(path))
 
 
+def merge_snapshot_rows(existing: pd.DataFrame, new: pd.DataFrame, brand_keys: set[str]) -> pd.DataFrame:
+    """Replace the rows of `brand_keys` (and of any brand present in `new`) in `existing` with `new`.
+
+    Every other brand's rows are kept untouched, so a partial snapshot (`snapshot --brand`) never wipes
+    the stores it did not fetch. Pure: reads nothing, writes nothing.
+    """
+    existing, new = _coerce_snapshot(existing), _coerce_snapshot(new)
+    replaced = set(brand_keys) | set(new["brand"].dropna())
+    kept = existing[~existing["brand"].isin(replaced)]
+    parts = [p for p in (kept, new) if len(p)]
+    return pd.concat(parts, ignore_index=True) if parts else kept
+
+
 def previous_snapshot_date(date: str, data_dir: Path = DATA_DIR) -> str | None:
     earlier = [d for d in list_snapshot_dates(data_dir) if d < date]
     return earlier[-1] if earlier else None

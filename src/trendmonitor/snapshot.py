@@ -11,7 +11,7 @@ import pandas as pd
 
 from .config import DATA_DIR, Brand, Sources
 from .shopify import FetchResult, ShopifyClient, normalise
-from .storage import SNAPSHOT_COLUMNS, append_runs, write_snapshot
+from .storage import SNAPSHOT_COLUMNS, append_runs, merge_snapshot_rows, read_snapshot, write_snapshot
 
 log = logging.getLogger(__name__)
 
@@ -27,9 +27,15 @@ def run_snapshot(
     fetcher: Callable[[Brand], FetchResult] | None = None,
     brands: list[Brand] | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Fetch all enabled brands (or `brands`), write data/snapshots/{date}.parquet, return (rows, runs)."""
+    """Fetch all enabled brands (or only `brands`), write data/snapshots/{date}.parquet, return (rows, runs).
+
+    With an explicit `brands` list the fetched brands' rows replace their rows in an existing snapshot for
+    `date`; every other brand's rows are kept, and a brand whose fetch failed keeps its old rows. The
+    returned rows are the snapshot as written. Without `brands` the whole day is overwritten.
+    """
     date = date or today_utc()
     fetcher = fetcher or ShopifyClient(sources).fetch_brand
+    partial = brands is not None
     brands = brands if brands is not None else sources.enabled()
 
     all_rows: list[dict] = []
@@ -69,6 +75,9 @@ def run_snapshot(
 
     df = pd.DataFrame(all_rows, columns=SNAPSHOT_COLUMNS)
     runs_df = pd.DataFrame(runs)
+    if partial:
+        fetched_ok = {r["brand"] for r in runs if r["status"] == "ok"}
+        df = merge_snapshot_rows(read_snapshot(date, data_dir), df, fetched_ok)
     if len(df):
         write_snapshot(df, date, data_dir)
     append_runs(runs_df, data_dir)

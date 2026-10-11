@@ -46,7 +46,9 @@ uv run trendmonitor run-daily [--no-claude]
 uv run trendmonitor demo [--days 70] [--seed 7]
 ```
 
-`--data-dir` and `--reports-dir` override the default `data/` and `reports/`.
+`--data-dir` and `--reports-dir` override the default `data/` and `reports/`. `snapshot --brand key`
+re-fetches only that store and merges it into the day's existing snapshot: the other brands' rows are
+kept and a failed fetch keeps the brand's old rows, so it is safe for retrying one store after a 429/430.
 
 ## Layout
 

@@ -3,13 +3,21 @@
 import pandas as pd
 from conftest import make_fetcher
 
-from trendmonitor.config import ATTRIBUTES
+from trendmonitor.config import ATTRIBUTES, Brand, Sources
 from trendmonitor.diff import diff_snapshots, run_diff
 from trendmonitor.metrics import compute
 from trendmonitor.report import render
 from trendmonitor.shopify import FetchResult, normalise
 from trendmonitor.snapshot import run_snapshot
-from trendmonitor.storage import RUN_COLUMNS, latest_runs, read_events, read_runs, read_snapshot, read_tags
+from trendmonitor.storage import (
+    RUN_COLUMNS,
+    latest_runs,
+    merge_snapshot_rows,
+    read_events,
+    read_runs,
+    read_snapshot,
+    read_tags,
+)
 from trendmonitor.tagger import run_tagging
 
 
@@ -156,3 +164,62 @@ def test_latest_runs_keeps_last_row_per_brand_and_date():
     assert today.loc["a"].status == "ok" and today.loc["a"].products == 7
     assert today.loc["b"].status == "http_error"  # ok, then a later failure: the later row wins
     assert latest_runs(pd.DataFrame(columns=RUN_COLUMNS)).empty
+
+
+def _two_brand_sources() -> Sources:
+    a = Brand(key="a", name="A", url="https://a.example.invalid")
+    b = Brand(key="b", name="B", url="https://b.example.invalid")
+    return Sources(brands=[a, b], user_agent="trendmonitor-tests/0.1", request_delay_seconds=0)
+
+
+def test_partial_snapshot_replaces_only_the_fetched_brand(tmp_path, day1, day2):
+    sources = _two_brand_sources()
+    data_dir = tmp_path / "data"
+    run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day1))
+    full = read_snapshot("2026-09-20", data_dir)
+    assert len(full) == 12 and set(full["brand"]) == {"a", "b"}
+
+    # Retry only brand b (as after a 429/430) with a changed catalogue: a is untouched, b is replaced
+    rows, runs = run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day2),
+                              brands=[sources.by_key("b")])
+    snap = read_snapshot("2026-09-20", data_dir)
+    assert len(snap) == 12 and len(rows) == 12 and runs["brand"].tolist() == ["b"]
+    pd.testing.assert_frame_equal(
+        snap[snap.brand == "a"].reset_index(drop=True), full[full.brand == "a"].reset_index(drop=True))
+    assert set(full[full.brand == "b"]["product_id"]) == {101, 102, 103}
+    assert set(snap[snap.brand == "b"]["product_id"]) == {101, 102, 104}
+    assert len(read_runs(data_dir)) == 3
+
+    # A full run (brands=None) still overwrites the whole day
+    run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day1))
+    assert set(read_snapshot("2026-09-20", data_dir)["product_id"]) == {101, 102, 103}
+
+
+def test_partial_snapshot_failed_fetch_keeps_existing_rows(tmp_path, day1):
+    sources = _two_brand_sources()
+    data_dir = tmp_path / "data"
+    run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=make_fetcher(day1))
+    before = read_snapshot("2026-09-20", data_dir)
+
+    def rate_limited(brand: Brand) -> FetchResult:
+        return FetchResult(brand.key, "http_error", [], None, 0, 0.0, error="HTTP 429")
+
+    _, runs = run_snapshot(sources, date="2026-09-20", data_dir=data_dir, fetcher=rate_limited,
+                           brands=[sources.by_key("b")])
+    assert runs["status"].tolist() == ["http_error"]
+    pd.testing.assert_frame_equal(read_snapshot("2026-09-20", data_dir), before)
+
+
+def test_merge_snapshot_rows_keeps_other_brands(day1, day2):
+    a = Brand(key="a", name="A", url="https://a.example.invalid")
+    b = Brand(key="b", name="B", url="https://b.example.invalid")
+    existing = pd.concat([_snap(day1, a, "2026-09-20"), _snap(day1, b, "2026-09-20")], ignore_index=True)
+    new = _snap(day2, b, "2026-09-20")
+
+    merged = merge_snapshot_rows(existing, new, {"b"})
+    assert len(existing) == 12 and len(merged) == 12  # input untouched, no duplicates
+    assert set(merged[merged.brand == "a"]["product_id"]) == {101, 102, 103}
+    assert set(merged[merged.brand == "b"]["product_id"]) == {101, 102, 104}
+    # A brand that was fetched fine but returned nothing is dropped; one not fetched at all is kept
+    assert set(merge_snapshot_rows(existing, new.iloc[0:0], {"b"})["brand"]) == {"a"}
+    assert len(merge_snapshot_rows(existing, new.iloc[0:0], set())) == 12

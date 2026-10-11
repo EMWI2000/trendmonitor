@@ -42,6 +42,7 @@ uv run trendmonitor diff [--date D]
 uv run trendmonitor tag [--date D] [--no-claude] [--limit N]
 uv run trendmonitor report [--date D]
 uv run trendmonitor profile [--date D] [--no-claude]   # style + positioning profile vs. the self brand
+uv run trendmonitor export [--date D] [--out DIR]       # dashboard tables as JSON (default data/export/)
 uv run trendmonitor run-daily [--no-claude]
 uv run trendmonitor demo [--days 70] [--seed 7]
 ```
@@ -80,6 +81,17 @@ price tier, size span, and (with `ANTHROPIC_API_KEY`) a Claude read of sampled d
 band, life stage, style identity and how the offer differs from Baum's. That section describes the
 offer, not the buyer: demographics need Baum's own customer data (Shopify customer reports, Meta
 Audience Insights, newsletter data), which is the natural next input.
+
+## Export for the dashboard
+
+`trendmonitor export` writes the tables the weekly report and the profile are built from as JSON under
+`data/export/` (`meta.json`, `brands.json`, `attributes.json`, `series.json`, `alerts.json`, `sizes.json`,
+`movements.json`, `sold_out_state.json`, `size_depletion.json`, `launch_calendar.json`, `positioning.json`,
+`runs.json`, `taxonomy.json`). Both workflows run it, so the files always match the latest snapshot. They hold
+aggregates only (counts, shares, quantiles): no product rows, texts or image URLs. `sold_out_state.json` is
+the day-one view of "what is sold out at the peers right now": for every attribute value, the share of
+unavailable variants against the share of live variants, overall and for launches in the last 8 weeks, with
+the same low-n flag as the report. `web/` is the Next.js dashboard that reads these files at build time.
 
 ## What the numbers mean
 

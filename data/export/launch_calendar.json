@@ -1,0 +1,560 @@
+[
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-07-20",
+  "products": 27
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-07-27",
+  "products": 7
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-08-03",
+  "products": 1
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-08-10",
+  "products": 46
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-08-31",
+  "products": 40
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-09-07",
+  "products": 6
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-09-14",
+  "products": 11
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-09-21",
+  "products": 7
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-09-28",
+  "products": 4
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-10-05",
+  "products": 168
+ },
+ {
+  "brand": "ceciliebahnsen",
+  "role": "benchmark",
+  "week_start": "2026-08-17",
+  "products": 49
+ },
+ {
+  "brand": "ceciliebahnsen",
+  "role": "benchmark",
+  "week_start": "2026-08-24",
+  "products": 2
+ },
+ {
+  "brand": "ceciliebahnsen",
+  "role": "benchmark",
+  "week_start": "2026-09-07",
+  "products": 25
+ },
+ {
+  "brand": "ceciliebahnsen",
+  "role": "benchmark",
+  "week_start": "2026-09-14",
+  "products": 2
+ },
+ {
+  "brand": "ceciliebahnsen",
+  "role": "benchmark",
+  "week_start": "2026-09-28",
+  "products": 75
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-07-27",
+  "products": 10
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-08-03",
+  "products": 7
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-08-10",
+  "products": 19
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-08-17",
+  "products": 102
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-08-24",
+  "products": 12
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-08-31",
+  "products": 23
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-09-07",
+  "products": 13
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-09-14",
+  "products": 54
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-09-21",
+  "products": 4
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-09-28",
+  "products": 21
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-10-05",
+  "products": 28
+ },
+ {
+  "brand": "designersremix",
+  "role": "peer",
+  "week_start": "2026-08-10",
+  "products": 34
+ },
+ {
+  "brand": "designersremix",
+  "role": "peer",
+  "week_start": "2026-08-17",
+  "products": 5
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-07-20",
+  "products": 22
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-07-27",
+  "products": 42
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-08-03",
+  "products": 15
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-08-10",
+  "products": 11
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-08-17",
+  "products": 32
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-08-24",
+  "products": 6
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-08-31",
+  "products": 5
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-09-07",
+  "products": 4
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-09-14",
+  "products": 3
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-09-21",
+  "products": 13
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-10-05",
+  "products": 318
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-07-20",
+  "products": 41
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-08-03",
+  "products": 1
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-08-17",
+  "products": 66
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-09-07",
+  "products": 51
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-09-14",
+  "products": 7
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-09-21",
+  "products": 5
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-09-28",
+  "products": 4
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-10-05",
+  "products": 34
+ },
+ {
+  "brand": "munthe",
+  "role": "peer",
+  "week_start": "2026-08-03",
+  "products": 55
+ },
+ {
+  "brand": "munthe",
+  "role": "peer",
+  "week_start": "2026-09-07",
+  "products": 1
+ },
+ {
+  "brand": "munthe",
+  "role": "peer",
+  "week_start": "2026-09-21",
+  "products": 1
+ },
+ {
+  "brand": "munthe",
+  "role": "peer",
+  "week_start": "2026-10-05",
+  "products": 77
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-07-20",
+  "products": 1
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-08-03",
+  "products": 34
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-08-10",
+  "products": 6
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-08-24",
+  "products": 2
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-08-31",
+  "products": 2
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-09-07",
+  "products": 51
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-09-28",
+  "products": 4
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-10-05",
+  "products": 6
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-07-20",
+  "products": 17
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-07-27",
+  "products": 43
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-08-03",
+  "products": 18
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-08-10",
+  "products": 3
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-08-17",
+  "products": 6
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-08-24",
+  "products": 20
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-08-31",
+  "products": 11
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-09-07",
+  "products": 4
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-09-14",
+  "products": 61
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-09-21",
+  "products": 6
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-09-28",
+  "products": 11
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-10-05",
+  "products": 2
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-08-03",
+  "products": 17
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-08-10",
+  "products": 37
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-08-17",
+  "products": 6
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-08-24",
+  "products": 5
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-09-07",
+  "products": 38
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-09-14",
+  "products": 6
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-09-21",
+  "products": 8
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-09-28",
+  "products": 2
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-10-05",
+  "products": 1
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-08-03",
+  "products": 8
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-08-17",
+  "products": 49
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-09-07",
+  "products": 57
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-09-14",
+  "products": 7
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-09-21",
+  "products": 2
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-09-28",
+  "products": 140
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-08-03",
+  "products": 93
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-08-10",
+  "products": 1
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-08-31",
+  "products": 292
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-09-14",
+  "products": 2
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-09-28",
+  "products": 1
+ },
+ {
+  "brand": "stinegoya",
+  "role": "peer",
+  "week_start": "2026-08-31",
+  "products": 6
+ },
+ {
+  "brand": "stinegoya",
+  "role": "peer",
+  "week_start": "2026-09-28",
+  "products": 34
+ }
+]

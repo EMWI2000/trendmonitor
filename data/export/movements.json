@@ -1,0 +1,16 @@
+[
+ {
+  "kind": "brand_sell_out_4w",
+  "brand": "ceciliebahnsen",
+  "rate": 0.0,
+  "n": 27,
+  "source": "launches × net_sold_out"
+ },
+ {
+  "kind": "brand_markdown",
+  "brand": "herskind",
+  "share": 0.7202818627450981,
+  "discount": 0.40020010005002504,
+  "source": "seneste snapshot"
+ }
+]

@@ -1,4 +1,4 @@
-"""Command-line entry point: probe | snapshot | diff | tag | report | run-daily | demo."""
+"""Command-line entry point: probe | snapshot | diff | tag | report | profile | export | run-daily | demo."""
 
 from __future__ import annotations
 
@@ -32,6 +32,9 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("profile", help="style and positioning profile of every brand vs. the self brand")
     p.add_argument("--date")
     p.add_argument("--no-claude", action="store_true", help="skip the Claude implied-customer read")
+    p = sub.add_parser("export", help="write the computed tables as JSON for the dashboard (data/export)")
+    p.add_argument("--date")
+    p.add_argument("--out", type=Path, help="output directory (default <data-dir>/export)")
     p = sub.add_parser("run-daily", help="snapshot + diff + tag")
     p.add_argument("--date")
     p.add_argument("--no-claude", action="store_true")
@@ -82,6 +85,13 @@ def main(argv: list[str] | None = None) -> int:
         from .profile import write_profile
 
         path = write_profile(args.date, args.data_dir, args.reports_dir, use_claude=False if args.no_claude else None)
+        print(path)
+        return 0
+
+    if args.cmd == "export":
+        from .export import export_all
+
+        path = export_all(args.date, args.data_dir, args.out)
         print(path)
         return 0
 

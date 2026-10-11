@@ -50,13 +50,15 @@ def _connect(data_dir: Path) -> duckdb.DuckDBPyConnection:
     return con
 
 
-def compute(report_date: str | None = None, data_dir: Path = DATA_DIR) -> WeeklyMetrics:
+def _prepare(report_date: str | None, data_dir: Path) -> tuple[duckdb.DuckDBPyConnection, str, str, list[str]]:
+    """Connect to the data and create the views every metric builds on (`latest`, `net_sold_out`, `launches`).
+
+    Returns (connection, report_date, latest snapshot date on or before it, all snapshot dates).
+    """
     dates = list_snapshot_dates(data_dir)
     if not dates:
         raise RuntimeError("no snapshots found")
     report_date = report_date or dates[-1]
-    rd = dt.date.fromisoformat(report_date)
-    week_start = (rd - dt.timedelta(days=6)).isoformat()
     latest = max(d for d in dates if d <= report_date)
     con = _connect(data_dir)
     con.execute(f"CREATE VIEW latest AS SELECT * FROM snapshots WHERE snapshot_date = '{latest}'")
@@ -81,6 +83,13 @@ def compute(report_date: str | None = None, data_dir: Path = DATA_DIR) -> Weekly
         FROM snapshots GROUP BY brand, product_id, role
         """
     )
+    return con, report_date, latest, dates
+
+
+def compute(report_date: str | None = None, data_dir: Path = DATA_DIR) -> WeeklyMetrics:
+    con, report_date, _, dates = _prepare(report_date, data_dir)
+    rd = dt.date.fromisoformat(report_date)
+    week_start = (rd - dt.timedelta(days=6)).isoformat()
     brands = _brand_table(con, report_date, week_start)
     attributes = _attribute_table(con, report_date)
     series, alerts, weeks_hist = _series_and_alerts(con, report_date)
@@ -264,3 +273,91 @@ def _movements(m: WeeklyMetrics) -> list[dict]:
         out.append({"kind": "alert", "attribute": r.attribute, "value": r.value, "this_week": int(r.this_week),
                     "median": r.baseline_median, "source": "ugeserie, 8-ugers median + 2·MAD"})
     return out[:5]
+
+
+# ----------------------------------------------------------------------------- state of the latest snapshot
+
+
+@dataclass
+class StateMetrics:
+    """What the latest snapshot looks like right now, before any event history exists.
+
+    `sold_out_state` is a stock measure (which attribute values are over-represented among variants that
+    are unavailable today), not the flow measure in WeeklyMetrics.attributes. It answers the day-one
+    question "what characterises what is sold out at the peers now" and must be read with the same
+    caveats: unavailable is buy depth × demand, never sales; the self brand is excluded; n < LOW_N is low.
+    """
+
+    report_date: str
+    latest_date: str
+    sold_out_state: pd.DataFrame  # attribute, scope (all | new), value, live_n, unavailable_n, shares, state_index, low_n
+    size_depletion: pd.DataFrame  # brand, role, size, live_variants, unavailable_variants, unavailable_share
+    launch_calendar: pd.DataFrame  # brand, role, week_start, products (launches in the last SERIES_WEEKS weeks)
+
+
+def compute_state(report_date: str | None = None, data_dir: Path = DATA_DIR) -> StateMetrics:
+    con, report_date, latest, _ = _prepare(report_date, data_dir)
+    return StateMetrics(report_date, latest, _sold_out_state(con, report_date), _size_depletion(con),
+                        _launch_calendar(con, report_date))
+
+
+def _sold_out_state(con, report_date: str) -> pd.DataFrame:
+    frames = []
+    for attr in ATTRIBUTES:
+        for scope, extra in (("all", ""),
+                             ("new", f"AND la.launch_date >= DATE '{report_date}' - INTERVAL {LAUNCH_WINDOW_DAYS} DAY")):
+            frames.append(
+                con.execute(
+                    f"""
+                    WITH v AS (
+                      SELECT l.available, t.{attr} AS value
+                      FROM latest l JOIN tags t USING (brand, product_id) JOIN launches la USING (brand, product_id)
+                      WHERE l.role <> 'self' AND t.{attr} IS NOT NULL {extra}),
+                    agg AS (
+                      SELECT value, COUNT(*) AS live_n,
+                             SUM(CASE WHEN available THEN 0 ELSE 1 END) AS unavailable_n
+                      FROM v GROUP BY value)
+                    SELECT '{attr}' AS attribute, '{scope}' AS scope, value, live_n, unavailable_n,
+                           live_n * 1.0 / NULLIF(SUM(live_n) OVER (), 0) AS share_live,
+                           unavailable_n * 1.0 / NULLIF(SUM(unavailable_n) OVER (), 0) AS share_unavailable
+                    FROM agg
+                    """
+                ).df()
+            )
+    df = pd.concat(frames, ignore_index=True)
+    if df.empty:
+        df["state_index"] = pd.Series(dtype=float)
+        df["low_n"] = pd.Series(dtype=bool)
+        return df
+    df["live_n"] = df["live_n"].astype(int)
+    df["unavailable_n"] = df["unavailable_n"].astype(int)
+    ok = (df["share_live"] >= 0.02) & (df["live_n"] >= MIN_LAUNCHED) & df["share_unavailable"].notna()
+    df["state_index"] = (df["share_unavailable"] / df["share_live"]).where(ok)
+    df["low_n"] = df["unavailable_n"] < LOW_N
+    return df.sort_values(["scope", "attribute", "state_index"], ascending=[True, True, False]).reset_index(drop=True)
+
+
+def _size_depletion(con) -> pd.DataFrame:
+    return con.execute(
+        """
+        SELECT brand, role, size, COUNT(*) AS live_variants,
+               SUM(CASE WHEN available THEN 0 ELSE 1 END) AS unavailable_variants,
+               SUM(CASE WHEN available THEN 0 ELSE 1 END) * 1.0 / COUNT(*) AS unavailable_share
+        FROM latest WHERE size IS NOT NULL
+        GROUP BY 1, 2, 3 ORDER BY 1, 3
+        """
+    ).df()
+
+
+def _launch_calendar(con, report_date: str) -> pd.DataFrame:
+    df = con.execute(
+        f"""
+        SELECT brand, role, DATE_TRUNC('week', launch_date) AS week_start, COUNT(*) AS products
+        FROM launches
+        WHERE launch_date > DATE '{report_date}' - INTERVAL {7 * SERIES_WEEKS} DAY AND launch_date <= DATE '{report_date}'
+        GROUP BY 1, 2, 3 ORDER BY 1, 3
+        """
+    ).df()
+    if len(df):
+        df["week_start"] = pd.to_datetime(df["week_start"]).dt.strftime("%Y-%m-%d")
+    return df

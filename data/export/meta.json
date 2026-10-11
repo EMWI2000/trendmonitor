@@ -1,0 +1,190 @@
+{
+ "report_date": "2026-10-11",
+ "week_start": "2026-10-05",
+ "latest_snapshot_date": "2026-10-11",
+ "snapshot_dates": [
+  "2026-10-11"
+ ],
+ "weeks_of_history": 0,
+ "calibration": true,
+ "taxonomy_version": "0.1",
+ "self_brand": "baum",
+ "thresholds": {
+  "low_n": 10,
+  "min_launched": 8,
+  "baseline_weeks": 8,
+  "series_weeks": 12,
+  "launch_window_days": 56
+ },
+ "brands": [
+  {
+   "key": "baum",
+   "name": "Baum und Pferdgarten",
+   "role": "self",
+   "enabled": true,
+   "currency": "EUR",
+   "url": "https://baumundpferdgarten.com"
+  },
+  {
+   "key": "stinegoya",
+   "name": "Stine Goya",
+   "role": "peer",
+   "enabled": true,
+   "currency": "DKK",
+   "url": "https://stinegoya.com"
+  },
+  {
+   "key": "munthe",
+   "name": "Munthe",
+   "role": "peer",
+   "enabled": true,
+   "currency": "DKK",
+   "url": "https://munthe.com"
+  },
+  {
+   "key": "herskind",
+   "name": "Birgitte Herskind",
+   "role": "peer",
+   "enabled": true,
+   "currency": "DKK",
+   "url": "https://www.birgitteherskind.com"
+  },
+  {
+   "key": "rabens",
+   "name": "Rabens Saloner",
+   "role": "peer",
+   "enabled": true,
+   "currency": "EUR",
+   "url": "https://rabenssaloner.com"
+  },
+  {
+   "key": "day",
+   "name": "DAY Birger et Mikkelsen",
+   "role": "peer",
+   "enabled": true,
+   "currency": "DKK",
+   "url": "https://www.day.dk"
+  },
+  {
+   "key": "designersremix",
+   "name": "Designers Remix",
+   "role": "peer",
+   "enabled": true,
+   "currency": "DKK",
+   "url": "https://www.designersremix.com"
+  },
+  {
+   "key": "skall",
+   "name": "Skall Studio",
+   "role": "peer",
+   "enabled": true,
+   "currency": "EUR",
+   "url": "https://skallstudio.com"
+  },
+  {
+   "key": "madsnorgaard",
+   "name": "Mads Nørgaard",
+   "role": "peer",
+   "enabled": true,
+   "currency": "EUR",
+   "url": "https://www.madsnorgaard.com"
+  },
+  {
+   "key": "ceciliebahnsen",
+   "name": "Cecilie Bahnsen",
+   "role": "benchmark",
+   "enabled": true,
+   "currency": "DKK",
+   "url": "https://ceciliebahnsen.com"
+  },
+  {
+   "key": "rodebjer",
+   "name": "Rodebjer",
+   "role": "international",
+   "enabled": true,
+   "currency": "SEK",
+   "url": "https://www.rodebjer.com"
+  },
+  {
+   "key": "rixo",
+   "name": "Rixo",
+   "role": "international",
+   "enabled": true,
+   "currency": "GBP",
+   "url": "https://www.rixo.co.uk"
+  },
+  {
+   "key": "kitri",
+   "name": "Kitri",
+   "role": "international",
+   "enabled": false,
+   "currency": "GBP",
+   "url": "https://kitristudio.com"
+  },
+  {
+   "key": "rouje",
+   "name": "Rouje",
+   "role": "international",
+   "enabled": true,
+   "currency": "EUR",
+   "url": "https://www.rouje.com"
+  },
+  {
+   "key": "ganni",
+   "name": "Ganni",
+   "role": "benchmark",
+   "enabled": false,
+   "currency": null,
+   "url": "https://www.ganni.com"
+  },
+  {
+   "key": "rotate",
+   "name": "Rotate Birger Christensen",
+   "role": "peer",
+   "enabled": false,
+   "currency": null,
+   "url": "https://www.rotatebirgerchristensen.com"
+  },
+  {
+   "key": "gestuz",
+   "name": "Gestuz",
+   "role": "peer",
+   "enabled": false,
+   "currency": null,
+   "url": "https://www.gestuz.com"
+  },
+  {
+   "key": "samsoe",
+   "name": "Samsøe Samsøe",
+   "role": "peer",
+   "enabled": false,
+   "currency": null,
+   "url": "https://www.samsoe.com"
+  },
+  {
+   "key": "envii",
+   "name": "Envii",
+   "role": "peer",
+   "enabled": false,
+   "currency": null,
+   "url": "https://www.envii.com"
+  },
+  {
+   "key": "malenebirger",
+   "name": "By Malene Birger",
+   "role": "peer",
+   "enabled": false,
+   "currency": null,
+   "url": "https://www.bymalenebirger.com"
+  }
+ ],
+ "notes": {
+  "not_sales": "Udsolgt er indkøbsdybde gange efterspørgsel, ikke salg.",
+  "index": "Alle attributtal er indekseret mod attributtens andel af nyt sortiment i de seneste 8 uger.",
+  "low_n": "n under 10 er markeret som lavt n.",
+  "calibration": "Afvigelser rapporteres først efter 8 ugers historik (kalibrering).",
+  "state": "Udsolgt-tilstand er et øjebliksbillede af varianter uden lager i dag, ikke en bevægelse.",
+  "self_excluded": "Referencebrandet indgår aldrig i udsolgt-indekset."
+ },
+ "generated_at": "2026-10-11T14:52:28+00:00"
+}

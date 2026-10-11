@@ -1,0 +1,122 @@
+{
+ "version": "0.1",
+ "attributes": {
+  "category": {
+   "description": "Product category",
+   "values": [
+    "dress",
+    "top",
+    "shirt",
+    "knit",
+    "jacket",
+    "coat",
+    "blazer",
+    "trousers",
+    "jeans",
+    "skirt",
+    "shorts",
+    "jumpsuit",
+    "swimwear",
+    "accessory",
+    "shoes"
+   ]
+  },
+  "silhouette": {
+   "description": "Overall silhouette or fit",
+   "values": [
+    "fitted",
+    "straight",
+    "relaxed",
+    "oversized",
+    "a-line",
+    "wide-leg",
+    "balloon",
+    "wrap",
+    "shift",
+    "pleated"
+   ]
+  },
+  "print": {
+   "description": "Print or pattern family",
+   "values": [
+    "solid",
+    "floral",
+    "animal",
+    "stripe",
+    "check",
+    "dot",
+    "abstract",
+    "logo",
+    "paisley",
+    "other-print"
+   ]
+  },
+  "colour_family": {
+   "description": "Dominant colour family",
+   "values": [
+    "black",
+    "white",
+    "grey",
+    "navy",
+    "blue",
+    "green",
+    "yellow",
+    "orange",
+    "red",
+    "pink",
+    "purple",
+    "brown",
+    "metallic",
+    "multi"
+   ]
+  },
+  "material": {
+   "description": "Main material family",
+   "values": [
+    "cotton",
+    "linen",
+    "silk",
+    "wool",
+    "viscose",
+    "polyester",
+    "denim",
+    "leather",
+    "lace",
+    "satin",
+    "knitwear",
+    "sequin"
+   ]
+  },
+  "sleeve": {
+   "description": "Sleeve type (tops, dresses, outerwear)",
+   "values": [
+    "sleeveless",
+    "short",
+    "long",
+    "puff",
+    "three-quarter"
+   ]
+  },
+  "length": {
+   "description": "Length (dresses, skirts, trousers, coats)",
+   "values": [
+    "mini",
+    "knee",
+    "midi",
+    "maxi",
+    "cropped",
+    "full"
+   ]
+  },
+  "occasion": {
+   "description": "Primary wearing occasion",
+   "values": [
+    "everyday",
+    "work",
+    "occasion",
+    "outerwear",
+    "lounge"
+   ]
+  }
+ }
+}

@@ -41,6 +41,8 @@ jobs:
           else
             uv run trendmonitor run-daily
           fi
+      - name: Export dashboard tables
+        run: uv run trendmonitor export
       - name: Commit data
         run: |
           git config user.name "trendmonitor-bot"

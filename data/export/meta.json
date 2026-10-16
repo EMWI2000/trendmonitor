@@ -1,11 +1,12 @@
 {
- "report_date": "2026-10-11",
- "week_start": "2026-10-05",
- "latest_snapshot_date": "2026-10-11",
+ "report_date": "2026-10-16",
+ "week_start": "2026-10-10",
+ "latest_snapshot_date": "2026-10-16",
  "snapshot_dates": [
-  "2026-10-11"
+  "2026-10-11",
+  "2026-10-16"
  ],
- "weeks_of_history": 0,
+ "weeks_of_history": 1,
  "calibration": true,
  "taxonomy_version": "0.1",
  "self_brand": "baum",
@@ -261,5 +262,5 @@
   "state": "Udsolgt-tilstand er et øjebliksbillede af varianter uden lager i dag, ikke en bevægelse.",
   "self_excluded": "Referencebrandet indgår aldrig i udsolgt-indekset."
  },
- "generated_at": "2026-10-12T13:33:13+00:00"
+ "generated_at": "2026-10-16T09:02:27+00:00"
 }

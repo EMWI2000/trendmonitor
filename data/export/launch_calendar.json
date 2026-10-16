@@ -2,12 +2,6 @@
  {
   "brand": "baum",
   "role": "self",
-  "week_start": "2026-07-20",
-  "products": 27
- },
- {
-  "brand": "baum",
-  "role": "self",
   "week_start": "2026-07-27",
   "products": 7
  },
@@ -58,6 +52,12 @@
   "role": "self",
   "week_start": "2026-10-05",
   "products": 168
+ },
+ {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-10-12",
+  "products": 1
  },
  {
   "brand": "ceciliebahnsen",
@@ -156,6 +156,12 @@
   "products": 28
  },
  {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-10-12",
+  "products": 10
+ },
+ {
   "brand": "designersremix",
   "role": "peer",
   "week_start": "2026-08-10",
@@ -168,10 +174,10 @@
   "products": 5
  },
  {
-  "brand": "herskind",
+  "brand": "designersremix",
   "role": "peer",
-  "week_start": "2026-07-20",
-  "products": 22
+  "week_start": "2026-10-12",
+  "products": 82
  },
  {
   "brand": "herskind",
@@ -236,12 +242,6 @@
  {
   "brand": "madsnorgaard",
   "role": "peer",
-  "week_start": "2026-07-20",
-  "products": 41
- },
- {
-  "brand": "madsnorgaard",
-  "role": "peer",
   "week_start": "2026-08-03",
   "products": 1
  },
@@ -282,6 +282,12 @@
   "products": 34
  },
  {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-10-12",
+  "products": 5
+ },
+ {
   "brand": "munthe",
   "role": "peer",
   "week_start": "2026-08-03",
@@ -304,12 +310,6 @@
   "role": "peer",
   "week_start": "2026-10-05",
   "products": 77
- },
- {
-  "brand": "rabens",
-  "role": "peer",
-  "week_start": "2026-07-20",
-  "products": 1
  },
  {
   "brand": "rabens",
@@ -354,10 +354,10 @@
   "products": 6
  },
  {
-  "brand": "rixo",
-  "role": "international",
-  "week_start": "2026-07-20",
-  "products": 17
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-10-12",
+  "products": 32
  },
  {
   "brand": "rixo",
@@ -424,6 +424,12 @@
   "role": "international",
   "week_start": "2026-10-05",
   "products": 2
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-10-12",
+  "products": 4
  },
  {
   "brand": "rodebjer",

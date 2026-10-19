@@ -111,21 +111,21 @@
  },
  {
   "attribute": "category",
-  "value": "shoes",
-  "launched_n": 11,
-  "sold_out_n": 7,
-  "share_new": 0.00648202710665881,
-  "share_sold_out": 0.008353221957040573,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
   "value": "shorts",
   "launched_n": 31,
   "sold_out_n": 9,
   "share_new": 0.018267530936947555,
   "share_sold_out": 0.010739856801909307,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "launched_n": 11,
+  "sold_out_n": 7,
+  "share_new": 0.00648202710665881,
+  "share_sold_out": 0.008353221957040573,
   "demand_index": null,
   "low_n": true
  },
@@ -241,16 +241,6 @@
  },
  {
   "attribute": "colour_family",
-  "value": "purple",
-  "launched_n": 16,
-  "sold_out_n": 4,
-  "share_new": 0.013061224489795919,
-  "share_sold_out": 0.005649717514124294,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "colour_family",
   "value": "metallic",
   "launched_n": 20,
   "sold_out_n": 19,
@@ -278,6 +268,16 @@
   "share_sold_out": 0.06073446327683616,
   "demand_index": null,
   "low_n": false
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "launched_n": 16,
+  "sold_out_n": 4,
+  "share_new": 0.013061224489795919,
+  "share_sold_out": 0.005649717514124294,
+  "demand_index": null,
+  "low_n": true
  },
  {
   "attribute": "length",
@@ -441,21 +441,21 @@
  },
  {
   "attribute": "material",
-  "value": "satin",
-  "launched_n": 20,
-  "sold_out_n": 8,
-  "share_new": 0.013297872340425532,
-  "share_sold_out": 0.01032258064516129,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "material",
   "value": "sequin",
   "launched_n": 18,
   "sold_out_n": 4,
   "share_new": 0.011968085106382979,
   "share_sold_out": 0.005161290322580645,
+  "demand_index": null,
+  "low_n": true
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "launched_n": 20,
+  "sold_out_n": 8,
+  "share_new": 0.013297872340425532,
+  "share_sold_out": 0.01032258064516129,
   "demand_index": null,
   "low_n": true
  },

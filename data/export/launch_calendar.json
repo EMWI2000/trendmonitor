@@ -3,7 +3,7 @@
   "brand": "baum",
   "role": "self",
   "week_start": "2026-07-27",
-  "products": 7
+  "products": 1
  },
  {
   "brand": "baum",
@@ -153,12 +153,18 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-10-05",
-  "products": 28
+  "products": 27
  },
  {
   "brand": "day",
   "role": "peer",
   "week_start": "2026-10-12",
+  "products": 37
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-10-19",
   "products": 37
  },
  {
@@ -178,6 +184,12 @@
   "role": "peer",
   "week_start": "2026-10-12",
   "products": 82
+ },
+ {
+  "brand": "designersremix",
+  "role": "peer",
+  "week_start": "2026-10-19",
+  "products": 12
  },
  {
   "brand": "herskind",
@@ -238,6 +250,12 @@
   "role": "peer",
   "week_start": "2026-10-05",
   "products": 318
+ },
+ {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-10-19",
+  "products": 1
  },
  {
   "brand": "madsnorgaard",
@@ -363,7 +381,7 @@
   "brand": "rixo",
   "role": "international",
   "week_start": "2026-07-27",
-  "products": 43
+  "products": 40
  },
  {
   "brand": "rixo",
@@ -430,6 +448,12 @@
   "role": "international",
   "week_start": "2026-10-12",
   "products": 18
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-10-19",
+  "products": 1
  },
  {
   "brand": "rodebjer",

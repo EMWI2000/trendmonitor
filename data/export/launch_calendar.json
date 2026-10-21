@@ -2,12 +2,6 @@
  {
   "brand": "baum",
   "role": "self",
-  "week_start": "2026-07-27",
-  "products": 1
- },
- {
-  "brand": "baum",
-  "role": "self",
   "week_start": "2026-08-03",
   "products": 1
  },
@@ -165,7 +159,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-10-19",
-  "products": 37
+  "products": 38
  },
  {
   "brand": "designersremix",
@@ -189,7 +183,7 @@
   "brand": "designersremix",
   "role": "peer",
   "week_start": "2026-10-19",
-  "products": 12
+  "products": 21
  },
  {
   "brand": "herskind",

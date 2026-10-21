@@ -1,145 +1,73 @@
 [
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 0,
-  "n": 6
+  "n": 23
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "material",
-  "value": "sequin",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 0,
-  "n": 101
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "knit",
+  "attribute": "print",
+  "value": "check",
   "weeks_ago": 11,
   "n": 0
  },
@@ -147,7 +75,7 @@
   "attribute": "category",
   "value": "dress",
   "weeks_ago": 0,
-  "n": 218
+  "n": 222
  },
  {
   "attribute": "category",
@@ -212,6 +140,78 @@
  {
   "attribute": "category",
   "value": "dress",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 0,
+  "n": 115
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "knit",
   "weeks_ago": 11,
   "n": 0
  },
@@ -219,7 +219,7 @@
   "attribute": "category",
   "value": "jeans",
   "weeks_ago": 0,
-  "n": 24
+  "n": 30
  },
  {
   "attribute": "category",
@@ -291,7 +291,7 @@
   "attribute": "category",
   "value": "jacket",
   "weeks_ago": 0,
-  "n": 79
+  "n": 84
  },
  {
   "attribute": "category",
@@ -363,7 +363,7 @@
   "attribute": "category",
   "value": "accessory",
   "weeks_ago": 0,
-  "n": 17
+  "n": 20
  },
  {
   "attribute": "category",
@@ -576,78 +576,6 @@
   "n": 0
  },
  {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 0,
-  "n": 22
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "check",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
   "attribute": "sleeve",
   "value": "puff",
   "weeks_ago": 0,
@@ -721,361 +649,73 @@
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 0,
-  "n": 123
+  "n": 7
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
+  "value": "sequin",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "viscose",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 0,
-  "n": 37
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "denim",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 0,
-  "n": 219
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "top",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 0,
-  "n": 20
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "blazer",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 0,
-  "n": 24
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "a-line",
+  "value": "sequin",
   "weeks_ago": 11,
   "n": 0
  },
@@ -1083,7 +723,7 @@
   "attribute": "silhouette",
   "value": "balloon",
   "weeks_ago": 0,
-  "n": 22
+  "n": 23
  },
  {
   "attribute": "silhouette",
@@ -1148,6 +788,78 @@
  {
   "attribute": "silhouette",
   "value": "balloon",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 0,
+  "n": 26
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "a-line",
   "weeks_ago": 11,
   "n": 0
  },
@@ -1227,7 +939,7 @@
   "attribute": "print",
   "value": "abstract",
   "weeks_ago": 0,
-  "n": 13
+  "n": 14
  },
  {
   "attribute": "print",
@@ -1296,3170 +1008,1010 @@
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 0,
-  "n": 184
+  "n": 245
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "midi",
+  "attribute": "category",
+  "value": "top",
   "weeks_ago": 11,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 0,
-  "n": 10
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "full",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 0,
-  "n": 177
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "black",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 0,
-  "n": 34
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "green",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 0,
   "n": 22
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "navy",
+  "attribute": "category",
+  "value": "blazer",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 0,
-  "n": 52
+  "n": 195
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "pink",
+  "value": "black",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 0,
-  "n": 5
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "orange",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 0,
-  "n": 121
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "red",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 0,
-  "n": 126
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "outerwear",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 0,
-  "n": 208
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "occasion",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 0,
-  "n": 11
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "linen",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 0,
-  "n": 33
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "leather",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 0,
-  "n": 176
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "polyester",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 0,
-  "n": 70
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "silk",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 0,
-  "n": 57
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "lace",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 0,
-  "n": 9
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "satin",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 0,
-  "n": 28
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shirt",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 0,
-  "n": 58
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "skirt",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 0,
-  "n": 25
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "coat",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 0,
-  "n": 105
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "trousers",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 0,
-  "n": 95
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "straight",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 0,
-  "n": 128
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "fitted",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 0,
-  "n": 23
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "wide-leg",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 0,
-  "n": 9
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "shift",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 0,
-  "n": 11
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "pleated",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 0,
-  "n": 301
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "other-print",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 0,
-  "n": 5
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "paisley",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 0,
-  "n": 33
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "animal",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 0,
-  "n": 23
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "print",
-  "value": "logo",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 0,
-  "n": 96
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "sleeve",
-  "value": "sleeveless",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 0,
-  "n": 65
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "maxi",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "length",
-  "value": "knee",
+  "value": "green",
   "weeks_ago": 0,
   "n": 24
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "knee",
+  "attribute": "colour_family",
+  "value": "green",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 0,
-  "n": 83
+  "n": 20
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "white",
+  "value": "navy",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 0,
   "n": 54
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "blue",
+  "value": "pink",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "colour_family",
-  "value": "grey",
+  "value": "orange",
+  "weeks_ago": 0,
+  "n": 6
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "orange",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 0,
+  "n": 130
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "red",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 0,
+  "n": 199
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "midi",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 0,
+  "n": 11
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "full",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 0,
+  "n": 209
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "occasion",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 0,
+  "n": 143
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "outerwear",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 0,
+  "n": 134
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "viscose",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "denim",
   "weeks_ago": 0,
   "n": 44
  },
  {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "grey",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 0,
-  "n": 45
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "multi",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 0,
-  "n": 24
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "metallic",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 0,
-  "n": 7
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "colour_family",
-  "value": "purple",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 0,
-  "n": 107
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "work",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 0,
-  "n": 77
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "occasion",
-  "value": "everyday",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
   "attribute": "material",
-  "value": "cotton",
-  "weeks_ago": 0,
-  "n": 191
- },
- {
-  "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
+  "value": "denim",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "material",
-  "value": "cotton",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 0,
-  "n": 70
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "wool",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 0,
-  "n": 73
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "material",
-  "value": "knitwear",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 0,
-  "n": 8
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "category",
-  "value": "shoes",
+  "value": "denim",
   "weeks_ago": 11,
   "n": 0
  },
@@ -4467,7 +2019,7 @@
   "attribute": "silhouette",
   "value": "relaxed",
   "weeks_ago": 0,
-  "n": 193
+  "n": 209
  },
  {
   "attribute": "silhouette",
@@ -4532,78 +2084,6 @@
  {
   "attribute": "silhouette",
   "value": "relaxed",
-  "weeks_ago": 11,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 0,
-  "n": 105
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 1,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 2,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 3,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 4,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 5,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 6,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 7,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 8,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 9,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
-  "weeks_ago": 10,
-  "n": 0
- },
- {
-  "attribute": "silhouette",
-  "value": "oversized",
   "weeks_ago": 11,
   "n": 0
  },
@@ -4680,10 +2160,82 @@
   "n": 0
  },
  {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 0,
+  "n": 118
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "oversized",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
   "attribute": "print",
   "value": "stripe",
   "weeks_ago": 0,
-  "n": 36
+  "n": 43
  },
  {
   "attribute": "print",
@@ -4755,7 +2307,7 @@
   "attribute": "print",
   "value": "floral",
   "weeks_ago": 0,
-  "n": 142
+  "n": 140
  },
  {
   "attribute": "print",
@@ -4827,7 +2379,7 @@
   "attribute": "print",
   "value": "solid",
   "weeks_ago": 0,
-  "n": 2
+  "n": 1
  },
  {
   "attribute": "print",
@@ -4892,6 +2444,366 @@
  {
   "attribute": "print",
   "value": "solid",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 0,
+  "n": 8
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 0,
+  "n": 107
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "brown",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 0,
+  "n": 23
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 0,
+  "n": 80
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "cropped",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 0,
+  "n": 103
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "length",
+  "value": "mini",
   "weeks_ago": 11,
   "n": 0
  },
@@ -4899,7 +2811,7 @@
   "attribute": "sleeve",
   "value": "short",
   "weeks_ago": 0,
-  "n": 127
+  "n": 136
  },
  {
   "attribute": "sleeve",
@@ -4971,7 +2883,7 @@
   "attribute": "sleeve",
   "value": "long",
   "weeks_ago": 0,
-  "n": 258
+  "n": 270
  },
  {
   "attribute": "sleeve",
@@ -5112,362 +3024,2450 @@
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 0,
-  "n": 68
+  "n": 66
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "length",
-  "value": "cropped",
+  "attribute": "occasion",
+  "value": "lounge",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 0,
+  "n": 203
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "cotton",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 0,
+  "n": 87
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "knitwear",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 0,
+  "n": 82
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "wool",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 0,
+  "n": 113
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "straight",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 0,
+  "n": 147
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "fitted",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 0,
+  "n": 27
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "wide-leg",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 0,
+  "n": 11
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 0,
+  "n": 13
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "silhouette",
+  "value": "pleated",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 0,
+  "n": 321
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "other-print",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 0,
+  "n": 5
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 0,
+  "n": 39
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "animal",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 0,
+  "n": 28
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "print",
+  "value": "logo",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 0,
+  "n": 30
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "shirt",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 0,
+  "n": 70
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "skirt",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 0,
+  "n": 119
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "trousers",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 0,
+  "n": 31
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "category",
+  "value": "coat",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 0,
+  "n": 58
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "blue",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 0,
+  "n": 96
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "white",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 0,
+  "n": 44
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "grey",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 0,
+  "n": 50
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "multi",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 0,
+  "n": 25
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "metallic",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 0,
+  "n": 6
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 0,
-  "n": 97
+  "n": 67
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "length",
-  "value": "mini",
+  "value": "maxi",
   "weeks_ago": 11,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 0,
-  "n": 85
+  "n": 27
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "brown",
+  "attribute": "length",
+  "value": "knee",
   "weeks_ago": 11,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 0,
-  "n": 21
+  "n": 111
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 1,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 2,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 3,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 4,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 5,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 6,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 7,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 8,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 9,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 10,
   "n": 0
  },
  {
-  "attribute": "colour_family",
-  "value": "yellow",
+  "attribute": "sleeve",
+  "value": "sleeveless",
   "weeks_ago": 11,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 0,
-  "n": 62
+  "n": 125
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 1,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 2,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 3,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 4,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 5,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 6,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 7,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 8,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 9,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
   "weeks_ago": 10,
   "n": 0
  },
  {
   "attribute": "occasion",
-  "value": "lounge",
+  "value": "work",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 0,
+  "n": 95
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "occasion",
+  "value": "everyday",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 0,
+  "n": 191
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "polyester",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 0,
+  "n": 65
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "lace",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 0,
+  "n": 8
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "linen",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 0,
+  "n": 74
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "silk",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 0,
+  "n": 37
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "leather",
+  "weeks_ago": 11,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 0,
+  "n": 12
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 1,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 2,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 3,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 4,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 5,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 6,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 7,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 8,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 9,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "weeks_ago": 10,
+  "n": 0
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
   "weeks_ago": 11,
   "n": 0
  }

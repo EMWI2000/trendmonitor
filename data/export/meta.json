@@ -1,7 +1,7 @@
 {
- "report_date": "2026-10-21",
- "week_start": "2026-10-15",
- "latest_snapshot_date": "2026-10-21",
+ "report_date": "2026-10-22",
+ "week_start": "2026-10-16",
+ "latest_snapshot_date": "2026-10-22",
  "snapshot_dates": [
   "2026-10-11",
   "2026-10-16",
@@ -9,7 +9,8 @@
   "2026-10-18",
   "2026-10-19",
   "2026-10-20",
-  "2026-10-21"
+  "2026-10-21",
+  "2026-10-22"
  ],
  "weeks_of_history": 1,
  "calibration": true,
@@ -267,5 +268,5 @@
   "state": "Udsolgt-tilstand er et øjebliksbillede af varianter uden lager i dag, ikke en bevægelse.",
   "self_excluded": "Referencebrandet indgår aldrig i udsolgt-indekset."
  },
- "generated_at": "2026-10-21T09:23:10+00:00"
+ "generated_at": "2026-10-22T09:25:58+00:00"
 }

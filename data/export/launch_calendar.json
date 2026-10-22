@@ -87,7 +87,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-07-27",
-  "products": 10
+  "products": 5
  },
  {
   "brand": "day",
@@ -189,7 +189,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-07-27",
-  "products": 42
+  "products": 7
  },
  {
   "brand": "herskind",
@@ -249,7 +249,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-10-19",
-  "products": 1
+  "products": 191
  },
  {
   "brand": "madsnorgaard",
@@ -375,7 +375,7 @@
   "brand": "rixo",
   "role": "international",
   "week_start": "2026-07-27",
-  "products": 40
+  "products": 5
  },
  {
   "brand": "rixo",
@@ -580,5 +580,11 @@
   "role": "peer",
   "week_start": "2026-09-28",
   "products": 34
+ },
+ {
+  "brand": "stinegoya",
+  "role": "peer",
+  "week_start": "2026-10-19",
+  "products": 48
  }
 ]

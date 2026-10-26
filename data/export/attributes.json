@@ -111,21 +111,21 @@
  },
  {
   "attribute": "category",
-  "value": "shoes",
-  "launched_n": 6,
-  "sold_out_n": 10,
-  "share_new": 0.0029717682020802376,
-  "share_sold_out": 0.006578947368421052,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "category",
   "value": "shorts",
   "launched_n": 34,
   "sold_out_n": 17,
   "share_new": 0.016840019811788013,
   "share_sold_out": 0.01118421052631579,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "launched_n": 6,
+  "sold_out_n": 10,
+  "share_new": 0.0029717682020802376,
+  "share_sold_out": 0.006578947368421052,
   "demand_index": null,
   "low_n": false
  },
@@ -441,16 +441,6 @@
  },
  {
   "attribute": "material",
-  "value": "satin",
-  "launched_n": 21,
-  "sold_out_n": 18,
-  "share_new": 0.011673151750972763,
-  "share_sold_out": 0.01276595744680851,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "material",
   "value": "sequin",
   "launched_n": 23,
   "sold_out_n": 8,
@@ -458,6 +448,16 @@
   "share_sold_out": 0.005673758865248227,
   "demand_index": null,
   "low_n": true
+ },
+ {
+  "attribute": "material",
+  "value": "satin",
+  "launched_n": 21,
+  "sold_out_n": 18,
+  "share_new": 0.011673151750972763,
+  "share_sold_out": 0.01276595744680851,
+  "demand_index": null,
+  "low_n": false
  },
  {
   "attribute": "occasion",
@@ -681,11 +681,11 @@
  },
  {
   "attribute": "silhouette",
-  "value": "shift",
-  "launched_n": 19,
-  "sold_out_n": 21,
-  "share_new": 0.013437057991513438,
-  "share_sold_out": 0.019319227230910764,
+  "value": "pleated",
+  "launched_n": 15,
+  "sold_out_n": 20,
+  "share_new": 0.010608203677510608,
+  "share_sold_out": 0.01839926402943882,
   "demand_index": null,
   "low_n": false
  },
@@ -701,11 +701,11 @@
  },
  {
   "attribute": "silhouette",
-  "value": "pleated",
-  "launched_n": 15,
-  "sold_out_n": 20,
-  "share_new": 0.010608203677510608,
-  "share_sold_out": 0.01839926402943882,
+  "value": "shift",
+  "launched_n": 19,
+  "sold_out_n": 21,
+  "share_new": 0.013437057991513438,
+  "share_sold_out": 0.019319227230910764,
   "demand_index": null,
   "low_n": false
  },

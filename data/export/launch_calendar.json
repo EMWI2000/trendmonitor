@@ -92,12 +92,6 @@
  {
   "brand": "day",
   "role": "peer",
-  "week_start": "2026-08-03",
-  "products": 7
- },
- {
-  "brand": "day",
-  "role": "peer",
   "week_start": "2026-08-10",
   "products": 19
  },
@@ -160,6 +154,12 @@
   "role": "peer",
   "week_start": "2026-10-19",
   "products": 87
+ },
+ {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-10-26",
+  "products": 4
  },
  {
   "brand": "designersremix",
@@ -327,7 +327,7 @@
   "brand": "rabens",
   "role": "peer",
   "week_start": "2026-08-03",
-  "products": 34
+  "products": 1
  },
  {
   "brand": "rabens",

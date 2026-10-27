@@ -60,6 +60,12 @@
   "products": 11
  },
  {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-10-26",
+  "products": 3
+ },
+ {
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "week_start": "2026-08-17",
@@ -246,6 +252,12 @@
   "products": 192
  },
  {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-10-26",
+  "products": 1
+ },
+ {
   "brand": "madsnorgaard",
   "role": "peer",
   "week_start": "2026-08-03",
@@ -326,12 +338,6 @@
  {
   "brand": "rabens",
   "role": "peer",
-  "week_start": "2026-08-03",
-  "products": 1
- },
- {
-  "brand": "rabens",
-  "role": "peer",
   "week_start": "2026-08-10",
   "products": 6
  },
@@ -375,7 +381,7 @@
   "brand": "rixo",
   "role": "international",
   "week_start": "2026-08-03",
-  "products": 18
+  "products": 17
  },
  {
   "brand": "rixo",
@@ -444,6 +450,12 @@
   "products": 5
  },
  {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-10-26",
+  "products": 1
+ },
+ {
   "brand": "rodebjer",
   "role": "international",
   "week_start": "2026-08-03",
@@ -500,12 +512,6 @@
  {
   "brand": "rouje",
   "role": "international",
-  "week_start": "2026-08-03",
-  "products": 8
- },
- {
-  "brand": "rouje",
-  "role": "international",
   "week_start": "2026-08-17",
   "products": 49
  },
@@ -540,10 +546,16 @@
   "products": 11
  },
  {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-10-26",
+  "products": 1
+ },
+ {
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-08-03",
-  "products": 93
+  "products": 5
  },
  {
   "brand": "skall",
@@ -586,5 +598,11 @@
   "role": "peer",
   "week_start": "2026-10-19",
   "products": 48
+ },
+ {
+  "brand": "stinegoya",
+  "role": "peer",
+  "week_start": "2026-10-26",
+  "products": 1
  }
 ]

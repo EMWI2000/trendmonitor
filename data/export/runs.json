@@ -1428,5 +1428,135 @@
   "pages": 2,
   "seconds": 5.9,
   "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "baum",
+  "status": "ok",
+  "products": 703,
+  "variants": 4456,
+  "pages": 3,
+  "seconds": 8.5,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "ceciliebahnsen",
+  "status": "ok",
+  "products": 355,
+  "variants": 1677,
+  "pages": 2,
+  "seconds": 7.1,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "day",
+  "status": "ok",
+  "products": 847,
+  "variants": 5510,
+  "pages": 4,
+  "seconds": 14.3,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "designersremix",
+  "status": "ok",
+  "products": 63,
+  "variants": 417,
+  "pages": 1,
+  "seconds": 3.4,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "herskind",
+  "status": "ok",
+  "products": 1537,
+  "variants": 4201,
+  "pages": 7,
+  "seconds": 19.5,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "madsnorgaard",
+  "status": "ok",
+  "products": 1238,
+  "variants": 2120,
+  "pages": 5,
+  "seconds": 16.1,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "munthe",
+  "status": "ok",
+  "products": 3046,
+  "variants": 5322,
+  "pages": 13,
+  "seconds": 33.3,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "rabens",
+  "status": "ok",
+  "products": 443,
+  "variants": 1123,
+  "pages": 2,
+  "seconds": 7.9,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "rixo",
+  "status": "ok",
+  "products": 828,
+  "variants": 5518,
+  "pages": 4,
+  "seconds": 12.2,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "rodebjer",
+  "status": "ok",
+  "products": 299,
+  "variants": 1048,
+  "pages": 2,
+  "seconds": 6.0,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "rouje",
+  "status": "ok",
+  "products": 776,
+  "variants": 2734,
+  "pages": 4,
+  "seconds": 11.4,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "skall",
+  "status": "ok",
+  "products": 351,
+  "variants": 2160,
+  "pages": 2,
+  "seconds": 5.5,
+  "error": null
+ },
+ {
+  "run_date": "2026-10-27",
+  "brand": "stinegoya",
+  "status": "ok",
+  "products": 281,
+  "variants": 1825,
+  "pages": 2,
+  "seconds": 5.4,
+  "error": null
  }
 ]

@@ -1,77 +1,72 @@
 [
  {
   "brand": "baum",
-  "size": "42",
-  "n": 19
- },
- {
-  "brand": "baum",
-  "size": "40",
-  "n": 19
- },
- {
-  "brand": "baum",
-  "size": "38",
-  "n": 15
+  "size": "32",
+  "n": 6
  },
  {
   "brand": "baum",
   "size": "34",
-  "n": 15
+  "n": 5
  },
  {
   "brand": "baum",
-  "size": "36",
-  "n": 10
+  "size": "42",
+  "n": 5
  },
  {
   "brand": "baum",
-  "size": "32",
-  "n": 10
+  "size": "40",
+  "n": 3
  },
  {
   "brand": "baum",
   "size": "44",
-  "n": 8
- },
- {
-  "brand": "baum",
-  "size": "L",
-  "n": 7
- },
- {
-  "brand": "baum",
-  "size": "S",
-  "n": 6
- },
- {
-  "brand": "baum",
-  "size": "M",
-  "n": 6
- },
- {
-  "brand": "baum",
-  "size": "XS",
-  "n": 4
- },
- {
-  "brand": "baum",
-  "size": "XXS",
   "n": 3
+ },
+ {
+  "brand": "baum",
+  "size": "38",
+  "n": 2
  },
  {
   "brand": "baum",
   "size": "XL",
-  "n": 3
+  "n": 1
+ },
+ {
+  "brand": "baum",
+  "size": "L",
+  "n": 1
+ },
+ {
+  "brand": "baum",
+  "size": "XS",
+  "n": 1
+ },
+ {
+  "brand": "baum",
+  "size": "M",
+  "n": 1
+ },
+ {
+  "brand": "baum",
+  "size": "S",
+  "n": 1
+ },
+ {
+  "brand": "baum",
+  "size": "36",
+  "n": 1
  },
  {
   "brand": "ceciliebahnsen",
   "size": "UK10",
-  "n": 2
+  "n": 3
  },
  {
   "brand": "ceciliebahnsen",
-  "size": "UK14",
+  "size": "M",
   "n": 2
  },
  {
@@ -81,12 +76,17 @@
  },
  {
   "brand": "ceciliebahnsen",
-  "size": "UK8",
+  "size": "UK14",
+  "n": 2
+ },
+ {
+  "brand": "ceciliebahnsen",
+  "size": "UK4",
   "n": 1
  },
  {
   "brand": "ceciliebahnsen",
-  "size": "M",
+  "size": "UK8",
   "n": 1
  },
  {
@@ -102,17 +102,12 @@
  {
   "brand": "day",
   "size": "40",
-  "n": 14
+  "n": 15
  },
  {
   "brand": "day",
   "size": "36",
-  "n": 12
- },
- {
-  "brand": "day",
-  "size": "42",
-  "n": 12
+  "n": 14
  },
  {
   "brand": "day",
@@ -121,13 +116,18 @@
  },
  {
   "brand": "day",
-  "size": "M",
-  "n": 6
+  "size": "42",
+  "n": 8
  },
  {
   "brand": "day",
   "size": "44",
-  "n": 5
+  "n": 7
+ },
+ {
+  "brand": "day",
+  "size": "M",
+  "n": 6
  },
  {
   "brand": "day",
@@ -141,18 +141,18 @@
  },
  {
   "brand": "day",
-  "size": "XS",
-  "n": 3
- },
- {
-  "brand": "day",
   "size": "32",
   "n": 3
  },
  {
   "brand": "day",
   "size": "XL",
-  "n": 2
+  "n": 3
+ },
+ {
+  "brand": "day",
+  "size": "XS",
+  "n": 3
  },
  {
   "brand": "day",
@@ -171,112 +171,107 @@
  },
  {
   "brand": "herskind",
-  "size": "40",
-  "n": 33
+  "size": "38",
+  "n": 11
  },
  {
   "brand": "herskind",
-  "size": "38",
-  "n": 28
+  "size": "40",
+  "n": 10
  },
  {
   "brand": "herskind",
   "size": "36",
-  "n": 27
- },
- {
-  "brand": "herskind",
-  "size": "32",
-  "n": 24
- },
- {
-  "brand": "herskind",
-  "size": "34",
-  "n": 24
+  "n": 10
  },
  {
   "brand": "herskind",
   "size": "42",
-  "n": 23
- },
- {
-  "brand": "herskind",
-  "size": "M",
-  "n": 9
- },
- {
-  "brand": "herskind",
-  "size": "L",
   "n": 7
  },
  {
   "brand": "herskind",
-  "size": "S",
-  "n": 6
+  "size": "34",
+  "n": 5
  },
  {
   "brand": "herskind",
-  "size": "XL",
-  "n": 6
+  "size": "32",
+  "n": 5
+ },
+ {
+  "brand": "herskind",
+  "size": "S",
+  "n": 4
  },
  {
   "brand": "herskind",
   "size": "XS",
-  "n": 5
+  "n": 4
  },
  {
-  "brand": "madsnorgaard",
+  "brand": "herskind",
   "size": "L",
   "n": 4
  },
  {
-  "brand": "madsnorgaard",
-  "size": "S",
+  "brand": "herskind",
+  "size": "M",
   "n": 3
  },
  {
-  "brand": "madsnorgaard",
-  "size": "42",
-  "n": 2
- },
- {
-  "brand": "madsnorgaard",
+  "brand": "herskind",
   "size": "XL",
   "n": 2
  },
  {
   "brand": "madsnorgaard",
-  "size": "XS",
-  "n": 2
+  "size": "S",
+  "n": 6
  },
  {
   "brand": "madsnorgaard",
-  "size": "36",
-  "n": 2
+  "size": "L",
+  "n": 5
+ },
+ {
+  "brand": "madsnorgaard",
+  "size": "M",
+  "n": 4
  },
  {
   "brand": "madsnorgaard",
   "size": "XXXL",
+  "n": 3
+ },
+ {
+  "brand": "madsnorgaard",
+  "size": "36",
+  "n": 3
+ },
+ {
+  "brand": "madsnorgaard",
+  "size": "XL",
+  "n": 3
+ },
+ {
+  "brand": "madsnorgaard",
+  "size": "XS",
   "n": 2
  },
  {
   "brand": "madsnorgaard",
   "size": "48",
-  "n": 1
+  "n": 2
  },
  {
   "brand": "madsnorgaard",
-  "size": "40",
-  "n": 1
+  "size": "42",
+  "n": 2
  },
  {
   "brand": "madsnorgaard",
-  "size": "34",
-  "n": 1
- },
- {
-  "brand": "madsnorgaard",
-  "size": "38",
+  "size": "46",
   "n": 1
  },
  {
@@ -286,12 +281,17 @@
  },
  {
   "brand": "madsnorgaard",
-  "size": "M",
+  "size": "38",
   "n": 1
  },
  {
   "brand": "madsnorgaard",
-  "size": "46",
+  "size": "40",
+  "n": 1
+ },
+ {
+  "brand": "madsnorgaard",
+  "size": "34",
   "n": 1
  },
  {
@@ -307,37 +307,32 @@
  {
   "brand": "munthe",
   "size": "40",
-  "n": 7
- },
- {
-  "brand": "munthe",
-  "size": "36",
   "n": 6
  },
  {
   "brand": "munthe",
-  "size": "38",
-  "n": 3
+  "size": "34",
+  "n": 4
  },
  {
   "brand": "munthe",
-  "size": "34",
+  "size": "36",
+  "n": 4
+ },
+ {
+  "brand": "munthe",
+  "size": "38",
   "n": 3
  },
  {
   "brand": "munthe",
   "size": "32",
-  "n": 1
- },
- {
-  "brand": "munthe",
-  "size": "46",
-  "n": 1
+  "n": 2
  },
  {
   "brand": "rabens",
   "size": "S",
-  "n": 4
+  "n": 3
  },
  {
   "brand": "rabens",
@@ -346,8 +341,18 @@
  },
  {
   "brand": "rabens",
+  "size": "L",
+  "n": 2
+ },
+ {
+  "brand": "rabens",
   "size": "XL",
   "n": 2
+ },
+ {
+  "brand": "rabens",
+  "size": "29",
+  "n": 1
  },
  {
   "brand": "rabens",
@@ -355,24 +360,14 @@
   "n": 1
  },
  {
-  "brand": "rabens",
-  "size": "27",
-  "n": 1
- },
- {
-  "brand": "rabens",
-  "size": "L",
-  "n": 1
+  "brand": "rodebjer",
+  "size": "S",
+  "n": 4
  },
  {
   "brand": "rodebjer",
   "size": "XL",
   "n": 4
- },
- {
-  "brand": "rodebjer",
-  "size": "XS",
-  "n": 3
  },
  {
   "brand": "rodebjer",
@@ -386,18 +381,18 @@
  },
  {
   "brand": "rodebjer",
-  "size": "S",
-  "n": 3
+  "size": "XS",
+  "n": 2
  },
  {
-  "brand": "rouje",
-  "size": "36",
-  "n": 12
+  "brand": "rodebjer",
+  "size": "M/L",
+  "n": 1
  },
  {
-  "brand": "rouje",
-  "size": "38",
-  "n": 12
+  "brand": "rodebjer",
+  "size": "XS/S",
+  "n": 1
  },
  {
   "brand": "rouje",
@@ -406,18 +401,23 @@
  },
  {
   "brand": "rouje",
-  "size": "34",
-  "n": 9
+  "size": "42",
+  "n": 8
  },
  {
   "brand": "rouje",
-  "size": "L",
+  "size": "36",
+  "n": 7
+ },
+ {
+  "brand": "rouje",
+  "size": "34",
   "n": 6
  },
  {
   "brand": "rouje",
-  "size": "42",
-  "n": 5
+  "size": "38",
+  "n": 6
  },
  {
   "brand": "rouje",
@@ -426,22 +426,22 @@
  },
  {
   "brand": "rouje",
-  "size": "32",
-  "n": 2
- },
- {
-  "brand": "rouje",
-  "size": "37",
-  "n": 2
- },
- {
-  "brand": "rouje",
   "size": "M",
   "n": 2
  },
  {
   "brand": "rouje",
-  "size": "29",
+  "size": "L",
+  "n": 2
+ },
+ {
+  "brand": "rouje",
+  "size": "32",
+  "n": 2
+ },
+ {
+  "brand": "rouje",
+  "size": "S",
   "n": 1
  },
  {
@@ -466,32 +466,22 @@
  },
  {
   "brand": "rouje",
-  "size": "24",
-  "n": 1
- },
- {
-  "brand": "rouje",
-  "size": "S",
-  "n": 1
- },
- {
-  "brand": "rouje",
-  "size": "39",
+  "size": "37",
   "n": 1
  },
  {
   "brand": "skall",
   "size": "42",
-  "n": 4
+  "n": 5
  },
  {
   "brand": "skall",
   "size": "38",
-  "n": 2
+  "n": 4
  },
  {
   "brand": "skall",
-  "size": "32",
+  "size": "36",
   "n": 2
  },
  {
@@ -501,12 +491,12 @@
  },
  {
   "brand": "skall",
-  "size": "36",
-  "n": 1
+  "size": "32",
+  "n": 2
  },
  {
   "brand": "skall",
-  "size": "40",
+  "size": "XL",
   "n": 1
  },
  {
@@ -517,12 +507,7 @@
  {
   "brand": "stinegoya",
   "size": "XXXL",
-  "n": 3
- },
- {
-  "brand": "stinegoya",
-  "size": "S",
-  "n": 1
+  "n": 2
  },
  {
   "brand": "stinegoya",
@@ -531,7 +516,7 @@
  },
  {
   "brand": "stinegoya",
-  "size": "M",
+  "size": "S",
   "n": 1
  }
 ]

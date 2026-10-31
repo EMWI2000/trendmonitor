@@ -195,7 +195,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-08-03",
-  "products": 8
+  "products": 3
  },
  {
   "brand": "herskind",
@@ -537,7 +537,7 @@
   "brand": "rouje",
   "role": "international",
   "week_start": "2026-10-26",
-  "products": 19
+  "products": 69
  },
  {
   "brand": "skall",
@@ -567,7 +567,7 @@
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-10-26",
-  "products": 88
+  "products": 90
  },
  {
   "brand": "stinegoya",

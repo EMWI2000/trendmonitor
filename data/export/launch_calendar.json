@@ -194,12 +194,6 @@
  {
   "brand": "herskind",
   "role": "peer",
-  "week_start": "2026-08-03",
-  "products": 3
- },
- {
-  "brand": "herskind",
-  "role": "peer",
   "week_start": "2026-08-10",
   "products": 11
  },
@@ -567,7 +561,7 @@
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-10-26",
-  "products": 90
+  "products": 96
  },
  {
   "brand": "stinegoya",

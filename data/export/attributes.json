@@ -261,21 +261,21 @@
  },
  {
   "attribute": "colour_family",
-  "value": "purple",
-  "launched_n": 20,
-  "sold_out_n": 16,
-  "share_new": 0.015408320493066256,
-  "share_sold_out": 0.01008827238335435,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "colour_family",
   "value": "yellow",
   "launched_n": 9,
   "sold_out_n": 42,
   "share_new": 0.006933744221879815,
   "share_sold_out": 0.02648171500630517,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "launched_n": 20,
+  "sold_out_n": 16,
+  "share_new": 0.015408320493066256,
+  "share_sold_out": 0.01008827238335435,
   "demand_index": null,
   "low_n": false
  },
@@ -431,16 +431,6 @@
  },
  {
   "attribute": "material",
-  "value": "sequin",
-  "launched_n": 26,
-  "sold_out_n": 12,
-  "share_new": 0.015691007845503924,
-  "share_sold_out": 0.006179196704428424,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "material",
   "value": "linen",
   "launched_n": 28,
   "sold_out_n": 22,
@@ -456,6 +446,16 @@
   "sold_out_n": 27,
   "share_new": 0.013277006638503319,
   "share_sold_out": 0.013903192584963954,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "material",
+  "value": "sequin",
+  "launched_n": 26,
+  "sold_out_n": 12,
+  "share_new": 0.015691007845503924,
+  "share_sold_out": 0.006179196704428424,
   "demand_index": null,
   "low_n": false
  },

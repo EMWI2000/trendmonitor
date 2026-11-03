@@ -2,12 +2,6 @@
  {
   "brand": "baum",
   "role": "self",
-  "week_start": "2026-08-10",
-  "products": 44
- },
- {
-  "brand": "baum",
-  "role": "self",
   "week_start": "2026-08-31",
   "products": 40
  },
@@ -60,6 +54,12 @@
   "products": 51
  },
  {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-11-02",
+  "products": 2
+ },
+ {
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "week_start": "2026-08-17",
@@ -99,7 +99,7 @@
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "week_start": "2026-11-02",
-  "products": 4
+  "products": 5
  },
  {
   "brand": "day",
@@ -177,7 +177,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-11-02",
-  "products": 2
+  "products": 7
  },
  {
   "brand": "designersremix",
@@ -465,7 +465,7 @@
   "brand": "rodebjer",
   "role": "international",
   "week_start": "2026-08-10",
-  "products": 37
+  "products": 6
  },
  {
   "brand": "rodebjer",
@@ -550,6 +550,12 @@
   "role": "international",
   "week_start": "2026-10-26",
   "products": 69
+ },
+ {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-11-02",
+  "products": 9
  },
  {
   "brand": "skall",

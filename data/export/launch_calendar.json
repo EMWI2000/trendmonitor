@@ -177,7 +177,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-11-02",
-  "products": 9
+  "products": 10
  },
  {
   "brand": "designersremix",
@@ -207,7 +207,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-08-10",
-  "products": 2
+  "products": 1
  },
  {
   "brand": "herskind",
@@ -392,12 +392,6 @@
  {
   "brand": "rixo",
   "role": "international",
-  "week_start": "2026-08-10",
-  "products": 3
- },
- {
-  "brand": "rixo",
-  "role": "international",
   "week_start": "2026-08-17",
   "products": 6
  },
@@ -465,7 +459,7 @@
   "brand": "rodebjer",
   "role": "international",
   "week_start": "2026-08-10",
-  "products": 6
+  "products": 2
  },
  {
   "brand": "rodebjer",
@@ -508,6 +502,12 @@
   "role": "international",
   "week_start": "2026-10-05",
   "products": 1
+ },
+ {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-11-02",
+  "products": 15
  },
  {
   "brand": "rouje",

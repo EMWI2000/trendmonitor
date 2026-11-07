@@ -440,12 +440,6 @@
  {
   "brand": "rodebjer",
   "role": "international",
-  "week_start": "2026-08-10",
-  "products": 1
- },
- {
-  "brand": "rodebjer",
-  "role": "international",
   "week_start": "2026-08-17",
   "products": 6
  },
@@ -537,7 +531,7 @@
   "brand": "rouje",
   "role": "international",
   "week_start": "2026-11-02",
-  "products": 9
+  "products": 34
  },
  {
   "brand": "skall",

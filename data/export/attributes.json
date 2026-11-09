@@ -121,16 +121,6 @@
  },
  {
   "attribute": "category",
-  "value": "shoes",
-  "launched_n": 8,
-  "sold_out_n": 18,
-  "share_new": 0.004454342984409799,
-  "share_sold_out": 0.006076975016880486,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "category",
   "value": "swimwear",
   "launched_n": 14,
   "sold_out_n": 5,
@@ -138,6 +128,16 @@
   "share_sold_out": 0.001688048615800135,
   "demand_index": null,
   "low_n": true
+ },
+ {
+  "attribute": "category",
+  "value": "shoes",
+  "launched_n": 8,
+  "sold_out_n": 18,
+  "share_new": 0.004454342984409799,
+  "share_sold_out": 0.006076975016880486,
+  "demand_index": null,
+  "low_n": false
  },
  {
   "attribute": "colour_family",
@@ -261,21 +261,21 @@
  },
  {
   "attribute": "colour_family",
-  "value": "purple",
-  "launched_n": 19,
-  "sold_out_n": 17,
-  "share_new": 0.015347334410339256,
-  "share_sold_out": 0.00755891507336594,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "colour_family",
   "value": "orange",
   "launched_n": 4,
   "sold_out_n": 13,
   "share_new": 0.0032310177705977385,
   "share_sold_out": 0.005780346820809248,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "colour_family",
+  "value": "purple",
+  "launched_n": 19,
+  "sold_out_n": 17,
+  "share_new": 0.015347334410339256,
+  "share_sold_out": 0.00755891507336594,
   "demand_index": null,
   "low_n": false
  },
@@ -431,11 +431,11 @@
  },
  {
   "attribute": "material",
-  "value": "sequin",
-  "launched_n": 29,
-  "sold_out_n": 15,
-  "share_new": 0.01828499369482976,
-  "share_sold_out": 0.005415162454873646,
+  "value": "linen",
+  "launched_n": 26,
+  "sold_out_n": 28,
+  "share_new": 0.01639344262295082,
+  "share_sold_out": 0.010108303249097473,
   "demand_index": null,
   "low_n": false
  },
@@ -451,11 +451,11 @@
  },
  {
   "attribute": "material",
-  "value": "linen",
-  "launched_n": 26,
-  "sold_out_n": 28,
-  "share_new": 0.01639344262295082,
-  "share_sold_out": 0.010108303249097473,
+  "value": "sequin",
+  "launched_n": 29,
+  "sold_out_n": 15,
+  "share_new": 0.01828499369482976,
+  "share_sold_out": 0.005415162454873646,
   "demand_index": null,
   "low_n": false
  },

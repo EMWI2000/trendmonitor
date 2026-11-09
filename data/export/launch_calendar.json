@@ -174,6 +174,12 @@
   "products": 13
  },
  {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-11-09",
+  "products": 3
+ },
+ {
   "brand": "designersremix",
   "role": "peer",
   "week_start": "2026-08-17",
@@ -195,7 +201,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-08-17",
-  "products": 32
+  "products": 31
  },
  {
   "brand": "herskind",
@@ -534,6 +540,12 @@
   "products": 34
  },
  {
+  "brand": "rouje",
+  "role": "international",
+  "week_start": "2026-11-09",
+  "products": 1
+ },
+ {
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-08-31",
@@ -586,5 +598,11 @@
   "role": "peer",
   "week_start": "2026-10-26",
   "products": 1
+ },
+ {
+  "brand": "stinegoya",
+  "role": "peer",
+  "week_start": "2026-11-09",
+  "products": 2
  }
 ]

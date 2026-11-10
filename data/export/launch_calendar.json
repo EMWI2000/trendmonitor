@@ -63,7 +63,7 @@
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "week_start": "2026-08-17",
-  "products": 49
+  "products": 5
  },
  {
   "brand": "ceciliebahnsen",
@@ -105,7 +105,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-08-17",
-  "products": 102
+  "products": 26
  },
  {
   "brand": "day",
@@ -183,7 +183,7 @@
   "brand": "designersremix",
   "role": "peer",
   "week_start": "2026-08-17",
-  "products": 5
+  "products": 1
  },
  {
   "brand": "designersremix",
@@ -201,7 +201,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-08-17",
-  "products": 31
+  "products": 29
  },
  {
   "brand": "herskind",
@@ -447,7 +447,7 @@
   "brand": "rodebjer",
   "role": "international",
   "week_start": "2026-08-17",
-  "products": 6
+  "products": 4
  },
  {
   "brand": "rodebjer",
@@ -495,7 +495,7 @@
   "brand": "rouje",
   "role": "international",
   "week_start": "2026-08-17",
-  "products": 49
+  "products": 9
  },
  {
   "brand": "rouje",
@@ -574,6 +574,12 @@
   "role": "peer",
   "week_start": "2026-11-02",
   "products": 9
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-11-09",
+  "products": 1
  },
  {
   "brand": "stinegoya",

@@ -4,8 +4,8 @@
   "role": "self",
   "size": "32",
   "live_variants": 169,
-  "unavailable_variants": 65.0,
-  "unavailable_share": 0.38461538461538464
+  "unavailable_variants": 64.0,
+  "unavailable_share": 0.378698224852071
  },
  {
   "brand": "baum",
@@ -20,8 +20,8 @@
   "role": "self",
   "size": "36",
   "live_variants": 173,
-  "unavailable_variants": 6.0,
-  "unavailable_share": 0.03468208092485549
+  "unavailable_variants": 7.0,
+  "unavailable_share": 0.04046242774566474
  },
  {
   "brand": "baum",
@@ -36,8 +36,8 @@
   "role": "self",
   "size": "40",
   "live_variants": 173,
-  "unavailable_variants": 13.0,
-  "unavailable_share": 0.07514450867052024
+  "unavailable_variants": 14.0,
+  "unavailable_share": 0.08092485549132948
  },
  {
   "brand": "baum",
@@ -100,8 +100,8 @@
   "role": "self",
   "size": "XS",
   "live_variants": 111,
-  "unavailable_variants": 21.0,
-  "unavailable_share": 0.1891891891891892
+  "unavailable_variants": 22.0,
+  "unavailable_share": 0.1981981981981982
  },
  {
   "brand": "baum",
@@ -307,17 +307,17 @@
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "size": "L",
-  "live_variants": 77,
-  "unavailable_variants": 28.0,
-  "unavailable_share": 0.36363636363636365
+  "live_variants": 76,
+  "unavailable_variants": 29.0,
+  "unavailable_share": 0.3815789473684211
  },
  {
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "size": "M",
-  "live_variants": 77,
+  "live_variants": 76,
   "unavailable_variants": 29.0,
-  "unavailable_share": 0.37662337662337664
+  "unavailable_share": 0.3815789473684211
  },
  {
   "brand": "ceciliebahnsen",
@@ -339,9 +339,9 @@
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "size": "S",
-  "live_variants": 77,
-  "unavailable_variants": 38.0,
-  "unavailable_share": 0.4935064935064935
+  "live_variants": 76,
+  "unavailable_variants": 36.0,
+  "unavailable_share": 0.47368421052631576
  },
  {
   "brand": "ceciliebahnsen",
@@ -403,17 +403,17 @@
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "size": "XL",
-  "live_variants": 44,
+  "live_variants": 43,
   "unavailable_variants": 27.0,
-  "unavailable_share": 0.6136363636363636
+  "unavailable_share": 0.627906976744186
  },
  {
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "size": "XS",
-  "live_variants": 44,
-  "unavailable_variants": 24.0,
-  "unavailable_share": 0.5454545454545454
+  "live_variants": 43,
+  "unavailable_variants": 23.0,
+  "unavailable_share": 0.5348837209302325
  },
  {
   "brand": "ceciliebahnsen",
@@ -427,9 +427,9 @@
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "size": "XXS",
-  "live_variants": 9,
-  "unavailable_variants": 6.0,
-  "unavailable_share": 0.6666666666666666
+  "live_variants": 8,
+  "unavailable_variants": 5.0,
+  "unavailable_share": 0.625
  },
  {
   "brand": "day",
@@ -516,16 +516,16 @@
   "role": "peer",
   "size": "34",
   "live_variants": 529,
-  "unavailable_variants": 167.0,
-  "unavailable_share": 0.31568998109640833
+  "unavailable_variants": 168.0,
+  "unavailable_share": 0.31758034026465026
  },
  {
   "brand": "day",
   "role": "peer",
   "size": "36",
   "live_variants": 536,
-  "unavailable_variants": 181.0,
-  "unavailable_share": 0.3376865671641791
+  "unavailable_variants": 182.0,
+  "unavailable_share": 0.33955223880597013
  },
  {
   "brand": "day",
@@ -540,8 +540,8 @@
   "role": "peer",
   "size": "38",
   "live_variants": 536,
-  "unavailable_variants": 197.0,
-  "unavailable_share": 0.3675373134328358
+  "unavailable_variants": 198.0,
+  "unavailable_share": 0.3694029850746269
  },
  {
   "brand": "day",
@@ -556,8 +556,8 @@
   "role": "peer",
   "size": "40",
   "live_variants": 536,
-  "unavailable_variants": 211.0,
-  "unavailable_share": 0.39365671641791045
+  "unavailable_variants": 213.0,
+  "unavailable_share": 0.39738805970149255
  },
  {
   "brand": "day",
@@ -572,8 +572,8 @@
   "role": "peer",
   "size": "42",
   "live_variants": 529,
-  "unavailable_variants": 231.0,
-  "unavailable_share": 0.43667296786389415
+  "unavailable_variants": 232.0,
+  "unavailable_share": 0.43856332703213613
  },
  {
   "brand": "day",
@@ -588,16 +588,16 @@
   "role": "peer",
   "size": "L",
   "live_variants": 236,
-  "unavailable_variants": 83.0,
-  "unavailable_share": 0.3516949152542373
+  "unavailable_variants": 82.0,
+  "unavailable_share": 0.3474576271186441
  },
  {
   "brand": "day",
   "role": "peer",
   "size": "M",
   "live_variants": 236,
-  "unavailable_variants": 88.0,
-  "unavailable_share": 0.3728813559322034
+  "unavailable_variants": 86.0,
+  "unavailable_share": 0.3644067796610169
  },
  {
   "brand": "day",
@@ -620,8 +620,8 @@
   "role": "peer",
   "size": "S",
   "live_variants": 236,
-  "unavailable_variants": 82.0,
-  "unavailable_share": 0.3474576271186441
+  "unavailable_variants": 80.0,
+  "unavailable_share": 0.3389830508474576
  },
  {
   "brand": "day",
@@ -636,16 +636,16 @@
   "role": "peer",
   "size": "XL",
   "live_variants": 230,
-  "unavailable_variants": 91.0,
-  "unavailable_share": 0.39565217391304347
+  "unavailable_variants": 90.0,
+  "unavailable_share": 0.391304347826087
  },
  {
   "brand": "day",
   "role": "peer",
   "size": "XS",
   "live_variants": 229,
-  "unavailable_variants": 71.0,
-  "unavailable_share": 0.31004366812227074
+  "unavailable_variants": 69.0,
+  "unavailable_share": 0.30131004366812225
  },
  {
   "brand": "day",
@@ -660,16 +660,16 @@
   "role": "peer",
   "size": "XXL",
   "live_variants": 82,
-  "unavailable_variants": 45.0,
-  "unavailable_share": 0.5487804878048781
+  "unavailable_variants": 46.0,
+  "unavailable_share": 0.5609756097560976
  },
  {
   "brand": "day",
   "role": "peer",
   "size": "XXS",
   "live_variants": 227,
-  "unavailable_variants": 106.0,
-  "unavailable_share": 0.4669603524229075
+  "unavailable_variants": 104.0,
+  "unavailable_share": 0.4581497797356828
  },
  {
   "brand": "designersremix",
@@ -859,65 +859,65 @@
   "brand": "herskind",
   "role": "peer",
   "size": "32",
-  "live_variants": 290,
-  "unavailable_variants": 213.0,
-  "unavailable_share": 0.7344827586206897
+  "live_variants": 291,
+  "unavailable_variants": 214.0,
+  "unavailable_share": 0.7353951890034365
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "34",
-  "live_variants": 293,
-  "unavailable_variants": 137.0,
-  "unavailable_share": 0.46757679180887374
+  "live_variants": 294,
+  "unavailable_variants": 135.0,
+  "unavailable_share": 0.45918367346938777
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "36",
-  "live_variants": 293,
-  "unavailable_variants": 105.0,
-  "unavailable_share": 0.3583617747440273
+  "live_variants": 294,
+  "unavailable_variants": 102.0,
+  "unavailable_share": 0.3469387755102041
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "38",
-  "live_variants": 293,
-  "unavailable_variants": 130.0,
-  "unavailable_share": 0.44368600682593856
+  "live_variants": 294,
+  "unavailable_variants": 133.0,
+  "unavailable_share": 0.4523809523809524
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "40",
-  "live_variants": 293,
-  "unavailable_variants": 159.0,
-  "unavailable_share": 0.5426621160409556
+  "live_variants": 294,
+  "unavailable_variants": 160.0,
+  "unavailable_share": 0.54421768707483
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "42",
-  "live_variants": 290,
+  "live_variants": 291,
   "unavailable_variants": 225.0,
-  "unavailable_share": 0.7758620689655172
+  "unavailable_share": 0.7731958762886598
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "L",
   "live_variants": 130,
-  "unavailable_variants": 83.0,
-  "unavailable_share": 0.6384615384615384
+  "unavailable_variants": 81.0,
+  "unavailable_share": 0.6230769230769231
  },
  {
   "brand": "herskind",
   "role": "peer",
   "size": "M",
   "live_variants": 130,
-  "unavailable_variants": 74.0,
-  "unavailable_share": 0.5692307692307692
+  "unavailable_variants": 77.0,
+  "unavailable_share": 0.5923076923076923
  },
  {
   "brand": "herskind",
@@ -932,8 +932,8 @@
   "role": "peer",
   "size": "S",
   "live_variants": 130,
-  "unavailable_variants": 64.0,
-  "unavailable_share": 0.49230769230769234
+  "unavailable_variants": 63.0,
+  "unavailable_share": 0.4846153846153846
  },
  {
   "brand": "herskind",
@@ -972,45 +972,37 @@
   "role": "peer",
   "size": "34",
   "live_variants": 85,
-  "unavailable_variants": 12.0,
-  "unavailable_share": 0.1411764705882353
+  "unavailable_variants": 13.0,
+  "unavailable_share": 0.15294117647058825
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "36",
   "live_variants": 85,
-  "unavailable_variants": 6.0,
-  "unavailable_share": 0.07058823529411765
+  "unavailable_variants": 7.0,
+  "unavailable_share": 0.08235294117647059
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "38",
   "live_variants": 85,
-  "unavailable_variants": 6.0,
-  "unavailable_share": 0.07058823529411765
+  "unavailable_variants": 7.0,
+  "unavailable_share": 0.08235294117647059
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "40",
   "live_variants": 85,
-  "unavailable_variants": 8.0,
-  "unavailable_share": 0.09411764705882353
+  "unavailable_variants": 9.0,
+  "unavailable_share": 0.10588235294117647
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "42",
-  "live_variants": 85,
-  "unavailable_variants": 10.0,
-  "unavailable_share": 0.11764705882352941
- },
- {
-  "brand": "madsnorgaard",
-  "role": "peer",
-  "size": "44",
   "live_variants": 85,
   "unavailable_variants": 11.0,
   "unavailable_share": 0.12941176470588237
@@ -1018,10 +1010,18 @@
  {
   "brand": "madsnorgaard",
   "role": "peer",
+  "size": "44",
+  "live_variants": 85,
+  "unavailable_variants": 12.0,
+  "unavailable_share": 0.1411764705882353
+ },
+ {
+  "brand": "madsnorgaard",
+  "role": "peer",
   "size": "46",
   "live_variants": 85,
-  "unavailable_variants": 14.0,
-  "unavailable_share": 0.16470588235294117
+  "unavailable_variants": 15.0,
+  "unavailable_share": 0.17647058823529413
  },
  {
   "brand": "madsnorgaard",
@@ -1035,25 +1035,25 @@
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "L",
-  "live_variants": 150,
-  "unavailable_variants": 24.0,
-  "unavailable_share": 0.16
+  "live_variants": 140,
+  "unavailable_variants": 22.0,
+  "unavailable_share": 0.15714285714285714
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "M",
-  "live_variants": 150,
-  "unavailable_variants": 25.0,
-  "unavailable_share": 0.16666666666666666
+  "live_variants": 140,
+  "unavailable_variants": 24.0,
+  "unavailable_share": 0.17142857142857143
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "M/L",
-  "live_variants": 5,
-  "unavailable_variants": 3.0,
-  "unavailable_share": 0.6
+  "live_variants": 2,
+  "unavailable_variants": 2.0,
+  "unavailable_share": 1.0
  },
  {
   "brand": "madsnorgaard",
@@ -1067,9 +1067,9 @@
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "S",
-  "live_variants": 150,
-  "unavailable_variants": 28.0,
-  "unavailable_share": 0.18666666666666668
+  "live_variants": 140,
+  "unavailable_variants": 27.0,
+  "unavailable_share": 0.19285714285714287
  },
  {
   "brand": "madsnorgaard",
@@ -1083,57 +1083,49 @@
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "XL",
-  "live_variants": 150,
-  "unavailable_variants": 32.0,
-  "unavailable_share": 0.21333333333333335
+  "live_variants": 140,
+  "unavailable_variants": 28.0,
+  "unavailable_share": 0.2
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "XS",
-  "live_variants": 150,
-  "unavailable_variants": 19.0,
-  "unavailable_share": 0.12666666666666668
- },
- {
-  "brand": "madsnorgaard",
-  "role": "peer",
-  "size": "XS/S",
-  "live_variants": 3,
-  "unavailable_variants": 0.0,
-  "unavailable_share": 0.0
+  "live_variants": 140,
+  "unavailable_variants": 20.0,
+  "unavailable_share": 0.14285714285714285
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "XXL",
-  "live_variants": 150,
-  "unavailable_variants": 22.0,
-  "unavailable_share": 0.14666666666666667
+  "live_variants": 140,
+  "unavailable_variants": 20.0,
+  "unavailable_share": 0.14285714285714285
  },
  {
   "brand": "madsnorgaard",
   "role": "peer",
   "size": "XXXL",
-  "live_variants": 153,
-  "unavailable_variants": 33.0,
-  "unavailable_share": 0.21568627450980393
+  "live_variants": 140,
+  "unavailable_variants": 30.0,
+  "unavailable_share": 0.21428571428571427
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "32",
-  "live_variants": 713,
-  "unavailable_variants": 252.0,
-  "unavailable_share": 0.3534361851332398
+  "live_variants": 699,
+  "unavailable_variants": 239.0,
+  "unavailable_share": 0.3419170243204578
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "34",
-  "live_variants": 714,
-  "unavailable_variants": 134.0,
-  "unavailable_share": 0.1876750700280112
+  "live_variants": 700,
+  "unavailable_variants": 133.0,
+  "unavailable_share": 0.19
  },
  {
   "brand": "munthe",
@@ -1147,9 +1139,9 @@
   "brand": "munthe",
   "role": "peer",
   "size": "36",
-  "live_variants": 715,
-  "unavailable_variants": 152.0,
-  "unavailable_share": 0.2125874125874126
+  "live_variants": 701,
+  "unavailable_variants": 156.0,
+  "unavailable_share": 0.2225392296718973
  },
  {
   "brand": "munthe",
@@ -1163,9 +1155,9 @@
   "brand": "munthe",
   "role": "peer",
   "size": "38",
-  "live_variants": 715,
-  "unavailable_variants": 160.0,
-  "unavailable_share": 0.22377622377622378
+  "live_variants": 701,
+  "unavailable_variants": 164.0,
+  "unavailable_share": 0.23395149786019973
  },
  {
   "brand": "munthe",
@@ -1179,9 +1171,9 @@
   "brand": "munthe",
   "role": "peer",
   "size": "40",
-  "live_variants": 715,
-  "unavailable_variants": 166.0,
-  "unavailable_share": 0.23216783216783216
+  "live_variants": 701,
+  "unavailable_variants": 173.0,
+  "unavailable_share": 0.24679029957203993
  },
  {
   "brand": "munthe",
@@ -1195,153 +1187,161 @@
   "brand": "munthe",
   "role": "peer",
   "size": "42",
-  "live_variants": 715,
-  "unavailable_variants": 200.0,
-  "unavailable_share": 0.27972027972027974
+  "live_variants": 701,
+  "unavailable_variants": 208.0,
+  "unavailable_share": 0.2967189728958631
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "44",
-  "live_variants": 714,
-  "unavailable_variants": 312.0,
-  "unavailable_share": 0.4369747899159664
+  "live_variants": 700,
+  "unavailable_variants": 305.0,
+  "unavailable_share": 0.4357142857142857
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "46",
-  "live_variants": 63,
-  "unavailable_variants": 23.0,
-  "unavailable_share": 0.36507936507936506
+  "live_variants": 61,
+  "unavailable_variants": 21.0,
+  "unavailable_share": 0.3442622950819672
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "48",
-  "live_variants": 63,
-  "unavailable_variants": 23.0,
-  "unavailable_share": 0.36507936507936506
+  "live_variants": 61,
+  "unavailable_variants": 21.0,
+  "unavailable_share": 0.3442622950819672
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "L",
-  "live_variants": 9,
+  "live_variants": 8,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.1111111111111111
+  "unavailable_share": 0.125
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "M",
-  "live_variants": 9,
-  "unavailable_variants": 2.0,
-  "unavailable_share": 0.2222222222222222
+  "live_variants": 8,
+  "unavailable_variants": 1.0,
+  "unavailable_share": 0.125
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "OS",
-  "live_variants": 59,
+  "live_variants": 58,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.01694915254237288
+  "unavailable_share": 0.017241379310344827
  },
  {
   "brand": "munthe",
   "role": "peer",
   "size": "S",
-  "live_variants": 9,
-  "unavailable_variants": 1.0,
-  "unavailable_share": 0.1111111111111111
+  "live_variants": 8,
+  "unavailable_variants": 0.0,
+  "unavailable_share": 0.0
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "25",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 2.0,
-  "unavailable_share": 0.6666666666666666
+  "unavailable_share": 0.5
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "26",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 2.0,
-  "unavailable_share": 0.6666666666666666
+  "unavailable_share": 0.5
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "27",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 2.0,
-  "unavailable_share": 0.6666666666666666
+  "unavailable_share": 0.5
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "28",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.3333333333333333
+  "unavailable_share": 0.25
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "29",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.3333333333333333
+  "unavailable_share": 0.25
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "30",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.3333333333333333
+  "unavailable_share": 0.25
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "31",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.3333333333333333
+  "unavailable_share": 0.25
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "32",
-  "live_variants": 3,
+  "live_variants": 4,
   "unavailable_variants": 1.0,
-  "unavailable_share": 0.3333333333333333
+  "unavailable_share": 0.25
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "L",
-  "live_variants": 244,
+  "live_variants": 276,
   "unavailable_variants": 37.0,
-  "unavailable_share": 0.15163934426229508
+  "unavailable_share": 0.13405797101449277
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "L/XL",
-  "live_variants": 36,
-  "unavailable_variants": 7.0,
-  "unavailable_share": 0.19444444444444445
+  "live_variants": 41,
+  "unavailable_variants": 6.0,
+  "unavailable_share": 0.14634146341463414
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "M",
-  "live_variants": 244,
-  "unavailable_variants": 36.0,
-  "unavailable_share": 0.14754098360655737
+  "live_variants": 276,
+  "unavailable_variants": 35.0,
+  "unavailable_share": 0.12681159420289856
+ },
+ {
+  "brand": "rabens",
+  "role": "peer",
+  "size": "M/L",
+  "live_variants": 1,
+  "unavailable_variants": 0.0,
+  "unavailable_share": 0.0
  },
  {
   "brand": "rabens",
@@ -1355,41 +1355,41 @@
   "brand": "rabens",
   "role": "peer",
   "size": "S",
-  "live_variants": 244,
-  "unavailable_variants": 27.0,
-  "unavailable_share": 0.11065573770491803
+  "live_variants": 276,
+  "unavailable_variants": 29.0,
+  "unavailable_share": 0.10507246376811594
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "S/M",
-  "live_variants": 36,
+  "live_variants": 41,
   "unavailable_variants": 3.0,
-  "unavailable_share": 0.08333333333333333
+  "unavailable_share": 0.07317073170731707
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "XL",
-  "live_variants": 242,
+  "live_variants": 274,
   "unavailable_variants": 70.0,
-  "unavailable_share": 0.2892561983471074
+  "unavailable_share": 0.25547445255474455
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "XS",
-  "live_variants": 243,
+  "live_variants": 275,
   "unavailable_variants": 49.0,
-  "unavailable_share": 0.20164609053497942
+  "unavailable_share": 0.1781818181818182
  },
  {
   "brand": "rabens",
   "role": "peer",
   "size": "XS/S",
-  "live_variants": 36,
+  "live_variants": 42,
   "unavailable_variants": 3.0,
-  "unavailable_share": 0.08333333333333333
+  "unavailable_share": 0.07142857142857142
  },
  {
   "brand": "rabens",
@@ -1468,8 +1468,8 @@
   "role": "international",
   "size": "XL",
   "live_variants": 209,
-  "unavailable_variants": 42.0,
-  "unavailable_share": 0.20095693779904306
+  "unavailable_variants": 43.0,
+  "unavailable_share": 0.20574162679425836
  },
  {
   "brand": "rodebjer",
@@ -1500,8 +1500,8 @@
   "role": "international",
   "size": "24",
   "live_variants": 16,
-  "unavailable_variants": 7.0,
-  "unavailable_share": 0.4375
+  "unavailable_variants": 8.0,
+  "unavailable_share": 0.5
  },
  {
   "brand": "rouje",
@@ -1580,16 +1580,16 @@
   "role": "international",
   "size": "34",
   "live_variants": 342,
-  "unavailable_variants": 61.0,
-  "unavailable_share": 0.1783625730994152
+  "unavailable_variants": 63.0,
+  "unavailable_share": 0.18421052631578946
  },
  {
   "brand": "rouje",
   "role": "international",
   "size": "36",
   "live_variants": 331,
-  "unavailable_variants": 53.0,
-  "unavailable_share": 0.16012084592145015
+  "unavailable_variants": 55.0,
+  "unavailable_share": 0.1661631419939577
  },
  {
   "brand": "rouje",
@@ -1604,8 +1604,8 @@
   "role": "international",
   "size": "38",
   "live_variants": 331,
-  "unavailable_variants": 59.0,
-  "unavailable_share": 0.1782477341389728
+  "unavailable_variants": 62.0,
+  "unavailable_share": 0.18731117824773413
  },
  {
   "brand": "rouje",
@@ -1636,8 +1636,8 @@
   "role": "international",
   "size": "42",
   "live_variants": 326,
-  "unavailable_variants": 69.0,
-  "unavailable_share": 0.2116564417177914
+  "unavailable_variants": 74.0,
+  "unavailable_share": 0.22699386503067484
  },
  {
   "brand": "rouje",
@@ -1652,8 +1652,8 @@
   "role": "international",
   "size": "L",
   "live_variants": 26,
-  "unavailable_variants": 3.0,
-  "unavailable_share": 0.11538461538461539
+  "unavailable_variants": 4.0,
+  "unavailable_share": 0.15384615384615385
  },
  {
   "brand": "rouje",
@@ -1755,17 +1755,17 @@
   "brand": "skall",
   "role": "peer",
   "size": "32",
-  "live_variants": 211,
-  "unavailable_variants": 29.0,
-  "unavailable_share": 0.13744075829383887
+  "live_variants": 215,
+  "unavailable_variants": 30.0,
+  "unavailable_share": 0.13953488372093023
  },
  {
   "brand": "skall",
   "role": "peer",
   "size": "34",
-  "live_variants": 207,
-  "unavailable_variants": 20.0,
-  "unavailable_share": 0.0966183574879227
+  "live_variants": 211,
+  "unavailable_variants": 22.0,
+  "unavailable_share": 0.10426540284360189
  },
  {
   "brand": "skall",
@@ -1779,9 +1779,9 @@
   "brand": "skall",
   "role": "peer",
   "size": "36",
-  "live_variants": 217,
-  "unavailable_variants": 8.0,
-  "unavailable_share": 0.03686635944700461
+  "live_variants": 221,
+  "unavailable_variants": 7.0,
+  "unavailable_share": 0.03167420814479638
  },
  {
   "brand": "skall",
@@ -1795,9 +1795,9 @@
   "brand": "skall",
   "role": "peer",
   "size": "38",
-  "live_variants": 217,
-  "unavailable_variants": 9.0,
-  "unavailable_share": 0.041474654377880185
+  "live_variants": 221,
+  "unavailable_variants": 8.0,
+  "unavailable_share": 0.03619909502262444
  },
  {
   "brand": "skall",
@@ -1811,9 +1811,9 @@
   "brand": "skall",
   "role": "peer",
   "size": "40",
-  "live_variants": 217,
+  "live_variants": 221,
   "unavailable_variants": 22.0,
-  "unavailable_share": 0.10138248847926268
+  "unavailable_share": 0.09954751131221719
  },
  {
   "brand": "skall",
@@ -1827,9 +1827,9 @@
   "brand": "skall",
   "role": "peer",
   "size": "42",
-  "live_variants": 210,
-  "unavailable_variants": 66.0,
-  "unavailable_share": 0.3142857142857143
+  "live_variants": 214,
+  "unavailable_variants": 63.0,
+  "unavailable_share": 0.29439252336448596
  },
  {
   "brand": "skall",
@@ -2019,17 +2019,17 @@
   "brand": "stinegoya",
   "role": "peer",
   "size": "L",
-  "live_variants": 213,
+  "live_variants": 214,
   "unavailable_variants": 7.0,
-  "unavailable_share": 0.03286384976525822
+  "unavailable_share": 0.03271028037383177
  },
  {
   "brand": "stinegoya",
   "role": "peer",
   "size": "M",
-  "live_variants": 213,
-  "unavailable_variants": 11.0,
-  "unavailable_share": 0.051643192488262914
+  "live_variants": 214,
+  "unavailable_variants": 10.0,
+  "unavailable_share": 0.04672897196261682
  },
  {
   "brand": "stinegoya",
@@ -2051,25 +2051,25 @@
   "brand": "stinegoya",
   "role": "peer",
   "size": "S",
-  "live_variants": 213,
+  "live_variants": 214,
   "unavailable_variants": 6.0,
-  "unavailable_share": 0.028169014084507043
+  "unavailable_share": 0.028037383177570093
  },
  {
   "brand": "stinegoya",
   "role": "peer",
   "size": "XL",
-  "live_variants": 213,
+  "live_variants": 214,
   "unavailable_variants": 8.0,
-  "unavailable_share": 0.03755868544600939
+  "unavailable_share": 0.037383177570093455
  },
  {
   "brand": "stinegoya",
   "role": "peer",
   "size": "XS",
-  "live_variants": 213,
+  "live_variants": 214,
   "unavailable_variants": 8.0,
-  "unavailable_share": 0.03755868544600939
+  "unavailable_share": 0.037383177570093455
  },
  {
   "brand": "stinegoya",
@@ -2083,24 +2083,24 @@
   "brand": "stinegoya",
   "role": "peer",
   "size": "XXL",
-  "live_variants": 213,
+  "live_variants": 214,
   "unavailable_variants": 12.0,
-  "unavailable_share": 0.056338028169014086
+  "unavailable_share": 0.056074766355140186
  },
  {
   "brand": "stinegoya",
   "role": "peer",
   "size": "XXS",
-  "live_variants": 213,
+  "live_variants": 214,
   "unavailable_variants": 56.0,
-  "unavailable_share": 0.26291079812206575
+  "unavailable_share": 0.2616822429906542
  },
  {
   "brand": "stinegoya",
   "role": "peer",
   "size": "XXXL",
-  "live_variants": 213,
-  "unavailable_variants": 24.0,
-  "unavailable_share": 0.11267605633802817
+  "live_variants": 214,
+  "unavailable_variants": 25.0,
+  "unavailable_share": 0.11682242990654206
  }
 ]

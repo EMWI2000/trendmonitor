@@ -66,6 +66,12 @@
   "products": 2
  },
  {
+  "brand": "baum",
+  "role": "self",
+  "week_start": "2026-11-16",
+  "products": 1
+ },
+ {
   "brand": "ceciliebahnsen",
   "role": "benchmark",
   "week_start": "2026-08-24",
@@ -111,7 +117,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-08-24",
-  "products": 12
+  "products": 10
  },
  {
   "brand": "day",
@@ -447,7 +453,7 @@
   "brand": "rodebjer",
   "role": "international",
   "week_start": "2026-08-24",
-  "products": 5
+  "products": 1
  },
  {
   "brand": "rodebjer",

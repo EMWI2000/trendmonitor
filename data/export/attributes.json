@@ -251,21 +251,21 @@
  },
  {
   "attribute": "colour_family",
-  "value": "yellow",
-  "launched_n": 6,
-  "sold_out_n": 68,
-  "share_new": 0.004611837048424289,
-  "share_sold_out": 0.024881083058909622,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "colour_family",
   "value": "orange",
   "launched_n": 4,
   "sold_out_n": 14,
   "share_new": 0.0030745580322828594,
   "share_sold_out": 0.005122575923893158,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "colour_family",
+  "value": "yellow",
+  "launched_n": 6,
+  "sold_out_n": 68,
+  "share_new": 0.004611837048424289,
+  "share_sold_out": 0.024881083058909622,
   "demand_index": null,
   "low_n": false
  },
@@ -431,6 +431,16 @@
  },
  {
   "attribute": "material",
+  "value": "sequin",
+  "launched_n": 28,
+  "sold_out_n": 22,
+  "share_new": 0.01694915254237288,
+  "share_sold_out": 0.006695069993913573,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "material",
   "value": "linen",
   "launched_n": 20,
   "sold_out_n": 31,
@@ -446,16 +456,6 @@
   "sold_out_n": 49,
   "share_new": 0.01694915254237288,
   "share_sold_out": 0.014911746804625686,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "material",
-  "value": "sequin",
-  "launched_n": 28,
-  "sold_out_n": 22,
-  "share_new": 0.01694915254237288,
-  "share_sold_out": 0.006695069993913573,
   "demand_index": null,
   "low_n": false
  },
@@ -581,21 +581,21 @@
  },
  {
   "attribute": "print",
-  "value": "solid",
-  "launched_n": 7,
-  "sold_out_n": 10,
-  "share_new": 0.011272141706924315,
-  "share_sold_out": 0.005076142131979695,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "print",
   "value": "dot",
   "launched_n": 11,
   "sold_out_n": 124,
   "share_new": 0.017713365539452495,
   "share_sold_out": 0.06294416243654823,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "print",
+  "value": "solid",
+  "launched_n": 7,
+  "sold_out_n": 10,
+  "share_new": 0.011272141706924315,
+  "share_sold_out": 0.005076142131979695,
   "demand_index": null,
   "low_n": false
  },

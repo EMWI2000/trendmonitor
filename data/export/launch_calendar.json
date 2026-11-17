@@ -333,7 +333,7 @@
   "brand": "rabens",
   "role": "peer",
   "week_start": "2026-08-24",
-  "products": 2
+  "products": 1
  },
  {
   "brand": "rabens",
@@ -387,7 +387,7 @@
   "brand": "rixo",
   "role": "international",
   "week_start": "2026-08-24",
-  "products": 20
+  "products": 6
  },
  {
   "brand": "rixo",
@@ -448,12 +448,6 @@
   "role": "international",
   "week_start": "2026-11-09",
   "products": 3
- },
- {
-  "brand": "rodebjer",
-  "role": "international",
-  "week_start": "2026-08-24",
-  "products": 1
  },
  {
   "brand": "rodebjer",

@@ -1,135 +1,5 @@
 [
  {
-  "run_date": "2026-11-03",
-  "brand": "baum",
-  "status": "ok",
-  "products": 350,
-  "variants": 2263,
-  "pages": 2,
-  "seconds": 5.3,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "ceciliebahnsen",
-  "status": "ok",
-  "products": 365,
-  "variants": 1713,
-  "pages": 2,
-  "seconds": 6.3,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "day",
-  "status": "ok",
-  "products": 841,
-  "variants": 5532,
-  "pages": 4,
-  "seconds": 12.7,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "designersremix",
-  "status": "ok",
-  "products": 63,
-  "variants": 417,
-  "pages": 1,
-  "seconds": 3.1,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "herskind",
-  "status": "ok",
-  "products": 1178,
-  "variants": 2514,
-  "pages": 5,
-  "seconds": 13.3,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "madsnorgaard",
-  "status": "ok",
-  "products": 1243,
-  "variants": 2130,
-  "pages": 5,
-  "seconds": 15.0,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "munthe",
-  "status": "ok",
-  "products": 3047,
-  "variants": 5313,
-  "pages": 13,
-  "seconds": 35.4,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "rabens",
-  "status": "ok",
-  "products": 496,
-  "variants": 1349,
-  "pages": 2,
-  "seconds": 8.0,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "rixo",
-  "status": "ok",
-  "products": 840,
-  "variants": 5376,
-  "pages": 4,
-  "seconds": 12.0,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "rodebjer",
-  "status": "ok",
-  "products": 299,
-  "variants": 1038,
-  "pages": 2,
-  "seconds": 6.2,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "rouje",
-  "status": "ok",
-  "products": 597,
-  "variants": 2177,
-  "pages": 3,
-  "seconds": 7.7,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "skall",
-  "status": "ok",
-  "products": 432,
-  "variants": 2627,
-  "pages": 2,
-  "seconds": 5.5,
-  "error": null
- },
- {
-  "run_date": "2026-11-03",
-  "brand": "stinegoya",
-  "status": "ok",
-  "products": 281,
-  "variants": 1825,
-  "pages": 2,
-  "seconds": 5.1,
-  "error": null
- },
- {
   "run_date": "2026-11-04",
   "brand": "baum",
   "status": "ok",
@@ -1947,6 +1817,136 @@
   "variants": 1841,
   "pages": 2,
   "seconds": 5.6,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "baum",
+  "status": "ok",
+  "products": 353,
+  "variants": 2278,
+  "pages": 2,
+  "seconds": 5.3,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "ceciliebahnsen",
+  "status": "ok",
+  "products": 425,
+  "variants": 2063,
+  "pages": 2,
+  "seconds": 5.8,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "day",
+  "status": "ok",
+  "products": 863,
+  "variants": 5648,
+  "pages": 4,
+  "seconds": 11.4,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "designersremix",
+  "status": "ok",
+  "products": 63,
+  "variants": 417,
+  "pages": 1,
+  "seconds": 2.8,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "herskind",
+  "status": "ok",
+  "products": 1181,
+  "variants": 2523,
+  "pages": 5,
+  "seconds": 13.6,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "madsnorgaard",
+  "status": "ok",
+  "products": 1272,
+  "variants": 2110,
+  "pages": 6,
+  "seconds": 16.0,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "munthe",
+  "status": "ok",
+  "products": 3075,
+  "variants": 5363,
+  "pages": 13,
+  "seconds": 31.7,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "rabens",
+  "status": "ok",
+  "products": 528,
+  "variants": 1534,
+  "pages": 3,
+  "seconds": 10.2,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "rixo",
+  "status": "ok",
+  "products": 849,
+  "variants": 5114,
+  "pages": 4,
+  "seconds": 10.6,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "rodebjer",
+  "status": "ok",
+  "products": 320,
+  "variants": 1090,
+  "pages": 2,
+  "seconds": 5.5,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "rouje",
+  "status": "ok",
+  "products": 628,
+  "variants": 2200,
+  "pages": 3,
+  "seconds": 7.8,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "skall",
+  "status": "ok",
+  "products": 440,
+  "variants": 2660,
+  "pages": 2,
+  "seconds": 4.8,
+  "error": null
+ },
+ {
+  "run_date": "2026-11-18",
+  "brand": "stinegoya",
+  "status": "ok",
+  "products": 283,
+  "variants": 1841,
+  "pages": 2,
+  "seconds": 5.3,
   "error": null
  }
 ]

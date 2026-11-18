@@ -330,10 +330,10 @@
   "products": 2
  },
  {
-  "brand": "rabens",
+  "brand": "munthe",
   "role": "peer",
-  "week_start": "2026-08-24",
-  "products": 1
+  "week_start": "2026-11-16",
+  "products": 30
  },
  {
   "brand": "rabens",
@@ -387,7 +387,7 @@
   "brand": "rixo",
   "role": "international",
   "week_start": "2026-08-24",
-  "products": 6
+  "products": 3
  },
  {
   "brand": "rixo",
@@ -448,6 +448,12 @@
   "role": "international",
   "week_start": "2026-11-09",
   "products": 3
+ },
+ {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-11-16",
+  "products": 8
  },
  {
   "brand": "rodebjer",

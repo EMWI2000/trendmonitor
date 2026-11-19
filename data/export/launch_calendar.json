@@ -114,10 +114,10 @@
   "products": 1
  },
  {
-  "brand": "day",
-  "role": "peer",
-  "week_start": "2026-08-24",
-  "products": 10
+  "brand": "ceciliebahnsen",
+  "role": "benchmark",
+  "week_start": "2026-11-16",
+  "products": 1
  },
  {
   "brand": "day",
@@ -201,7 +201,7 @@
   "brand": "herskind",
   "role": "peer",
   "week_start": "2026-08-24",
-  "products": 6
+  "products": 4
  },
  {
   "brand": "herskind",

@@ -121,16 +121,6 @@
  },
  {
   "attribute": "category",
-  "value": "swimwear",
-  "launched_n": 20,
-  "sold_out_n": 6,
-  "share_new": 0.01026694045174538,
-  "share_sold_out": 0.0014774686037921695,
-  "demand_index": null,
-  "low_n": true
- },
- {
-  "attribute": "category",
   "value": "shoes",
   "launched_n": 5,
   "sold_out_n": 33,
@@ -138,6 +128,16 @@
   "share_sold_out": 0.008126077320856932,
   "demand_index": null,
   "low_n": false
+ },
+ {
+  "attribute": "category",
+  "value": "swimwear",
+  "launched_n": 20,
+  "sold_out_n": 6,
+  "share_new": 0.01026694045174538,
+  "share_sold_out": 0.0014774686037921695,
+  "demand_index": null,
+  "low_n": true
  },
  {
   "attribute": "colour_family",
@@ -251,11 +251,11 @@
  },
  {
   "attribute": "colour_family",
-  "value": "yellow",
-  "launched_n": 5,
-  "sold_out_n": 75,
-  "share_new": 0.0035536602700781805,
-  "share_sold_out": 0.023734177215189875,
+  "value": "orange",
+  "launched_n": 4,
+  "sold_out_n": 16,
+  "share_new": 0.0028429282160625444,
+  "share_sold_out": 0.005063291139240506,
   "demand_index": null,
   "low_n": false
  },
@@ -271,11 +271,11 @@
  },
  {
   "attribute": "colour_family",
-  "value": "orange",
-  "launched_n": 4,
-  "sold_out_n": 16,
-  "share_new": 0.0028429282160625444,
-  "share_sold_out": 0.005063291139240506,
+  "value": "yellow",
+  "launched_n": 5,
+  "sold_out_n": 75,
+  "share_new": 0.0035536602700781805,
+  "share_sold_out": 0.023734177215189875,
   "demand_index": null,
   "low_n": false
  },
@@ -591,21 +591,21 @@
  },
  {
   "attribute": "print",
-  "value": "paisley",
-  "launched_n": 0,
-  "sold_out_n": 17,
-  "share_new": 0.0,
-  "share_sold_out": 0.007606263982102908,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "print",
   "value": "dot",
   "launched_n": 12,
   "sold_out_n": 139,
   "share_new": 0.01804511278195489,
   "share_sold_out": 0.0621923937360179,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "print",
+  "value": "paisley",
+  "launched_n": 0,
+  "sold_out_n": 17,
+  "share_new": 0.0,
+  "share_sold_out": 0.007606263982102908,
   "demand_index": null,
   "low_n": false
  },
@@ -681,21 +681,21 @@
  },
  {
   "attribute": "silhouette",
-  "value": "shift",
-  "launched_n": 11,
-  "sold_out_n": 53,
-  "share_new": 0.008500772797527048,
-  "share_sold_out": 0.017851128326035703,
-  "demand_index": null,
-  "low_n": false
- },
- {
-  "attribute": "silhouette",
   "value": "balloon",
   "launched_n": 25,
   "sold_out_n": 55,
   "share_new": 0.019319938176197836,
   "share_sold_out": 0.018524755810037048,
+  "demand_index": null,
+  "low_n": false
+ },
+ {
+  "attribute": "silhouette",
+  "value": "shift",
+  "launched_n": 11,
+  "sold_out_n": 53,
+  "share_new": 0.008500772797527048,
+  "share_sold_out": 0.017851128326035703,
   "demand_index": null,
   "low_n": false
  },

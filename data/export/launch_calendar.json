@@ -117,7 +117,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-08-31",
-  "products": 23
+  "products": 20
  },
  {
   "brand": "day",
@@ -186,6 +186,12 @@
   "products": 5
  },
  {
+  "brand": "day",
+  "role": "peer",
+  "week_start": "2026-11-23",
+  "products": 5
+ },
+ {
   "brand": "designersremix",
   "role": "peer",
   "week_start": "2026-10-12",
@@ -196,12 +202,6 @@
   "role": "peer",
   "week_start": "2026-10-19",
   "products": 21
- },
- {
-  "brand": "herskind",
-  "role": "peer",
-  "week_start": "2026-08-31",
-  "products": 5
  },
  {
   "brand": "herskind",
@@ -579,7 +579,7 @@
   "brand": "stinegoya",
   "role": "peer",
   "week_start": "2026-08-31",
-  "products": 6
+  "products": 1
  },
  {
   "brand": "stinegoya",

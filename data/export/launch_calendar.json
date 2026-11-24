@@ -246,6 +246,12 @@
   "products": 2
  },
  {
+  "brand": "herskind",
+  "role": "peer",
+  "week_start": "2026-11-23",
+  "products": 6
+ },
+ {
   "brand": "madsnorgaard",
   "role": "peer",
   "week_start": "2026-09-07",
@@ -378,6 +384,12 @@
   "products": 42
  },
  {
+  "brand": "rabens",
+  "role": "peer",
+  "week_start": "2026-11-23",
+  "products": 4
+ },
+ {
   "brand": "rixo",
   "role": "international",
   "week_start": "2026-08-31",
@@ -486,6 +498,12 @@
   "products": 1
  },
  {
+  "brand": "rodebjer",
+  "role": "international",
+  "week_start": "2026-11-23",
+  "products": 1
+ },
+ {
   "brand": "rouje",
   "role": "international",
   "week_start": "2026-09-07",
@@ -543,7 +561,7 @@
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-08-31",
-  "products": 292
+  "products": 215
  },
  {
   "brand": "skall",
@@ -573,7 +591,13 @@
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-11-09",
-  "products": 11
+  "products": 12
+ },
+ {
+  "brand": "skall",
+  "role": "peer",
+  "week_start": "2026-11-23",
+  "products": 5
  },
  {
   "brand": "stinegoya",

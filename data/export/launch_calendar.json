@@ -117,7 +117,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-08-31",
-  "products": 20
+  "products": 12
  },
  {
   "brand": "day",
@@ -189,7 +189,7 @@
   "brand": "day",
   "role": "peer",
   "week_start": "2026-11-23",
-  "products": 5
+  "products": 6
  },
  {
   "brand": "designersremix",
@@ -300,6 +300,12 @@
   "products": 4
  },
  {
+  "brand": "madsnorgaard",
+  "role": "peer",
+  "week_start": "2026-11-23",
+  "products": 366
+ },
+ {
   "brand": "munthe",
   "role": "peer",
   "week_start": "2026-09-07",
@@ -334,12 +340,6 @@
   "role": "peer",
   "week_start": "2026-11-16",
   "products": 30
- },
- {
-  "brand": "rabens",
-  "role": "peer",
-  "week_start": "2026-08-31",
-  "products": 2
  },
  {
   "brand": "rabens",
@@ -456,6 +456,12 @@
   "products": 13
  },
  {
+  "brand": "rixo",
+  "role": "international",
+  "week_start": "2026-11-23",
+  "products": 5
+ },
+ {
   "brand": "rodebjer",
   "role": "international",
   "week_start": "2026-09-07",
@@ -561,7 +567,7 @@
   "brand": "skall",
   "role": "peer",
   "week_start": "2026-08-31",
-  "products": 215
+  "products": 7
  },
  {
   "brand": "skall",
@@ -598,12 +604,6 @@
   "role": "peer",
   "week_start": "2026-11-23",
   "products": 5
- },
- {
-  "brand": "stinegoya",
-  "role": "peer",
-  "week_start": "2026-08-31",
-  "products": 1
  },
  {
   "brand": "stinegoya",
